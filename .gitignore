@@ -1,0 +1,24 @@
+__pycache__/
+    *.pyc
+    *.pyo
+    *.pyd
+    *.so
+    *.dylib
+    *.egg-info
+    *.egg
+    .cache
+    .coverage
+    .tox
+    .eggs
+    *.egg
+    .pytest_cache
+    .mypy_cache
+    .hypothesis
+    .ipynb_checkpoints
+    .coverage.*
+    .coverage
+    .coverage.*
+    .coverage.*
+    .coverage.*
+    .coverage.*
+    .coverage.*
