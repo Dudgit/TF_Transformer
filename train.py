@@ -18,7 +18,9 @@ import numpy as np
 import math
 
 def get_data():
-
+    """
+    This is just a temporary function, later it should and will be replaced with the real data loader method.
+    """
     with open('input.txt', 'r', encoding='utf-8') as f:
         text = f.read()
 
@@ -40,13 +42,25 @@ def get_data():
 
 
 def get_batch(data):
-    # generate a small batch of data of inputs x and targets y
+    """
+    Get batch out of data.
+    
+    Output:  
+    ------  
+    - x: tf.Tensor of shape (batch_size, block_size)  
+    - y: tf.Tensor of shape (batch_size, block_size)  
+    """
     
     ix = tf.random.uniform(maxval= len(data) - block_size,shape= (batch_size,),dtype=tf.int64)
     x = tf.stack([data[i:i+block_size] for i in ix])
     y = tf.stack([data[i+1:i+block_size+1] for i in ix])
     return x, y
 
+
+
+
+#* Note: Ezt meg lehetne csinálni szofisztikáltabban is valamikor...
+#* Egyelőre működik, ami elég.
 def estimate_loss(model, train_data, val_data):
     out = {}
     for split in ['train', 'val']:
@@ -59,21 +73,16 @@ def estimate_loss(model, train_data, val_data):
         out[split] = tf.math.reduce_mean(losses)
     return out
 
-def fourier_mapping(x, target_dim=None, scale=1., basis='gaussian'):
-    x = tf.cast(x, tf.float32)
-    if target_dim is None:
-        target_dim = x.shape[1]
+def fourier_mapping(x, target_dim=16, scale=1., basis='gaussian'):
     if basis == 'basic':
         B = tf.eye(2)
-            
     elif basis == 'gaussian':
-        B = tf.random.normal((x.shape[1]//2, x.shape[1])) * scale
-    
-    x_proj=(tf.math.scalar_mul(2*math.pi,x)) @ tf.transpose(B)
-    x_proj = tf.concat([tf.math.sin(x_proj), tf.math.cos(x_proj)], axis=-1)
+        B = tf.random.normal((target_dim, x.shape[1])) * scale   #! This should be dx
+                                                                    #TODO: TALÁLD MEG A PIXELTÁVOLSÁGOT!
+    else:                                                          
+        x_proj=(tf.math.scalar_mul(2*math.pi,x)) @ tf.transpose(B)
+        x_proj = tf.concat([tf.math.sin(x_proj), tf.math.cos(x_proj)], axis=-1)
     return x_proj
-
-
 
 tf.random.set_seed(1337)
 def debug():
@@ -86,19 +95,22 @@ def main():
     model = Transformer(vocab_size)
     optimizer = tf.keras.optimizers.Adam(lr=learning_rate)
     for iter in range(max_iters):
-        # every once in a while evaluate the loss on train and val sets
+        #* sample a batch of data
+        xb, yb = get_batch(train_data)
+        b = fourier_mapping(xb)
+        
+        #* evaluate the loss & update the weights
+        with tf.GradientTape() as tape:
+            logits, loss = model(xb, yb)
+            grads = tape.gradient(loss,model.trainable_weights)
+            optimizer.apply_gradients(zip(grads,model.trainable_weights))
+        
+        #*Printing train-val losses
         if iter % eval_interval == 0 or iter == max_iters - 1:
             losses = estimate_loss(model, train_data, val_data)
             print(f"step {iter}: train loss {losses['train']:.4f}, val loss {losses['val']:.4f}")
 
-        # sample a batch of data
-        xb, yb = get_batch(train_data)
-        b = fourier_mapping(xb)
-        with tf.GradientTape() as tape:
-            # evaluate the loss
-            logits, loss = model(xb, yb)
-            grads = tape.gradient(loss,model.trainable_weights)
-            optimizer.apply_gradients(zip(grads,model.trainable_weights))
-
 if __name__ == "__main__":
+    #mirrored_strategy = tf.distribute.MirroredStrategy()
+    #with mirrored_strategy.scope():
     main()
