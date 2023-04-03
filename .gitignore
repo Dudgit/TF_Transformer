@@ -24,3 +24,4 @@ __pycache__/
     .coverage.*
 
 input.txt
+data
