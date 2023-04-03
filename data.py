@@ -25,13 +25,14 @@ def get_track(pth:str = DEF_FOLD_PATH)->pd.DataFrame:
     for i,idx in enumerate(hit.index.unique()):
         h1 = hit.loc[idx].reset_index()
         a1 = ahit.loc[idx].reset_index()
-        h1["particleID"] = i 
+        h1["particleID"] = int(i) 
         concated = pd.concat([h1,a1],axis=1)
         tracks = pd.concat([tracks,concated],ignore_index=True)
 
     tracks.posZ = tracks.Layer
 
     tracks.drop(["trackID","eventID","Layer","EventID","TrackID"],axis=1,inplace=True)
+    tracks.set_index(["particleID","posZ"],inplace=True)
     return tracks
 
 
