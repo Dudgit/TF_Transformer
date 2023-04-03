@@ -15,10 +15,23 @@ def get_track(pth:str = DEF_FOLD_PATH)->pd.DataFrame:
     ahit = ahit[ahit.ParentID==0]
     hit.drop("parentID",axis=1,inplace=True)
     ahit.drop("ParentID",axis=1,inplace=True)
-    tracks = pd.merge(ahit,hit,left_on=["TrackID","EventID"],right_on=["trackID","eventID"],how="inner")
+
+    hit.set_index(["eventID","trackID"],inplace=True)
+    ahit.set_index(["EventID","TrackID"],inplace=True)
+
+    tracks = pd.DataFrame([],columns=[*hit.columns,*ahit.columns])
+    
+    #* Ezt biztos ,hogy lehet valahogy okosabban is ://
+    for i,idx in enumerate(hit.index.unique()):
+        h1 = hit.loc[idx].reset_index()
+        a1 = ahit.loc[idx].reset_index()
+        h1["particleID"] = i 
+        concated = pd.concat([h1,a1],axis=1)
+        tracks = pd.concat([tracks,concated],ignore_index=True)
+
     tracks.posZ = tracks.Layer
-    tracks.set_index(["EventID","TrackID"],inplace=True)
-    tracks.drop(["trackID","eventID","Layer"],axis=1,inplace=True)
+
+    tracks.drop(["trackID","eventID","Layer","EventID","TrackID"],axis=1,inplace=True)
     return tracks
 
 
