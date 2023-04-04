@@ -1,6 +1,7 @@
 import pandas as pd
 import numpy as np
 import glob
+import tensorflow as tf
 DEF_FOLD_PATH = glob.glob("data/*.npy")
 
 
@@ -33,19 +34,58 @@ def get_track(pth:str = DEF_FOLD_PATH)->pd.DataFrame:
 
     tracks.drop(["trackID","eventID","Layer","EventID","TrackID"],axis=1,inplace=True)
     tracks.set_index(["particleID","posZ"],inplace=True)
+    tracks.dropna(inplace=True)
     return tracks
 
 
 MAX_LAYER = 25
 
-def padBatch(df):
-    trL = df.posZ.max()+1
-    numParticles = int(df.index.size/trL)
+def padBatch(df:pd.DataFrame, pidx:int)->tf.Tensor:
+    trL = df.index.max()+1
+    padding = tf.constant([[0,25-int(trL)],[0,0]])
+
+    preBatch = df[0*int(trL):1*int(trL)].astype(np.float32)
+    preBatch.reset_index(inplace=True)
     
-    padding = tf.constant([[0,MAX_LAYER-trL],[0,0]])
-    res =  tf.pad(df[0*trL:1*trL],padding,"CONSTANT")
-    for pidx in range(1,numParticles-1):
-        padding = tf.constant([[0,MAX_LAYER-trL],[0,0]])
-        r1 = tf.pad(df[pidx*trL:(pidx+1)*trL],padding,"CONSTANT")
-        res = tf.concat([res,r1],0) 
-    return res 
+    res =  tf.pad( preBatch,padding,"CONSTANT")
+    
+    idxpadding = tf.constant([[0,0],[1,0]])
+    res = tf.pad(res,idxpadding,"CONSTANT",constant_values=pidx)
+    return res
+
+def getBatch(tracks:pd.DataFrame,batch_size:int=32)->tf.Tensor:
+    """
+    Creates the batch with padding.  
+    The structure is the following: 
+    
+    [particleID, posZ, (posX, posY, edep,) ('dX', 'dY', 'dZ', 'Ekine')]  
+    
+    The first bunch belongs to training the second to target data.  
+    - Default shape: (32,25,9)  
+    - Shape explained: (batch_size, max_track_length, feature_size)  
+    """
+    pidx = tracks.index.get_level_values(0).unique()
+    bidxs = np.random.choice(pidx,batch_size)
+    batch = tf.convert_to_tensor([padBatch(tracks.loc[bidx],bidx) for bidx in bidxs])
+    return batch
+
+def preprocessBatch(X:tf.Tensor)->tf.Tensor:
+    """
+    Random Feature Function for the batch.  
+    """
+    xpos = X[:,:,2]
+    ypos = X[:,:,3]
+    edep = X[:,:,4]
+    
+    X2 = X.numpy()
+    lx = tf.keras.layers.experimental.RandomFourierFeatures(25)
+    
+    xpos = lx(xpos)
+    ypos = lx(ypos)
+    edep = lx(edep)
+    
+    X2[:,:,2] = xpos
+    X2[:,:,3] = ypos
+    X2[:,:,4] = edep
+
+    return tf.convert_to_tensor(X2)
