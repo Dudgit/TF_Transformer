@@ -9,3 +9,6 @@ n_embd = 384
 n_head = 6
 n_layer = 6
 dropout = 0.2
+EPOCHS = 1
+MAX_LAYER = 25
+train_steps = 1

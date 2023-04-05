@@ -1,7 +1,7 @@
 import tensorflow as tf
 from hyperparams import *
 
-lossF = tf.keras.losses.SparseCategoricalCrossentropy(from_logits=True
+lossF = tf.keras.losses.CategoricalCrossentropy(from_logits=True
 #,reduction=tf.keras.losses.Reduction.NONE
 )
 class FeedFoward(tf.Module):
@@ -14,7 +14,7 @@ class FeedFoward(tf.Module):
     def __init__(self, n_embd):
         super().__init__()
         self.net = tf.keras.models.Sequential([
-            tf.keras.layers.Dense(units = 4 * n_embd ,activation='relu',input_shape=(n_embd,) ),
+            tf.keras.layers.Dense(units = 4 * n_embd ,activation='relu',input_shape=(3,n_embd,) ),
             tf.keras.layers.Dense(units = n_embd),
             tf.keras.layers.Dropout(dropout),
         ])
@@ -65,32 +65,42 @@ class BlockStack(tf.Module):
 class Transformer(tf.keras.Model):
     def __init__(self, vocab_size):
         super().__init__(vocab_size)
-        self.rand_four =  tf.keras.layers.experimental.RandomFourierFeatures(n_embd,kernel_initializer='gaussian',dtype=tf.int64)
         self.token_embedding_table = tf.keras.layers.Embedding(vocab_size, n_embd)
         self.position_embedding_table =tf.keras.layers.Embedding(block_size, n_embd)
         self.blocks = BlockStack(n_embd, n_head, n_layer)
         self.ln_f = tf.keras.layers.LayerNormalization() # final layer norm
-        self.lm_head = tf.keras.layers.Dense(vocab_size)
+        self.lm_head = tf.keras.layers.Dense(1,activation ="softmax")
 
     def __call__(self, idx, targets=None):
         B, T = idx.shape
         # idx and targets are both (B,T) tensor of integers
         tok_emb = self.token_embedding_table(idx) # (B,T,C)
         pos_emb = self.position_embedding_table(tf.range(T)) # (T,C)
-        x = tok_emb + pos_emb # (B,T,C)
+        x = tok_emb + pos_emb  #(B,T,C)
 
         x = self.blocks(x) # (B,T,C)
-        #x = self.rand_four(x)
         x = self.ln_f(x) # (B,T,C)
         logits = self.lm_head(x) # (B,T,vocab_size)
 
         if targets is None:
             loss = None
         else:
+            """ #* This might be reused, but so far trying different approach.  
             B, T, C = logits.shape
             logits = tf.reshape(logits, shape = (B*T, C))
 
             targets = tf.reshape(targets, shape = (B*T,1) )
+            """
             loss = lossF(targets, logits)
 
         return logits, loss
+    
+"""
+Training loop:
+X_L =(x,y,dE)
+
+model input(X_L(i), X_L(i-1))     SHAPE(B,P,3,3)
+
+
+
+"""

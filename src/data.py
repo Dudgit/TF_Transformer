@@ -1,18 +1,30 @@
 import pandas as pd
 import numpy as np
 import glob
+from hyperparams import MAX_LAYER
 import tensorflow as tf
 DEF_FOLD_PATH = glob.glob("data/*.npy")
 
 
+def convert_angles(df:pd.DataFrame)->pd.DataFrame:
+    """
+    Converts the angles to cartesian coordinates.
+    """
+    df["lat"] = df.dX/df.dY
+    df["long"] = df.dZ /np.sqrt( (df.dX**2+df.dY**2 +df.dZ**2))
+    return df
+
 def get_track(pth:str = DEF_FOLD_PATH)->pd.DataFrame:
     hit = pd.DataFrame(np.load(pth[0]))
+    
     ahit = pd.DataFrame(np.load(pth[1],allow_pickle=True)) 
+    ahit = convert_angles(ahit)
+
     hit['Layer'] =  2*(hit['volumeID[2]'])+hit['volumeID[3]']
     hit = hit[["trackID","eventID","parentID","posX","posY","posZ","Layer","edep"] ]
     hit = hit[hit.parentID==0]
 
-    ahit = ahit[["TrackID","EventID","ParentID","dX","dY","dZ","Ekine"]]
+    ahit = ahit[["TrackID","EventID","ParentID","lat","long","Ekine"]]
     ahit = ahit[ahit.ParentID==0]
     hit.drop("parentID",axis=1,inplace=True)
     ahit.drop("ParentID",axis=1,inplace=True)
@@ -38,7 +50,7 @@ def get_track(pth:str = DEF_FOLD_PATH)->pd.DataFrame:
     return tracks
 
 
-MAX_LAYER = 25
+
 
 def padBatch(df:pd.DataFrame, pidx:int)->tf.Tensor:
     trL = df.index.max()+1
