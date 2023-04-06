@@ -12,16 +12,29 @@ os.environ['TF_CPP_MIN_LOG_LEVEL'] = '1'
 import sys
 sys.path.append('src/')
 from data import get_track, preprocessBatch, getBatch
-from src.hyperparams import EPOCHS,train_steps
+from src.hyperparams import EPOCHS,train_steps, MAX_LAYER
 import tensorflow as tf
 
 
 if __name__ == "__main__":
     tracks = get_track()
-    
+    model = Transformer(1000)
     for _ in EPOCHS:
-        for _ in train_steps:
-            batch = getBatch(tracks,batch_size=32)
-            X = batch[:,:,:5]
-            Y = tf.gather(batch,[0,1,5,6,7,8],axis = 2)
-            X = preprocessBatch(X)
+        #*Creating batch from data
+        batch = getBatch(tracks,batch_size=32)
+        #* Parse batch to train and target data.
+        X = batch[:,:,:5]
+        X = preprocessBatch(X) #*Random Fouirier features.
+        Y = tf.gather(batch,[0,1,5,6,7],axis = 2)
+
+        for lidx in range(MAX_LAYER):
+            #* Train and target data on the corresponding layer.
+            Xl = X[:,-lidxd,2:]
+            Yl = Y[:,-lidxd,2:] 
+            
+            #* shuffle data by random permutation.
+            pidxs = np.random.permutation(Xt.shape[0])
+            Xlp = tf.gather(Xl,pidxs)
+            Ylp = tf.gather(Yl,pidxs)
+            
+            preds, loss = model(Xlp,Ylp)
