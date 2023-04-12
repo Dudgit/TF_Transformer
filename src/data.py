@@ -1,10 +1,11 @@
 import pandas as pd
 import numpy as np
 import glob
-from hyperparams import MAX_LAYER
+from hyperparams import MAX_LAYER, XMIN, XMAX
 import tensorflow as tf
-DEF_FOLD_PATH = glob.glob("data/*.npy")
-
+import math
+DEF_ALL_FOLD_PATH = glob.glob("data/*AllPSA.npy")
+DEF_HIT_PATH = glob.glob("data/*.hits.npy")
 
 def convert_angles(df:pd.DataFrame)->pd.DataFrame:
     """
@@ -14,10 +15,14 @@ def convert_angles(df:pd.DataFrame)->pd.DataFrame:
     df["long"] = df.dZ /np.sqrt( (df.dX**2+df.dY**2 +df.dZ**2))
     return df
 
-def get_track(pth:str = DEF_FOLD_PATH)->pd.DataFrame:
-    hit = pd.DataFrame(np.load(pth[0]))
+def get_track(apth:str = DEF_ALL_FOLD_PATH,hpth:str = DEF_HIT_PATH )->pd.DataFrame:
+    """
+    Load the data from the files and create the track dataframe.
+    TODO: Stepping on files.
+    """
+    hit = pd.DataFrame(np.load(hpth[0]))
     
-    ahit = pd.DataFrame(np.load(pth[1],allow_pickle=True)) 
+    ahit = pd.DataFrame(np.load(apth[0],allow_pickle=True)) 
     ahit = convert_angles(ahit)
 
     hit['Layer'] =  2*(hit['volumeID[2]'])+hit['volumeID[3]']
@@ -81,6 +86,21 @@ def getBatch(tracks:pd.DataFrame,batch_size:int=32)->tf.Tensor:
     batch = tf.convert_to_tensor([padBatch(tracks.loc[bidx],bidx) for bidx in bidxs])
     return batch
 
+
+def fourier_mapping(x, target_dim=16, scale=1.):
+    
+    B = tf.random.uniform((target_dim, x.shape[1])) * scale  
+    omega_min = 2*math.pi/XMAX
+    omega_max = 2*math.pi/XMIN
+
+    omega = tf.random.uniform( x.shape[1], minval=omega_min, maxval=omega_max)
+    x_proj=tf.math.multiply(omega,x) @ tf.transpose(B)
+    x_proj = tf.concat([tf.math.sin(x_proj), tf.math.cos(x_proj)], axis=-1)
+    return x_proj
+
+
+
+
 def preprocessBatch(X:tf.Tensor)->tf.Tensor:
     """
     Random Feature Function for the batch.  
@@ -90,7 +110,7 @@ def preprocessBatch(X:tf.Tensor)->tf.Tensor:
     edep = X[:,:,4]
     
     X2 = X.numpy()
-    lx = tf.keras.layers.experimental.RandomFourierFeatures(25)
+    lx = fourier_mapping #tf.keras.layers.experimental.RandomFourierFeatures(25)
     
     xpos = lx(xpos)
     ypos = lx(ypos)
