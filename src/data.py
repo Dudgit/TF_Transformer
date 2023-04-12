@@ -87,23 +87,21 @@ def getBatch(tracks:pd.DataFrame,batch_size:int=32)->tf.Tensor:
     return batch
 
 
-def fourier_mapping(x:tf.Tensor, scale:float =1.,nlayers:int = 25)->tf.Tensor:
+def fourier_mapping(X:tf.Tensor, scale:float =1.,nlayers:int = 25,target_dim:int = 16)->tf.Tensor:
     """
     Fourier mapping data.  
-    Keeps dimensions.  
-    TODO: Preprocessing should be implemented inside.  
+    Keeps dimensions.
     """
-    B = tf.random.uniform((nlayers,x.shape[1] )) * scale 
+    B = tf.random.uniform((target_dim,)) * scale
+    B = tf.cast(B,tf.float32)
+
+    x = tf.cast(tf.tile(tf.expand_dims(X,axis=-1),[1,1,target_dim]),tf.float32)
     omega_min = 2*math.pi/XMAX
     omega_max = 2*math.pi/XMIN
-
-    omega = tf.random.uniform( (1,x.shape[1]) , minval=omega_min, maxval=omega_max)
-    x = tf.cast(x,tf.float32)
-    omega = tf.cast(omega,tf.float32)
-
-    x_proj=tf.math.multiply(omega,x) @ tf.transpose(B)
-    #x_proj = tf.concat([tf.math.sin(x_proj), tf.math.cos(x_proj)], axis=-1)
-    return tf.math.cos(x_proj)
+    omega = tf.random.uniform( shape=[target_dim,] , minval=omega_min, maxval=omega_max)
+    x = tf.math.multiply(x,tf.expand_dims(omega,axis=0))
+    x = tf.math.multiply(x,B)
+    return tf.math.cos(x)
 
 
 
@@ -119,9 +117,9 @@ def preprocessBatch(X:tf.Tensor,tembed:int = 16)->tf.Tensor:
     
     lx = fourier_mapping
     
-    xpos = tf.stack([lx(xpos) for _ in range(tembed)],axis = 2)
-    ypos = tf.stack([lx(ypos) for _ in range(tembed)],axis = 2)
-    edep = tf.stack([lx(edep) for _ in range(tembed)],axis = 2)
+    xpos =lx(xpos)
+    ypos =lx(ypos)
+    edep =lx(edep)
     
     
 
