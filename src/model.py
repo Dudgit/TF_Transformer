@@ -64,6 +64,12 @@ class BlockStack(tf.Module):
         return x
 
 class RandomFourierFeatures(tf.keras.layers.Layer):
+    """
+    Random Fourier Feature layer, for pre-processing the input data.    
+    Custom Layer for specifically PCT data. 
+    From shape (Batch,Layer) to (Batch,Layer,Embedding)  
+
+    """
     def __init__(self,target_dim:int = 16,xmin:int=-160,xmax:int=160,scale:int = 1.):
         super().__init__()
         self.target_dim = target_dim
@@ -71,16 +77,30 @@ class RandomFourierFeatures(tf.keras.layers.Layer):
         self.xmax = xmax
         self.scale = scale
         
+        # Creating the constant values, that we will add to the result
+        # target dimension times, so for a Batch,Layer composition we will add only one constant value
+        # For each embedding it's a different value from a uniform distribution
+        #TODO: scale should be updatet to dx detector resolution
         B = tf.random.uniform((target_dim,)) * scale
         self.B = tf.cast(B,tf.float32)
         
+        
+        # Creating omega valuse for multiplication
+        # Same manner as used for B
         omega_min = 2*math.pi/XMAX
         omega_max = 2*math.pi/XMIN
         self.omega = tf.random.uniform( shape=[target_dim,] , minval=omega_min, maxval=omega_max)
-        
+
     def call(self,X):
+        # Expanding X to target dimension
+        # Every value inside the batch,layer composition will be repeated target_dim times
+        # From shape (Batch,Layer,Feature) to (Batch,Layer,Feature,Embedding) and so X[0,0,0] will be repeated target_dim times
         x = tf.cast(tf.tile(tf.expand_dims(X,axis=-1),[1,1,self.target_dim]),tf.float32)
+
+        # Creating a random fourier feature mapping
+        # Formula used f(x_n) = cos(omega_n * x_n + B_n) 
         x = tf.math.add(tf.math.multiply(x,tf.expand_dims(self.omega,axis=0)) ,self.B)
+        
         return tf.math.cos(x)
 
 
