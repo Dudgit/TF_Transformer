@@ -87,37 +87,42 @@ def getBatch(tracks:pd.DataFrame,batch_size:int=32)->tf.Tensor:
     return batch
 
 
-def fourier_mapping(x, target_dim=16, scale=1.):
-    
-    B = tf.random.uniform((target_dim, x.shape[1])) * scale  
+def fourier_mapping(x:tf.Tensor, scale:float =1.,nlayers:int = 25)->tf.Tensor:
+    """
+    Fourier mapping data.  
+    Keeps dimensions.  
+    TODO: Preprocessing should be implemented inside.  
+    """
+    B = tf.random.uniform((nlayers,x.shape[1] )) * scale 
     omega_min = 2*math.pi/XMAX
     omega_max = 2*math.pi/XMIN
 
-    omega = tf.random.uniform( x.shape[1], minval=omega_min, maxval=omega_max)
+    omega = tf.random.uniform( (1,x.shape[1]) , minval=omega_min, maxval=omega_max)
+    x = tf.cast(x,tf.float32)
+    omega = tf.cast(omega,tf.float32)
+
     x_proj=tf.math.multiply(omega,x) @ tf.transpose(B)
-    x_proj = tf.concat([tf.math.sin(x_proj), tf.math.cos(x_proj)], axis=-1)
-    return x_proj
+    #x_proj = tf.concat([tf.math.sin(x_proj), tf.math.cos(x_proj)], axis=-1)
+    return tf.math.cos(x_proj)
 
 
 
 
-def preprocessBatch(X:tf.Tensor)->tf.Tensor:
+def preprocessBatch(X:tf.Tensor,tembed:int = 16)->tf.Tensor:
     """
-    Random Feature Function for the batch.  
+    Random Feature Function for the batch.   
+    From input shape (BATCH,Layer,Feature) to (BATCH,Layer,Feature,Embedding)  
     """
     xpos = X[:,:,2]
     ypos = X[:,:,3]
     edep = X[:,:,4]
     
-    X2 = X.numpy()
-    lx = fourier_mapping #tf.keras.layers.experimental.RandomFourierFeatures(25)
+    lx = fourier_mapping
     
-    xpos = lx(xpos)
-    ypos = lx(ypos)
-    edep = lx(edep)
+    xpos = tf.stack([lx(xpos) for _ in range(tembed)],axis = 2)
+    ypos = tf.stack([lx(ypos) for _ in range(tembed)],axis = 2)
+    edep = tf.stack([lx(edep) for _ in range(tembed)],axis = 2)
     
-    X2[:,:,2] = xpos
-    X2[:,:,3] = ypos
-    X2[:,:,4] = edep
+    
 
-    return tf.convert_to_tensor(X2)
+    return tf.stack([xpos,ypos,edep],axis=2)

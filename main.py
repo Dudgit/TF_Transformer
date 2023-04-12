@@ -27,15 +27,13 @@ if __name__ == "__main__":
         print(batch.shape)
         #* Parse batch to train and target data.
         X = batch[:,:,:5]
-        print(X.shape)
-        print("\n\n")
         X = preprocessBatch(X) #*Random Fouirier features.
-        Y = tf.gather(batch,[0,1,5,6,7],axis = 2)
+        Y = tf.gather(batch,[5,6,7],axis = 2)
 
         for lidx in range(MAX_LAYER):
             #* Train and target data on the corresponding layer.
-            Xl = X[:,-lidx,2:]
-            Yl = Y[:,-lidx,2:] 
+            Xl = X[:,-lidx]
+            Yl = Y[:,-lidx] 
             
             #* shuffle data by random permutation.
             pidxs = np.random.permutation(Xl.shape[0])
