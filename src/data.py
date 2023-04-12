@@ -87,29 +87,45 @@ def getBatch(tracks:pd.DataFrame,batch_size:int=32)->tf.Tensor:
     return batch
 
 
-def fourier_mapping(X:tf.Tensor, scale:float =1.,nlayers:int = 25,target_dim:int = 16)->tf.Tensor:
+def fourier_mapping(X:tf.Tensor, scale:float =1.,target_dim:int = 16)->tf.Tensor:
     """
     Fourier mapping data.  
-    Keeps dimensions.
+    From shape (Batch,Layer) to (Batch,Layer,Embedding)
     """
+    # Expanding X to target dimension
+    # Every value inside the batch,layer composition will be repeated target_dim times
+    # From shape (Batch,Layer,Feature) to (Batch,Layer,Feature,Embedding) and so X[0,0,0] will be repeated target_dim times
+    x = tf.cast(tf.tile(tf.expand_dims(X,axis=-1),[1,1,target_dim]),tf.float32)
+
+
+    # Creating the constant values, that we will add to the result
+    # target dimension times, so for a Batch,Layer composition we will add only one constant value
+    # For each embedding it's a different value from a uniform distribution
+    #TODO: scale should be updatet to dx detector resolution
     B = tf.random.uniform((target_dim,)) * scale
     B = tf.cast(B,tf.float32)
 
-    x = tf.cast(tf.tile(tf.expand_dims(X,axis=-1),[1,1,target_dim]),tf.float32)
+
+    # Creating omega valuse for multiplication
+    # Same manner as used for B
     omega_min = 2*math.pi/XMAX
     omega_max = 2*math.pi/XMIN
     omega = tf.random.uniform( shape=[target_dim,] , minval=omega_min, maxval=omega_max)
-    x = tf.math.multiply(x,tf.expand_dims(omega,axis=0))
-    x = tf.math.multiply(x,B)
+
+    # Creating a random fourier feature mapping
+    # Formula used f(x_n) = cos(omega_n * x_n + B_n) 
+    x = tf.math.add(tf.math.multiply(x,tf.expand_dims(omega,axis=0)) ,B)
     return tf.math.cos(x)
 
 
 
 
-def preprocessBatch(X:tf.Tensor,tembed:int = 16)->tf.Tensor:
+def preprocessBatch(X:tf.Tensor,)->tf.Tensor:
     """
     Random Feature Function for the batch.   
     From input shape (BATCH,Layer,Feature) to (BATCH,Layer,Feature,Embedding)  
+    
+    !Note:So far the indexing features are not used and may be not stored. In that case X slice should start with 0 and not 2
     """
     xpos = X[:,:,2]
     ypos = X[:,:,3]
