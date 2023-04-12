@@ -1,5 +1,6 @@
 import tensorflow as tf
 from hyperparams import *
+import math
 
 lossF = tf.keras.losses.CategoricalCrossentropy(from_logits=True
 #,reduction=tf.keras.losses.Reduction.NONE
@@ -61,6 +62,29 @@ class BlockStack(tf.Module):
         for layer in self.layers:
             x = layer(x)
         return x
+
+class RandomFourierFeatures(tf.keras.layers.Layer):
+    def __init__(self,target_dim:int = 16,xmin:int=-160,xmax:int=160,scale:int = 1.):
+        super().__init__()
+        self.target_dim = target_dim
+        self.xmin = xmin
+        self.xmax = xmax
+        self.scale = scale
+        
+        B = tf.random.uniform((target_dim,)) * scale
+        self.B = tf.cast(B,tf.float32)
+        
+        omega_min = 2*math.pi/XMAX
+        omega_max = 2*math.pi/XMIN
+        self.omega = tf.random.uniform( shape=[target_dim,] , minval=omega_min, maxval=omega_max)
+        
+    def call(self,X):
+        x = tf.cast(tf.tile(tf.expand_dims(X,axis=-1),[1,1,self.target_dim]),tf.float32)
+        x = tf.math.add(tf.math.multiply(x,tf.expand_dims(self.omega,axis=0)) ,self.B)
+        return tf.math.cos(x)
+
+
+
 
 class Transformer(tf.keras.Model):
     def __init__(self, vocab_size):
