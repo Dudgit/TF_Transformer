@@ -70,17 +70,19 @@ class RandomFourierFeatures(tf.keras.layers.Layer):
         self.xmin = xmin
         self.xmax = xmax
         self.scale = scale
-        
-        B = tf.random.uniform((target_dim,)) * scale
-        self.B = tf.cast(B,tf.float32)
-        
-        omega_min = 2*math.pi/XMAX
-        omega_max = 2*math.pi/XMIN
-        self.omega = tf.random.uniform( shape=[target_dim,] , minval=omega_min, maxval=omega_max)
+
         
     def call(self,X):
+        B = tf.random.uniform((self.target_dim,)) * self.scale
+        B = tf.cast(B,tf.float32)
+        
+        omega_min = 2*math.pi/self.xmax
+        omega_max = 2*math.pi/self.xmin
+
+        omega = tf.random.uniform( shape=[self.target_dim,] , minval=omega_min, maxval=omega_max)
+
         x = tf.cast(tf.tile(tf.expand_dims(X,axis=-1),[1,1,self.target_dim]),tf.float32)
-        x = tf.math.add(tf.math.multiply(x,tf.expand_dims(self.omega,axis=0)) ,self.B)
+        x = tf.math.add(tf.math.multiply(x,tf.expand_dims(omega,axis=0)) ,B)
         return tf.math.cos(x)
 
 
@@ -89,42 +91,35 @@ class RandomFourierFeatures(tf.keras.layers.Layer):
 class Transformer(tf.keras.Model):
     def __init__(self, vocab_size):
         super().__init__(vocab_size)
+        self.ffeatures = RandomFourierFeatures()
+
         self.token_embedding_table = tf.keras.layers.Embedding(vocab_size, n_embd)
         self.position_embedding_table =tf.keras.layers.Embedding(block_size, n_embd)
         self.blocks = BlockStack(n_embd, n_head, n_layer)
         self.ln_f = tf.keras.layers.LayerNormalization() # final layer norm
         self.lm_head = tf.keras.layers.Dense(1,activation ="softmax")
 
-    def __call__(self, idx, targets=None):
-        B, T = idx.shape
-        # idx and targets are both (B,T) tensor of integers
-        tok_emb = self.token_embedding_table(idx) # (B,T,C)
-        pos_emb = self.position_embedding_table(tf.range(T)) # (T,C)
-        x = tok_emb + pos_emb  #(B,T,C)
+    def __call__(self, X, targets=None):       
+        # Creating fourier embedded features
+        xpos = self.ffeatures(X[:,:,0])
+        ypos = self.ffeatures(X[:,:,1])
+        dE = self.ffeatures(X[:,:,2])
+        XS = tf.stack([xpos,ypos,dE],axis=2)# X stacked... Other name would be better perhaps.
+        loss = []
+        for lidx in range(idx.shape[1]):
+            #TODO: hozzáadni az előző layereket is.
+            idx = XS[:,lidx]
+            B, _ , T = idx.shape
 
-        x = self.blocks(x) # (B,T,C)
-        x = self.ln_f(x) # (B,T,C)
-        logits = self.lm_head(x) # (B,T,vocab_size)
+            tok_emb = self.token_embedding_table(idx) # (B,3,F_embd)
+            pos_emb = self.position_embedding_table(tf.range(T)) # Valszeg nem lesz jó a diemnzió, valamit ügyködni kell
+            x = tok_emb + pos_emb  #(B,T,C)
 
-        if targets is None:
-            loss = None
-        else:
-            """ #* This might be reused, but so far trying different approach.  
-            B, T, C = logits.shape
-            logits = tf.reshape(logits, shape = (B*T, C))
-
-            targets = tf.reshape(targets, shape = (B*T,1) )
-            """
-            loss = lossF(targets, logits)
-
-        return logits, loss
+            x = self.blocks(x) # (B,T,C)
+            x = self.ln_f(x) # (B,T,C)
+            
+            #? Add bipartete matching here 
+            logits = self.lm_head(x) # (B,T,vocab_size)
+            loss.append( lossF(targets, logits) if targets is not None else None)
+        return logits, tf.reduce_mean(loss)
     
-"""
-Training loop:
-X_L =(x,y,dE)
-
-model input(X_L(i), X_L(i-1))     SHAPE(B,P,3,3)
-
-
-
-"""
