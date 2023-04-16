@@ -18,7 +18,6 @@ import tensorflow as tf
 import glob
 import numpy as np
 
-#TODO: The layernumber and the particle ID might not needed to keep, so far they are here for debugging
 
 if __name__ == "__main__":
     
@@ -48,3 +47,5 @@ if __name__ == "__main__":
             optimizer.apply_gradients(zip(grads, model.trainable_weights))
             
             print(f"Current loss is :{loss:.4f} ")
+
+#TODO: The layernumber and the particle ID might not needed to keep, so far they are here for debugging

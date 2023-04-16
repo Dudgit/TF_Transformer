@@ -6,9 +6,9 @@ lossF = tf.keras.losses.CategoricalCrossentropy(from_logits=False)
 #,reduction=tf.keras.losses.Reduction.NONE
 class FeedFoward(tf.Module):
     """ 
-    Used the format shown in Adnrej Karphaty's video.
-    It should give the same results, since it is the same in tf.keras.
-    HOPEEEEEEE.
+    Used the format shown in Adnrej Karphaty's video.  
+    Only its tensorflow version.  
+
     """
 
     def __init__(self, n_embd):
@@ -91,12 +91,13 @@ class RandomFourierFeatures(tf.keras.layers.Layer):
         return tf.math.cos(x)
 
 class Transformer(tf.keras.Model):
+    """
+    Transformer model for PCT data.  
+    The layer by layer training is inside the model call.  
+    """
     def __init__(self, vocab_size = None):
         super().__init__()
         self.ffeatures = RandomFourierFeatures()
-
-        #self.token_embedding_table = tf.keras.layers.Embedding(vocab_size, n_embd)
-        #self.position_embedding_table =tf.keras.layers.Embedding(block_size, n_embd)
         self.blocks = BlockStack(n_embd, n_head, n_layer)
         self.ln_f = tf.keras.layers.LayerNormalization() # final layer norm
         self.flat_l = tf.keras.layers.Flatten()
@@ -110,6 +111,7 @@ class Transformer(tf.keras.Model):
         XS = tf.stack([xpos,ypos,dE],axis=2)# X stacked... Other name would be better perhaps.
         
         loss = []
+        preds = []
         for lidx in range(1, XS.shape[1]):
             xc = XS[:,-lidx]
             xp = XS[:,-lidx-1]
@@ -120,6 +122,7 @@ class Transformer(tf.keras.Model):
             x = self.flat_l(x)
             logits = self.outp(x)
 
+            preds.append(logits)
             loss.append( lossF(targets[:,-lidx], logits) if targets is not None else None)
         
         return logits, tf.reduce_mean(loss)
