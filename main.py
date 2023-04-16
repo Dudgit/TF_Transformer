@@ -11,7 +11,7 @@ os.environ['TF_CPP_MIN_LOG_LEVEL'] = '1'
 
 import sys
 sys.path.append('src/')
-from data import get_track, preprocessBatch, getBatch
+from data import get_track, getBatch
 from src.hyperparams import EPOCHS,train_steps
 from src.model import Transformer
 import tensorflow as tf
