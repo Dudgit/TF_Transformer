@@ -24,7 +24,6 @@ def convert_angles(df:pd.DataFrame)->pd.DataFrame:
 def get_track(apth:str = DEF_ALL_FOLD_PATH,hpth:str = DEF_HIT_PATH )->pd.DataFrame:
     """
     Load the data from the files and create the track dataframe.
-    TODO: Stepping on files.
     """
     hit = pd.DataFrame(np.load(hpth))
     
