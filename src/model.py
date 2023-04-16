@@ -2,9 +2,8 @@ import tensorflow as tf
 from hyperparams import *
 import math
 
-lossF = tf.keras.losses.CategoricalCrossentropy(from_logits=True
+lossF = tf.keras.losses.CategoricalCrossentropy(from_logits=False)
 #,reduction=tf.keras.losses.Reduction.NONE
-)
 class FeedFoward(tf.Module):
     """ 
     Used the format shown in Adnrej Karphaty's video.
@@ -70,7 +69,7 @@ class RandomFourierFeatures(tf.keras.layers.Layer):
     From shape (Batch,Layer) to (Batch,Layer,Embedding)  
 
     """
-    def __init__(self,target_dim:int = 16,xmin:int=-160,xmax:int=160,scale:int = 1.):
+    def __init__(self,target_dim:int = n_embd//2,xmin:int=-160,xmax:int=160,scale:int = 1.):
         super().__init__()
         self.target_dim = target_dim
         self.xmin = xmin
@@ -91,19 +90,17 @@ class RandomFourierFeatures(tf.keras.layers.Layer):
         x = tf.math.add(tf.math.multiply(x,tf.expand_dims(omega,axis=0)) ,B)
         return tf.math.cos(x)
 
-
-
-
 class Transformer(tf.keras.Model):
-    def __init__(self, vocab_size):
-        super().__init__(vocab_size)
+    def __init__(self, vocab_size = None):
+        super().__init__()
         self.ffeatures = RandomFourierFeatures()
 
-        self.token_embedding_table = tf.keras.layers.Embedding(vocab_size, n_embd)
-        self.position_embedding_table =tf.keras.layers.Embedding(block_size, n_embd)
+        #self.token_embedding_table = tf.keras.layers.Embedding(vocab_size, n_embd)
+        #self.position_embedding_table =tf.keras.layers.Embedding(block_size, n_embd)
         self.blocks = BlockStack(n_embd, n_head, n_layer)
         self.ln_f = tf.keras.layers.LayerNormalization() # final layer norm
-        self.lm_head = tf.keras.layers.Dense(1,activation ="softmax")
+        self.flat_l = tf.keras.layers.Flatten()
+        self.outp = tf.keras.layers.Dense(3,activation ="softmax")
 
     def __call__(self, X, targets=None):       
         # Creating fourier embedded features
@@ -111,17 +108,20 @@ class Transformer(tf.keras.Model):
         ypos = self.ffeatures(X[:,:,1])
         dE = self.ffeatures(X[:,:,2])
         XS = tf.stack([xpos,ypos,dE],axis=2)# X stacked... Other name would be better perhaps.
+        
         loss = []
         for lidx in range(1, XS.shape[1]):
-            #TODO: hozzáadni az előző layereket is.
             xc = XS[:,-lidx]
             xp = XS[:,-lidx-1]
             x = tf.concat([xc,xp],axis=2) 
-            x = self.blocks(x) # (B,T,C)
-            x = self.ln_f(x) # (B,T,C)
             
-            #? Add bipartete matching here 
-            logits = self.lm_head(x) # (B,T,vocab_size)
-            loss.append( lossF(targets, logits) if targets is not None else None)
+            x = self.blocks(x)
+            x = self.ln_f(x)
+            x = self.flat_l(x)
+            logits = self.outp(x)
+
+            loss.append( lossF(targets[:,-lidx], logits) if targets is not None else None)
+        
         return logits, tf.reduce_mean(loss)
     
+#TODO: fit inside the model class

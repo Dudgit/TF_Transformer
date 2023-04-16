@@ -4,6 +4,12 @@ import glob
 from hyperparams import MAX_LAYER, XMIN, XMAX
 import tensorflow as tf
 import math
+
+import pandas as pd
+import warnings
+
+warnings.simplefilter(action='ignore', category=pd.errors.PerformanceWarning)
+
 DEF_ALL_FOLD_PATH = glob.glob("data/*AllPSA.npy")
 DEF_HIT_PATH = glob.glob("data/*.hits.npy")
 
@@ -20,9 +26,9 @@ def get_track(apth:str = DEF_ALL_FOLD_PATH,hpth:str = DEF_HIT_PATH )->pd.DataFra
     Load the data from the files and create the track dataframe.
     TODO: Stepping on files.
     """
-    hit = pd.DataFrame(np.load(hpth[0]))
+    hit = pd.DataFrame(np.load(hpth))
     
-    ahit = pd.DataFrame(np.load(apth[0],allow_pickle=True)) 
+    ahit = pd.DataFrame(np.load(apth,allow_pickle=True)) 
     ahit = convert_angles(ahit)
 
     hit['Layer'] =  2*(hit['volumeID[2]'])+hit['volumeID[3]']
@@ -41,8 +47,10 @@ def get_track(apth:str = DEF_ALL_FOLD_PATH,hpth:str = DEF_HIT_PATH )->pd.DataFra
     
     #* Ezt biztos ,hogy lehet valahogy okosabban is ://
     for i,idx in enumerate(hit.index.unique()):
+        #* Talán lehetne valamit kitalálni, de egyelőre működik.
         h1 = hit.loc[idx].reset_index()
         a1 = ahit.loc[idx].reset_index()
+
         h1["particleID"] = int(i) 
         concated = pd.concat([h1,a1],axis=1)
         tracks = pd.concat([tracks,concated],ignore_index=True)

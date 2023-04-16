@@ -12,31 +12,39 @@ os.environ['TF_CPP_MIN_LOG_LEVEL'] = '1'
 import sys
 sys.path.append('src/')
 from data import get_track, preprocessBatch, getBatch
-from src.hyperparams import EPOCHS,train_steps, MAX_LAYER
+from src.hyperparams import EPOCHS,train_steps
 from src.model import Transformer
 import tensorflow as tf
+import glob
 import numpy as np
 
+#TODO: The layernumber and the particle ID might not needed to keep, so far they are here for debugging
 
 if __name__ == "__main__":
-    tracks = get_track()
-    model = Transformer(1000)
-    for _ in range(EPOCHS):
-        #*Creating batch from data
-        batch = getBatch(tracks,batch_size=32)
-        print(batch.shape)
-        #* Parse batch to train and target data.
-        X = batch[:,:,:5]
-        Y = tf.gather(batch,[5,6,7],axis = 2)
+    
+    aPaths = glob.glob("data/*AllPSA.npy")
+    hpaths = glob.glob("data/*.hits.npy")
 
-        for lidx in range(MAX_LAYER):
-            #* Train and target data on the corresponding layer.
-            Xl = X[:,-lidx]
-            Yl = Y[:,-lidx] 
+    model = Transformer()
+    optimizer = tf.keras.optimizers.Adam(learning_rate=0.0001)
+
+    for epoch in range(EPOCHS):
+        print("Epoch: ",epoch+1)
+        for train_step in range(train_steps):
             
-            #* shuffle data by random permutation.
-            pidxs = np.random.permutation(Xl.shape[0])
-            Xlp = tf.gather(Xl,pidxs)
-            Ylp = tf.gather(Yl,pidxs)
+            ap = np.random.choice(aPaths)
+            hp = np.random.choice(hpaths)
             
-            preds, loss = model(Xlp,Ylp)
+            tracks = get_track(apth=ap,hpth=hp)
+            batch = getBatch(tracks,batch_size=32)
+            
+            X = batch[:,:,2:5]
+            Y = tf.gather(batch,[5,6,7],axis = 2)
+            
+            with tf.GradientTape() as tape:
+                preds, loss = model(X,Y)
+            
+            grads = tape.gradient(loss, model.trainable_weights)
+            optimizer.apply_gradients(zip(grads, model.trainable_weights))
+            
+            print(f"Current loss is :{loss:.4f} ")
