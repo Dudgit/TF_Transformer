@@ -26,27 +26,24 @@ if __name__ == "__main__":
 
     model = Transformer()
     optimizer = tf.keras.optimizers.Adam(learning_rate=0.0001)
-    mirrored_strategy = tf.distribute.MirroredStrategy()
-    with mirrored_strategy.scope():
-        for epoch in range(EPOCHS):
-            print("Epoch: ",epoch+1)
-            for train_step in range(train_steps):
-                
-                ap = np.random.choice(aPaths)
-                hp = np.random.choice(hpaths)
-                
-                tracks = get_track(apth=ap,hpth=hp)
-                batch = getBatch(tracks,batch_size=32)
-                
-                X = batch[:,:,2:5]
-                Y = tf.gather(batch,[5,6,7],axis = 2)
-                
-                with tf.GradientTape() as tape:
-                    preds, loss = model(X,Y)
-                loss = tf.reduce_mean(loss)
-                grads = tape.gradient(loss, model.trainable_weights)
-                optimizer.apply_gradients(zip(grads, model.trainable_weights))
-                
-                print(f"Current loss is :{loss:.4f} ")
+    for epoch in range(EPOCHS):
+        print("Epoch: ",epoch+1)
+        for train_step in range(train_steps):
+            
+            ap = np.random.choice(aPaths)
+            hp = np.random.choice(hpaths)
+            
+            tracks = get_track(apth=ap,hpth=hp)
+            batch = getBatch(tracks,batch_size=32)
+            
+            X = batch[:,:,2:5]
+            Y = tf.gather(batch,[5,6,7],axis = 2)
+            
+            with tf.GradientTape() as tape:
+                preds, loss = model(X,Y)
+            grads = tape.gradient(loss, model.trainable_weights)
+            optimizer.apply_gradients(zip(grads, model.trainable_weights))
+            
+            print(f"Current loss is :{loss:.4f} ")
 
 #TODO: The layernumber and the particle ID might not needed to keep, so far they are here for debugging

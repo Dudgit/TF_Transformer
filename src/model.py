@@ -2,7 +2,7 @@ import tensorflow as tf
 from hyperparams import *
 import math
 
-lossF = tf.keras.losses.CategoricalCrossentropy(from_logits=False,reduction=tf.keras.losses.Reduction.NONE)
+lossF = tf.keras.losses.CategoricalCrossentropy(from_logits=False)
 class FeedFoward(tf.Module):
     """ 
     Used the format shown in Adnrej Karphaty's video.  
