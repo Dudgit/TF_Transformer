@@ -27,7 +27,6 @@ if __name__ == "__main__":
         print(batch.shape)
         #* Parse batch to train and target data.
         X = batch[:,:,:5]
-        X = preprocessBatch(X) #*Random Fouirier features.
         Y = tf.gather(batch,[5,6,7],axis = 2)
 
         for lidx in range(MAX_LAYER):
