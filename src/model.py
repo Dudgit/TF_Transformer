@@ -76,33 +76,6 @@ class RandomFourierFeatures(tf.keras.layers.Layer):
         self.xmin = xmin
         self.xmax = xmax
         self.scale = scale
-<<<<<<< HEAD
-        
-        # Creating the constant values, that we will add to the result
-        # target dimension times, so for a Batch,Layer composition we will add only one constant value
-        # For each embedding it's a different value from a uniform distribution
-        #TODO: scale should be updatet to dx detector resolution
-        B = tf.random.uniform((target_dim,)) * scale
-        self.B = tf.cast(B,tf.float32)
-        
-        
-        # Creating omega valuse for multiplication
-        # Same manner as used for B
-        omega_min = 2*math.pi/XMAX
-        omega_max = 2*math.pi/XMIN
-        self.omega = tf.random.uniform( shape=[target_dim,] , minval=omega_min, maxval=omega_max)
-
-    def call(self,X):
-        # Expanding X to target dimension
-        # Every value inside the batch,layer composition will be repeated target_dim times
-        # From shape (Batch,Layer,Feature) to (Batch,Layer,Feature,Embedding) and so X[0,0,0] will be repeated target_dim times
-        x = tf.cast(tf.tile(tf.expand_dims(X,axis=-1),[1,1,self.target_dim]),tf.float32)
-
-        # Creating a random fourier feature mapping
-        # Formula used f(x_n) = cos(omega_n * x_n + B_n) 
-        x = tf.math.add(tf.math.multiply(x,tf.expand_dims(self.omega,axis=0)) ,self.B)
-        
-=======
 
         
     def call(self,X):
@@ -116,7 +89,6 @@ class RandomFourierFeatures(tf.keras.layers.Layer):
 
         x = tf.cast(tf.tile(tf.expand_dims(X,axis=-1),[1,1,self.target_dim]),tf.float32)
         x = tf.math.add(tf.math.multiply(x,tf.expand_dims(omega,axis=0)) ,B)
->>>>>>> b2c835fa0026f32dbbde323dfa6a204101e5a649
         return tf.math.cos(x)
 
 
@@ -140,15 +112,11 @@ class Transformer(tf.keras.Model):
         dE = self.ffeatures(X[:,:,2])
         XS = tf.stack([xpos,ypos,dE],axis=2)# X stacked... Other name would be better perhaps.
         loss = []
-        for lidx in range(idx.shape[1]):
+        for lidx in range(1, XS.shape[1]):
             #TODO: hozzáadni az előző layereket is.
-            idx = XS[:,lidx]
-            B, _ , T = idx.shape
-
-            tok_emb = self.token_embedding_table(idx) # (B,3,F_embd)
-            pos_emb = self.position_embedding_table(tf.range(T)) # Valszeg nem lesz jó a diemnzió, valamit ügyködni kell
-            x = tok_emb + pos_emb  #(B,T,C)
-
+            xc = XS[:,-lidx]
+            xp = XS[:,-lidx-1]
+            x = tf.concat([xc,xp],axis=2) 
             x = self.blocks(x) # (B,T,C)
             x = self.ln_f(x) # (B,T,C)
             
