@@ -111,6 +111,7 @@ class Transformer(tf.keras.Model):
         
         loss = []
         preds = []
+        
         for lidx in range(1, XS.shape[1]):
             xc = XS[:,-lidx]
             xp = XS[:,-lidx-1]

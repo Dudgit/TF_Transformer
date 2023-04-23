@@ -29,7 +29,7 @@ if __name__ == "__main__":
     for epoch in range(EPOCHS):
         print("Epoch: ",epoch+1)
         for train_step in range(train_steps):
-            
+            #TODO: összekapcsolódó fájlokat tölteni be!!!
             ap = np.random.choice(aPaths)
             hp = np.random.choice(hpaths)
             
