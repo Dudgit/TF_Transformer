@@ -1,6 +1,8 @@
 import tensorflow as tf
 from hyperparams import *
 import math
+from scipy.spatial import distance_matrix
+import numpy as np
 
 lossF = tf.keras.losses.CategoricalCrossentropy(from_logits=False)
 class FeedFoward(tf.Module):
@@ -114,14 +116,25 @@ class Transformer(tf.keras.Model):
         
         for lidx in range(1, XS.shape[1]):
             xc = XS[:,-lidx]
-            xp = XS[:,-lidx-1]
-            x = tf.concat([xc,xp],axis=2) 
+            xp = XS[:,-lidx+1]
             
+            y = targets[:,-lidx+1]
+            #y_prev = tf.cast(tf.tile(tf.expand_dims(y,axis=-1),[1,1,n_embd]),tf.float32)
+            x_concated = tf.concat([xc,xp],axis=2) 
+            #x_concated = tf.concat([x_concated,y_prev],axis=1)
+            
+            perm_indexes = np.random.permutation(x_concated.shape[0])
+            x = tf.gather(x_concated,perm_indexes)
             x = self.blocks(x)
+            
             x = self.ln_f(x)
             x = self.flat_l(x)
             logits = self.outp(x)
 
+            #Reindexing by the closest distance
+            target_indexes = tf.argmin(distance_matrix(logits,targets[:,-lidx]))
+            logits = tf.gather(logits,target_indexes)
+            
             preds.append(logits)
             loss.append( lossF(targets[:,-lidx], logits) if targets is not None else None)
         
