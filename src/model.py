@@ -1,6 +1,8 @@
 import tensorflow as tf
 from hyperparams import *
 import math
+import numpy as np
+from scipy.spatial import distance_matrix
 
 lossF = tf.keras.losses.CategoricalCrossentropy(from_logits=False)
 class FeedFoward(tf.Module):
@@ -13,7 +15,7 @@ class FeedFoward(tf.Module):
     def __init__(self, n_embd):
         super().__init__()
         self.net = tf.keras.models.Sequential([
-            tf.keras.layers.Dense(units = 4 * n_embd ,activation='relu',input_shape=(3,n_embd,) ),
+            tf.keras.layers.Dense(units = 4 * n_embd ,activation='relu',input_shape=(6,n_embd,) ), # 6 ha y prevet úgy adjuk hozzá ahogy most én
             tf.keras.layers.Dense(units = n_embd),
             tf.keras.layers.Dropout(dropout),
         ])
@@ -80,9 +82,12 @@ class RandomFourierFeatures(tf.keras.layers.Layer):
         B = tf.random.uniform((self.target_dim,)) * self.scale
         B = tf.cast(B,tf.float32)
         
-        omega_min = 2*math.pi/self.xmax
-        omega_max = 2*math.pi/self.xmin
-
+        omega_min = 2*math.pi/self.xmax-self.xmin
+        omega_max = 2*math.pi/ self.xmin # delta X (xmax-xmin)/n
+        
+        # X irányba  n = 9*1024
+        # Y iránbya  n = 12*512
+        # dde 0.1 
         omega = tf.random.uniform( shape=[self.target_dim,] , minval=omega_min, maxval=omega_max)
 
         x = tf.cast(tf.tile(tf.expand_dims(X,axis=-1),[1,1,self.target_dim]),tf.float32)
@@ -113,18 +118,35 @@ class Transformer(tf.keras.Model):
         preds = []
         
         for lidx in range(1, XS.shape[1]):
+            #Előző réteg targetjait is beaedom
+            #Bemenet (X_i,Y_i,de_i) + (X_i-1,Y_i-1,de_i-1) + (Ekin_i-1,phi_i-1,theta_i-1)
+            #Kimenet:(Ekin_i,phi_i,theta_i)
+            #Random indexing here ...
             xc = XS[:,-lidx]
             xp = XS[:,-lidx-1]
-            x = tf.concat([xc,xp],axis=2) 
             
+            x_concated = tf.concat([xc,xp],axis=2) 
+            # Highly experimental method
+            y = targets[:,-lidx+1]
+            y_prev = tf.cast(tf.tile(tf.expand_dims(y,axis=-1),[1,1,n_embd]),tf.float32)
+            x_concated = tf.concat([x_concated,y_prev],axis=1)
+
+            perm_indexes = np.random.permutation(x_concated.shape[0])
+            x = tf.gather(x_concated,perm_indexes)
+
+
             x = self.blocks(x)
             x = self.ln_f(x)
             x = self.flat_l(x)
             logits = self.outp(x)
+            
+            target_indexes = tf.argmin(distance_matrix(logits,targets[:,-lidx]))
+            logits = tf.gather(logits,target_indexes)
+            
 
             preds.append(logits)
             loss.append( lossF(targets[:,-lidx], logits) if targets is not None else None)
         
         return logits, tf.reduce_mean(loss)
-    
-#TODO: fit inside the model class
+
+#TODO: Elsőre 16 klassz-ra paddelni, tesztelni, utána 200-ra
