@@ -136,6 +136,7 @@ class Transformer(tf.keras.Model):
 
 
             x = self.blocks(x)
+            
             x = self.ln_f(x)
             x = self.flat_l(x)
             logits = self.outp(x)
@@ -144,6 +145,10 @@ class Transformer(tf.keras.Model):
             logits = tf.gather(logits,target_indexes)
             
 
+            #Reindexing by the closest distance
+            target_indexes = tf.argmin(distance_matrix(logits,targets[:,-lidx]))
+            logits = tf.gather(logits,target_indexes)
+            
             preds.append(logits)
             loss.append( lossF(targets[:,-lidx], logits) if targets is not None else None)
         
