@@ -66,7 +66,7 @@ def get_track(apth:str = DEF_ALL_FOLD_PATH,hpth:str = DEF_HIT_PATH )->pd.DataFra
 
 def padBatch(df:pd.DataFrame, pidx:int)->tf.Tensor:
     trL = df.index.max()+1
-    padding = tf.constant([[0,25-int(trL)],[0,0]])
+    padding = tf.constant([[0,MAX_LAYER-int(trL)],[0,0]])
 
     preBatch = df[0*int(trL):1*int(trL)].astype(np.float32)
     preBatch.reset_index(inplace=True)
