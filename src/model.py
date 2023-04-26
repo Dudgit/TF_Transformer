@@ -117,10 +117,12 @@ class BipartateMatching(tf.keras.layers.Layer):
         return tf.convert_to_tensor(col_to_row_match_vec)
 
 
-class Transformer(tf.keras.Model):
+class PCT_Transformer(tf.keras.Model):
     """
     Transformer model for PCT data.  
-    The layer by layer training is inside the model call.  
+    Model compile is implemented.
+    Model fit is implemented.
+    
     """
     def __init__(self, vocab_size = None):
         super().__init__()
