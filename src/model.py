@@ -4,7 +4,7 @@ import math
 import numpy as np
 from scipy.spatial import distance_matrix
 
-lossF = tf.keras.losses.CategoricalCrossentropy(from_logits=False)
+
 class FeedFoward(tf.Module):
     """ 
     Used the format shown in Adnrej Karphaty's video.  
@@ -179,15 +179,18 @@ class PCT_Transformer(tf.keras.Model):
             losses.append( self.loss(targets[:,-lidx], logits) )
         return logits, tf.reduce_mean(losses)
     
-    def fit(self, X, targets=None, epochs=1):
-        for epoch in range(epochs):
-            print("Epoch: ",epoch)
-            with tf.GradientTape() as tape:
-                preds, loss = self._calculate_loss(X,targets)
-            grads = tape.gradient(loss, self.trainable_weights)
-            self.optimizer.apply_gradients(zip(grads, self.trainable_weights))
-            print("Loss: ",loss.numpy())
-            return loss,preds
+    def fit(self, X:tf.Tensor, targets:tf.Tensor)->tf.Tensor:
+        """
+        TODO: Implement epochs and train steps inside the model
+        It means multiple batches should go inside the model
+        """
+        with tf.GradientTape() as tape:
+            preds, loss = self._calculate_loss(X,targets)
+        grads = tape.gradient(loss, self.trainable_weights)
+        self.optimizer.apply_gradients(zip(grads, self.trainable_weights))
+        print(f"    Loss: {loss:.4f}")
+        return preds
+    
     def __call__(self, X, targets=None):       
         # Creating fourier embedded features
         xpos = self.xffeatures(X[:,:,0])
