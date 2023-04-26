@@ -84,7 +84,7 @@ class RandomFourierFeatures(tf.keras.layers.Layer):
         B = tf.cast(B,tf.float32)
         
         omega_min = 2*math.pi/self.xmax-self.xmin
-        omega_max = 2*math.pi/ self.xmax-self.xmin/self.n # delta X (xmax-xmin)/n
+        omega_max = 2*math.pi/ (self.xmax-self.xmin)/self.n # delta X (xmax-xmin)/n
         
         # X irányba  n = 9*1024
         # Y iránbya  n = 12*512
