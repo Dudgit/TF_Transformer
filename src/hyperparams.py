@@ -13,7 +13,7 @@ n_layer = 6
 dropout = 0.2
 
 EPOCHS = 100
-MAX_LAYER = 45
+MAX_LAYER = 60
 train_steps = 20
 XMIN = -160
 XMAX = 160

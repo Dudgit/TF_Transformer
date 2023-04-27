@@ -25,7 +25,7 @@ if __name__ == "__main__":
     aPaths = glob.glob(f"data/{phantom}/*AllPSA.npy")
     hPaths = glob.glob(f"data/{phantom}/*.hits.npy")
 
-    model = PCT_Transformer()
+    model = PCT_Transformer(batch_size=16)
     optimizer = tf.keras.optimizers.Adam(learning_rate=learning_rate) 
     model.compile(optimizer=optimizer,loss=tf.keras.losses.CategoricalCrossentropy(from_logits=False) )
     
@@ -37,7 +37,7 @@ if __name__ == "__main__":
             hp =  glob.glob(f"data/{phantom}/*_{pidx}.hits.npy")[0]
 
             tracks = get_track(apth=ap,hpth=hp)
-            batch = getBatch(tracks,batch_size=16) # batch size is the number of tracks used
+            batch = getBatch(tracks.copy(),batch_size=16) # batch size is the number of tracks used
             
             X = batch[:,:,2:5]
             Y = tf.gather(batch,[5,6,7],axis = 2)
