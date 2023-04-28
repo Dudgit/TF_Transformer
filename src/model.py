@@ -163,7 +163,7 @@ class PCT_Transformer(tf.keras.Model):
             x_concated = tf.concat([x_concated,y_prev],axis=1)
             #Layer information added
             #! Experimental
-            currentLayer = tf.cast(tf.tile(tf.expand_dim(lidx,axis=-1),[1,1,n_embd] ),tf.float32)
+            currentLayer = tf.ones(x_concated.shape)*(MAX_LAYER-lidx)
             x_concated = tf.concat([x_concated,currentLayer],axis=1)
             perm_indexes = np.random.permutation(x_concated.shape[0])
             x = tf.gather(x_concated,perm_indexes)
