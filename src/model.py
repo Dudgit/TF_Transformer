@@ -191,7 +191,7 @@ class PCT_Transformer(tf.keras.Model):
         grads = tape.gradient(loss, self.trainable_weights)
         self.optimizer.apply_gradients(zip(grads, self.trainable_weights))
         print(f"    Loss: {loss:.4f}")
-        return preds
+        return preds, loss
     
 
     def __detector_iteration__(lidx:int,XS:tf.Tensor,target:tf.Tensor)->tf.Tensor:

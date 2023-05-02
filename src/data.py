@@ -65,7 +65,9 @@ def get_track(apth:str = DEF_ALL_FOLD_PATH,hpth:str = DEF_HIT_PATH )->pd.DataFra
 
 
 def padBatch(df:pd.DataFrame, pidx:int)->tf.Tensor:
-    trL = df.index.max()+1
+    #? What to do if missing inside
+    #* So far it is only a bonus at the end
+    trL = df.index.size
     padding = tf.constant([[0,MAX_LAYER-int(trL)],[0,0]])
 
     preBatch = df[0*int(trL):1*int(trL)].astype(np.float32)
@@ -75,6 +77,11 @@ def padBatch(df:pd.DataFrame, pidx:int)->tf.Tensor:
     
     idxpadding = tf.constant([[0,0],[1,0]])
     res = tf.pad(res,idxpadding,"CONSTANT",constant_values=pidx)
+
+    # Size Check
+
+    if df.index.size > MAX_LAYER:
+        df.drop(df.tail(1).index,inplace=True)
     return res
 
 def getBatch(tracks:pd.DataFrame,batch_size:int=32)->tf.Tensor:

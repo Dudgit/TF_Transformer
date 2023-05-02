@@ -19,7 +19,6 @@ import tensorflow as tf
 import glob
 import numpy as np
 
-
 if __name__ == "__main__":
     phantom = "water"    
     aPaths = glob.glob(f"data/{phantom}/*AllPSA.npy")
@@ -28,7 +27,8 @@ if __name__ == "__main__":
     model = PCT_Transformer(batch_size=16)
     optimizer = tf.keras.optimizers.Adam(learning_rate=learning_rate) 
     model.compile(optimizer=optimizer,loss=tf.keras.losses.CategoricalCrossentropy(from_logits=False) )
-    
+    all_loss = []
+
     for epoch in range(1,EPOCHS):
         print("Epoch: ",epoch)
         for train_step in range(train_steps):
@@ -41,6 +41,6 @@ if __name__ == "__main__":
             
             X = batch[:,:,2:5]
             Y = tf.gather(batch,[5,6,7],axis = 2)
-            model.fit(X,Y)
-
-#TODO: The layernumber and the particle ID might not needed to keep, so far they are here for debugging
+            _,loss =  model.fit(X,Y)
+            all_loss.append(loss)
+    np.save("losses/01",np.array(all_loss))
