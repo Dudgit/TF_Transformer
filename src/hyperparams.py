@@ -5,14 +5,14 @@ block_size = 256 # what is the maximum context length for predictions?
 max_iters = 5000
 eval_interval = 500
 eval_iters = 200
-learning_rate = 3e-3
+learning_rate = 3e-4
 
 n_embd = 8
 n_head = 6
 n_layer = 6
 dropout = 0.2
 
-EPOCHS = 100
+EPOCHS = 2000
 MAX_LAYER = 40
 train_steps = 20
 XMIN = -160

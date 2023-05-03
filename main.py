@@ -32,7 +32,7 @@ if __name__ == "__main__":
     for epoch in range(1,EPOCHS):
         print("Epoch: ",epoch)
         for train_step in range(train_steps):
-            pidx = np.random.randint(1,5000)
+            pidx = np.random.randint(1,50000)
             ap = glob.glob(f"data/{phantom}/*_{pidx}_AllPSA.npy")[0]
             hp =  glob.glob(f"data/{phantom}/*_{pidx}.hits.npy")[0]
 
@@ -43,4 +43,4 @@ if __name__ == "__main__":
             Y = tf.gather(batch,[5,6,7],axis = 2)
             _,loss =  model.fit(X,Y)
             all_loss.append(loss)
-    np.save("losses/01",np.array(all_loss))
+    np.save("losses/02",np.array(all_loss))
