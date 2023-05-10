@@ -17,8 +17,8 @@ def convert_angles(df:pd.DataFrame)->pd.DataFrame:
     """
     Converts the angles to cartesian coordinates.
     """
-    df["lat"] = df.dX/df.dY
-    df["long"] = df.dZ /np.sqrt( (df.dX**2+df.dY**2 +df.dZ**2))
+    df["lat"] = np.arctan(df.dY/df.dX)
+    df["long"] = np.arccos(df.dZ /np.sqrt( (df.dX**2+df.dY**2 +df.dZ**2)))
     return df
 
 def get_track(apth:str = DEF_ALL_FOLD_PATH,hpth:str = DEF_HIT_PATH )->pd.DataFrame:
@@ -59,6 +59,7 @@ def get_track(apth:str = DEF_ALL_FOLD_PATH,hpth:str = DEF_HIT_PATH )->pd.DataFra
     tracks.drop(["trackID","eventID","Layer","EventID","TrackID"],axis=1,inplace=True)
     tracks.set_index(["particleID","posZ"],inplace=True)
     tracks.dropna(inplace=True)
+    tracks.Ekine = tracks.Ekine.apply(lambda x: x/150)
     return tracks
 
 

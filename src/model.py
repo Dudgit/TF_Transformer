@@ -5,6 +5,12 @@ import numpy as np
 from scipy.spatial import distance_matrix
 from itertools import product
 
+phLF = tf.keras.losses.MeanSquaredError()
+thLF = tf.keras.losses.MeanSquaredError()
+ELF = tf.keras.losses.MeanSquaredError()
+
+
+
 class FeedFoward(tf.Module):
     """ 
     Used the format shown in Adnrej Karphaty's video.  
@@ -141,7 +147,7 @@ class PCT_Transformer(tf.keras.Model):
         self.optimizer = optimizer
         self.loss = loss
     
-    def _calculate_loss(self, X, targets=None):
+    def _calculate_loss(self,X,targets):
         xpos = self.xffeatures(X[:,:,0])
         ypos = self.yffeatures(X[:,:,1])
         dE = self.deffeatures(X[:,:,2])
@@ -149,7 +155,7 @@ class PCT_Transformer(tf.keras.Model):
         
         losses = []
         preds = []
-        
+        individual_losses = []
         for lidx in range(1, XS.shape[1]):
             xc = XS[:,-lidx]
             xp = XS[:,-lidx-1]
@@ -175,24 +181,80 @@ class PCT_Transformer(tf.keras.Model):
             #target_indexes = tf.argmin(distance_matrix(logits,targets[:,-lidx]))
             target_indexes = self.match(logits,targets[:,-lidx])
             logits = tf.gather(logits,target_indexes)
-            
+            phi_loss = phLF(logits[:,0],targets[:,-lidx,0])
+            theta_loss = thLF(logits[:,1],targets[:,-lidx,1])
+            dE_loss = ELF(logits[:,2],targets[:,-lidx,2])
             preds.append(logits)
-            losses.append( self.loss(targets[:,-lidx], logits) )
-        return logits, tf.reduce_mean(losses)
+            losses.append( self.loss(targets[:,-lidx], logits))
+            individual_losses.append([phi_loss,theta_loss,dE_loss])
+
+        return logits, tf.reduce_mean(losses),individual_losses
+
+    def _fit(self, X, targets=None):
+        xpos = self.xffeatures(X[:,:,0])
+        ypos = self.yffeatures(X[:,:,1])
+        dE = self.deffeatures(X[:,:,2])
+        XS = tf.stack([xpos,ypos,dE],axis=2)# X stacked... Other name would be better perhaps.
+        
+        losses = []
+        preds = []
+        individual_losses = []
+
+        for lidx in range(1, XS.shape[1]):
+            xc = XS[:,-lidx]
+            xp = XS[:,-lidx-1]
+            
+            x_concated = tf.concat([xc,xp],axis=2) 
+            # Highly experimental method
+            y = targets[:,-lidx+1]
+            y_prev = tf.cast(tf.tile(tf.expand_dims(y,axis=-1),[1,1,n_embd]),tf.float32)# y(Batch,3) -> y(Batch,3,Embedding)
+            # X(Batch,3,Embedding) + y ==> X_new(Batch,3+3,Embedding)
+            x_concated = tf.concat([x_concated,y_prev],axis=1)
+            #Layer information added
+            #! Experimental
+            currentLayer = tf.ones(x_concated.shape)*(MAX_LAYER-lidx)
+            x_concated = tf.concat([x_concated,currentLayer],axis=1)
+            perm_indexes = np.random.permutation(x_concated.shape[0])
+            x = tf.gather(x_concated,perm_indexes)
+            x = self.blocks(x)
+            x = self.ln_f(x) # -> (Batch,6,Embedding) // y = (Batch,3)
+            x = self.flat_l(x)
+            logits = self.outp(x) # -> (Batch,3)
+            #Reindexing by the closest distance
+            #target_indexes = tf.argmin(distance_matrix(logits,targets[:,-lidx]))
+            target_indexes = self.match(logits,targets[:,-lidx])
+            logits = tf.gather(logits,target_indexes)
+            model_loss = self.loss(targets[:,-lidx], logits)
+            phi_loss = phLF(logits[:,0],targets[:,-lidx,0])
+            theta_loss = thLF(logits[:,1],targets[:,-lidx,1])
+            dE_loss = ELF(logits[:,2],targets[:,-lidx,2])
+            preds.append(logits)
+            losses.append( model_loss)
+            individual_losses.append([phi_loss,theta_loss,dE_loss])
+        mean_loss = tf.reduce_mean(losses)
+        
+
+
+        return preds, mean_loss, individual_losses
     
     def fit(self, X:tf.Tensor, targets:tf.Tensor, valX:tf.Tensor = None,valY:tf.Tensor=None)->tf.Tensor:
         """
         It means multiple batches should go inside the model
         """
         with tf.GradientTape() as tape:
-            preds, loss = self._calculate_loss(X,targets)
+            preds, loss, ind_losses = self._fit(X,targets)
         grads = tape.gradient(loss, self.trainable_weights)
         self.optimizer.apply_gradients(zip(grads, self.trainable_weights))
+
         print(f"    Loss: {loss:.4f}")
+        print(f"    Phi Loss: {tf.reduce_mean(np.array(ind_losses)[:,0]):.4f}",end=" ")
+        print(f" Theata Loss: {tf.reduce_mean(np.array(ind_losses)[:,1]):.4f}",end=" ")
+        print(f" E Loss: {tf.reduce_mean(np.array(ind_losses)[:,2]):.4f}")
+
         if valX is not None:
-            _, val_loss = self._calculate_loss(valX,valY)
-            print(f"    Val Loss: {val_loss:.4f}")
-        return preds, loss, val_loss
+            _, val_loss, _ = self._calculate_loss(valX,valY)
+            print(f"    Val Loss: {val_loss:.4f}\n")
+        return preds, loss, val_loss, ind_losses
     
 
     def __detector_iteration__(self,lidx:int,XS:tf.Tensor,targets:tf.Tensor)->tf.Tensor:

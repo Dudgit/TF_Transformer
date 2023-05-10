@@ -35,13 +35,17 @@ if __name__ == "__main__":
     hPaths = glob.glob(f"data/{phantom}/*.hits.npy")
 
     model = PCT_Transformer(batch_size=batch_size)
-    optimizer = tf.keras.optimizers.Adam() 
+    optimizer = tf.keras.optimizers.SGD() 
     model.compile(optimizer=optimizer,loss=tf.keras.losses.MeanSquaredError())
     all_loss = []
     vall_losses = []
-    current_time = datetime.now().strftime("%Y_m_d-H_M")
+    seperate_losses = []
+    
+    all_predictions = []
+    all_targets = []
+    current_time = datetime.now().strftime("%Y_%m_%d-%H_%M")
 
-    for epoch in range(1,EPOCHS):
+    for epoch in range(EPOCHS):
         print("Epoch: ",epoch)
         for train_step in range(train_steps):
             batch = create_batch(1,5000) # batch size is the number of tracks used
@@ -50,8 +54,16 @@ if __name__ == "__main__":
             valx   = valBatch[:,:,2:5]
             Y = tf.gather(batch,[5,6,7],axis = 2)
             valy = tf.gather(valBatch,[5,6,7],axis = 2)
-            _,loss,val_loss =  model.fit(X,Y,valx,valy)
+            preds,loss,val_loss, individual_losses =  model.fit(X,Y,valx,valy)
+
             all_loss.append(loss)
             vall_losses.append(val_loss)
+            all_predictions.append(preds)
+            all_targets.append(Y)
+            seperate_losses.append(individual_losses)
+
+    np.save(f"preds/{current_time}_preds",np.array(all_predictions)) 
+    np.save(f"preds/{current_time}_targets",np.array(all_targets)) 
     np.save(f"losses/{current_time}_loss",np.array(all_loss))
     np.save(f"losses/{current_time}_valloss",np.array(vall_losses))
+    np.save(f"losses/{current_time}_separate",np.array(seperate_losses))
