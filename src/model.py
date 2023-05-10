@@ -3,7 +3,7 @@ from hyperparams import *
 import math
 import numpy as np
 from scipy.spatial import distance_matrix
-
+from itertools import product
 
 class FeedFoward(tf.Module):
     """ 
@@ -84,14 +84,15 @@ class RandomFourierFeatures(tf.keras.layers.Layer):
         B = tf.random.uniform((self.target_dim,)) * self.scale
         B = tf.cast(B,tf.float32)
         
-        omega_min = 2*math.pi/self.xmax-self.xmin
+        omega_min = 2*math.pi/(self.xmax-self.xmin) #
         omega_max = 2*math.pi/ (self.xmax-self.xmin)/self.n # delta X (xmax-xmin)/n
         
         # X irányba  n = 9*1024
         # Y iránbya  n = 12*512
         # dde 0.1 
-        omega = tf.random.uniform( shape=[self.target_dim,] , minval=omega_min, maxval=omega_max)
-
+        omega = tf.random.uniform( shape=[self.target_dim,] , minval=tf.math.log(omega_min), maxval=tf.math.log(omega_max))
+        # valuek helyett log
+        omega = tf.math.exp(omega)
         x = tf.cast(tf.tile(tf.expand_dims(X,axis=-1),[1,1,self.target_dim]),tf.float32)
         x = tf.math.add(tf.math.multiply(x,tf.expand_dims(omega,axis=0)) ,B)
         return tf.math.cos(x)
@@ -101,20 +102,18 @@ class BipartateMatching(tf.keras.layers.Layer):
     def __init__(self,N:int):
         super().__init__()
         self.N = N
-    
     def __call__(self,xINP:tf.Tensor,yINP:tf.Tensor)->tf.Tensor:
         cost_matrix = distance_matrix(xINP,yINP)
-        queue = []
-        for i in range(cost_matrix.shape[0]):
-            for j in range(cost_matrix.shape[1]):
-                queue.append([i,j,cost_matrix[i,j]])
-        queue = sorted(queue, key=lambda x: x[2])
+        t = np.asarray(cost_matrix).reshape(-1)
+        ind = sorted(range(len(t)), key=lambda k: t[k])
         row_to_col_match_vec = np.full(self.N,-1)
         col_to_row_match_vec = np.full(self.N,-1)
-        for row in queue:
-            if (row_to_col_match_vec[row[0]] == -1) & (col_to_row_match_vec[row[1]] == -1):
-                row_to_col_match_vec[row[0]] = row[1]
-                col_to_row_match_vec[row[1]] = row[0]
+        for k in ind:
+            i = k // self.N
+            j = k % self.N
+            if (row_to_col_match_vec[i] == -1) & (col_to_row_match_vec[j] == -1):
+                row_to_col_match_vec[i] = j
+                col_to_row_match_vec[j] = i
         return tf.convert_to_tensor(row_to_col_match_vec)
 
 
@@ -134,7 +133,7 @@ class PCT_Transformer(tf.keras.Model):
         self.blocks = BlockStack(n_embd, n_head, n_layer)
         self.ln_f = tf.keras.layers.LayerNormalization() # final layer norm
         self.flat_l = tf.keras.layers.Flatten()
-        self.outp = tf.keras.layers.Dense(3,activation ="softmax")
+        self.outp = tf.keras.layers.Dense(3)
         self.match = BipartateMatching(batch_size)
 
     def compile(self, optimizer, loss):
@@ -181,9 +180,8 @@ class PCT_Transformer(tf.keras.Model):
             losses.append( self.loss(targets[:,-lidx], logits) )
         return logits, tf.reduce_mean(losses)
     
-    def fit(self, X:tf.Tensor, targets:tf.Tensor)->tf.Tensor:
+    def fit(self, X:tf.Tensor, targets:tf.Tensor, valX:tf.Tensor = None,valY:tf.Tensor=None)->tf.Tensor:
         """
-        TODO: Implement epochs and train steps inside the model
         It means multiple batches should go inside the model
         """
         with tf.GradientTape() as tape:
@@ -191,10 +189,13 @@ class PCT_Transformer(tf.keras.Model):
         grads = tape.gradient(loss, self.trainable_weights)
         self.optimizer.apply_gradients(zip(grads, self.trainable_weights))
         print(f"    Loss: {loss:.4f}")
-        return preds, loss
+        if valX is not None:
+            _, val_loss = self._calculate_loss(valX,valY)
+            print(f"    Val Loss: {val_loss:.4f}")
+        return preds, loss, val_loss
     
 
-    def __detector_iteration__(lidx:int,XS:tf.Tensor,target:tf.Tensor)->tf.Tensor:
+    def __detector_iteration__(self,lidx:int,XS:tf.Tensor,targets:tf.Tensor)->tf.Tensor:
         xc = XS[:,-lidx]
         xp = XS[:,-lidx-1]
         
