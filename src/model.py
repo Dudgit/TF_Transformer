@@ -152,14 +152,15 @@ class PCT_Transformer(tf.keras.Model):
         ypos = self.yffeatures(X[:,:,1])
         dE = self.deffeatures(X[:,:,2])
         XS = tf.stack([xpos,ypos,dE],axis=2)# X stacked... Other name would be better perhaps.
-        
-        losses = []
-        preds = []
-        individual_losses = []
 
-        for lidx in range(1, XS.shape[1]):
+        preds = []
+        phi_losses = []
+        theta_losses = []
+        energy_losses = []
+
+        for lidx in range(2, XS.shape[1]+1):
             xc = XS[:,-lidx]
-            xp = XS[:,-lidx-1]
+            xp = XS[:,-lidx+1]
             
             x_concated = tf.concat([xc,xp],axis=2) 
             # Highly experimental method
@@ -181,32 +182,38 @@ class PCT_Transformer(tf.keras.Model):
             #target_indexes = tf.argmin(distance_matrix(logits,targets[:,-lidx]))
             target_indexes = self.match(logits,targets[:,-lidx])
             logits = tf.gather(logits,target_indexes)
-            model_loss = self.loss(targets[:,-lidx], logits)
-            phi_loss = phLF(logits[:,0],targets[:,-lidx,0])
-            theta_loss = thLF(logits[:,1],targets[:,-lidx,1])
-            dE_loss = ELF(logits[:,2],targets[:,-lidx,2])
+            #model_loss = self.loss(targets[:,-lidx], logits)
+            phi_losses.append(self.loss(logits[:,0],targets[:,-lidx,0])* ((lidx-2)/25))
+            theta_losses.append( self.loss(logits[:,1],targets[:,-lidx,1]) * ((lidx-2)/25))
+            energy_losses.append( self.loss(logits[:,2],targets[:,-lidx,2])*((3*(lidx-2)/25) + 1 ))
+
             preds.append(logits)
-            losses.append( model_loss)
-            individual_losses.append([phi_loss,theta_loss,dE_loss])
-        mean_loss = tf.reduce_mean(losses)
         
-        return preds, mean_loss, individual_losses
+        l1 = tf.reduce_mean(phi_losses)
+        l2 = tf.reduce_mean(theta_losses)
+        l3 = tf.reduce_mean(energy_losses)
+        return preds,tf.reduce_mean( l1+l2+l3),l1,l2,l3
     
     def fit(self, X:tf.Tensor, targets:tf.Tensor, valX:tf.Tensor = None,valY:tf.Tensor=None)->tf.Tensor:
         """
         It means multiple batches should go inside the model
         """
         with tf.GradientTape() as tape:
-            preds, loss, ind_losses = self(X,targets)
-        grads = tape.gradient(loss, self.trainable_weights)
+            preds, model_loss, philoss,thetaloss,ekinloss = self(X,targets)
+        loss = philoss + thetaloss + ekinloss
+        grads = tape.gradient(model_loss, self.trainable_weights)
         self.optimizer.apply_gradients(zip(grads, self.trainable_weights))
 
-        print(f"    Loss: {loss:.4f}")
-        print(f"    Phi Loss: {tf.reduce_mean(np.array(ind_losses)[:,0]):.4f}",end=" ")
-        print(f" Theata Loss: {tf.reduce_mean(np.array(ind_losses)[:,1]):.4f}",end=" ")
-        print(f" E Loss: {tf.reduce_mean(np.array(ind_losses)[:,2]):.4f}")
+        print(f"    Loss: {model_loss:.4f}")
+        print(f"    Phi Loss: {philoss:.4f}",end=" ")
+        print(f" Theata Loss: {thetaloss:.4f}",end=" ")
+        print(f" E Loss: {ekinloss:.4f}")
 
         if valX is not None:
-            _, val_loss, _ = self(valX,valY)
-            print(f"    Val Loss: {val_loss:.4f}\n")
-        return preds, loss, val_loss, ind_losses
+            _, _,phi_val_loss, phi_thetaloss, phi_ekinloss = self(valX,valY)
+            val_loss = phi_val_loss + phi_thetaloss + phi_ekinloss
+            print(f"    Val Loss: {val_loss:.4f}")
+            print(f"    Val Phi Loss: {phi_val_loss:.4f}",end=" ")
+            print(f" Val Theata Loss: {phi_thetaloss:.4f}",end=" ")
+            print(f" Val E Loss: {phi_ekinloss:.4f}\n")
+        return preds, loss, val_loss, (philoss,thetaloss,ekinloss)
