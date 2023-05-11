@@ -159,7 +159,7 @@ class PCT_Transformer(tf.keras.Model):
 
         for lidx in range(1, XS.shape[1]):
             xc = XS[:,-lidx]
-            xp = XS[:,-lidx-1]
+            xp = XS[:,-lidx+1]
             
             x_concated = tf.concat([xc,xp],axis=2) 
             # Highly experimental method
