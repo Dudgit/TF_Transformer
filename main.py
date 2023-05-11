@@ -35,8 +35,8 @@ if __name__ == "__main__":
     hPaths = glob.glob(f"data/{phantom}/*.hits.npy")
 
     model = PCT_Transformer(batch_size=batch_size)
-    optimizer = tf.keras.optimizers.SGD()
-    model.compile(optimizer=optimizer,loss=tf.keras.losses.MeanSquaredError())
+    optimizer = tf.keras.optimizers.Adam()
+    model.compile(optimizer=optimizer,loss=tf.keras.losses.MeanAbsoluteError())
     used_parameters = np.array([batch_size, EPOCHS, train_steps, optimizer.get_config()["name"],optimizer.get_config()["learning_rate"],"MSE"])
     
     all_loss = []
@@ -62,7 +62,7 @@ if __name__ == "__main__":
             all_predictions.append(preds)
             all_targets.append(Y)
             seperate_losses.append(individual_losses)
-            
+
     np.save(f"configs/{current_time}_config",used_parameters)
     np.save(f"preds/{current_time}_preds",np.array(all_predictions)) 
     np.save(f"preds/{current_time}_targets",np.array(all_targets)) 
