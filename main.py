@@ -34,10 +34,10 @@ if __name__ == "__main__":
     aPaths = glob.glob(f"data/{phantom}/*AllPSA.npy")
     hPaths = glob.glob(f"data/{phantom}/*.hits.npy")
 
-    model = PCT_Transformer(batch_size=batch_size,input_dims=6)
+    model = PCT_Transformer(batch_size=batch_size)
     optimizer = tf.keras.optimizers.Adam()
     model.compile(optimizer=optimizer,loss=tf.keras.losses.MeanSquaredError())
-    used_parameters = np.array([batch_size, EPOCHS, train_steps, optimizer.get_config()["name"],optimizer.get_config()["learning_rate"],"mean_loss+dim_experiment"])
+    used_parameters = np.array([batch_size, EPOCHS, train_steps, optimizer.get_config()["name"],optimizer.get_config()["learning_rate"],"mean_loss"])
     
     all_loss = []
     vall_losses = []
