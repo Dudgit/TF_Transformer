@@ -192,9 +192,9 @@ class PCT_Transformer(tf.keras.Model):
 
             preds.append(logits)
         
-        l1 = tf.reduce_mean(phi_losses)
-        l2 = tf.reduce_mean(theta_losses)
-        l3 = tf.reduce_mean(energy_losses)
+        l1 = tf.reduce_sum(phi_losses)
+        l2 = tf.reduce_sum(theta_losses)
+        l3 = tf.reduce_sum(energy_losses)
         return preds, tf.reduce_mean([l1,l2,l3]) ,l1,l2,l3
     
     def fit(self, X:tf.Tensor, targets:tf.Tensor, valX:tf.Tensor = None,valY:tf.Tensor=None)->tf.Tensor:
