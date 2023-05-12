@@ -18,10 +18,10 @@ class FeedFoward(tf.Module):
 
     """
 
-    def __init__(self, n_embd):
+    def __init__(self, n_embd,input_dims=6):
         super().__init__()
         self.net = tf.keras.models.Sequential([
-            tf.keras.layers.Dense(units = 4 * n_embd ,activation='relu',input_shape=(6,n_embd,) ), # 6 ha y prevet úgy adjuk hozzá ahogy most én
+            tf.keras.layers.Dense(units = 4 * n_embd ,activation='relu',input_shape=(input_dims,n_embd) ), # 6 ha y prevet úgy adjuk hozzá ahogy most én
             tf.keras.layers.Dense(units = n_embd),
             tf.keras.layers.Dropout(dropout),
         ])
@@ -38,12 +38,12 @@ class Block(tf.Module):
     
     """
 
-    def __init__(self, n_embd, n_head):
+    def __init__(self, n_embd, n_head,input_dims=6):
         # n_embd: embedding dimension, n_head: the number of heads we'd like
         super().__init__()
         head_size = n_embd // n_head
         self.sa = tf.keras.layers.MultiHeadAttention(n_head, head_size,)
-        self.ffwd = FeedFoward(n_embd)
+        self.ffwd = FeedFoward(n_embd,input_dims)
         self.ln1 = tf.keras.layers.LayerNormalization()
         self.ln2 = tf.keras.layers.LayerNormalization()
 
@@ -56,12 +56,12 @@ class Block(tf.Module):
         return x
 
 class BlockStack(tf.Module):
-    def __init__(self,n_embd,n_head,n_layer):
+    def __init__(self,n_embd,n_head,n_layer,input_dims=6):
         super().__init__()
         self.layers = []
         with self.name_scope:
             for _ in range(n_layer):
-                self.layers.append(Block(n_embd,n_head))
+                self.layers.append(Block(n_embd,n_head,input_dims))
 
     @tf.Module.with_name_scope
     def __call__(self,x):
@@ -130,13 +130,13 @@ class PCT_Transformer(tf.keras.Model):
     Model fit is implemented.
     
     """
-    def __init__(self, batch_size = 16):
+    def __init__(self, batch_size = 16,input_dims=6)->tf.keras.Model:
         super().__init__()
         self.xffeatures = RandomFourierFeatures(n = 9*1024)
         self.yffeatures = RandomFourierFeatures(n = 12*512 )
         self.deffeatures = RandomFourierFeatures(xmin=0,xmax=230,n=2300)
         
-        self.blocks = BlockStack(n_embd, n_head, n_layer)
+        self.blocks = BlockStack(n_embd, n_head, n_layer,input_dims)
         self.ln_f = tf.keras.layers.LayerNormalization() # final layer norm
         self.flat_l = tf.keras.layers.Flatten()
         self.outp = tf.keras.layers.Dense(3)
@@ -161,15 +161,19 @@ class PCT_Transformer(tf.keras.Model):
         for lidx in range(2, XS.shape[1]+1):
             xc = XS[:,-lidx]
             xp = XS[:,-lidx+1]
-            
-            x_concated = tf.concat([xc,xp],axis=2) 
+            #xpp = XS[:,-lidx+2]
+            x_concated = tf.concat([xc,xp],axis=2)
             # Highly experimental method
-            y = targets[:,-lidx+1]
-            y_prev = tf.cast(tf.tile(tf.expand_dims(y,axis=-1),[1,1,n_embd]),tf.float32)# y(Batch,3) -> y(Batch,3,Embedding)
+            y = tf.cast(targets[:,-lidx+1],tf.float32)
+            y_mult = tf.one_hot([0],depth = n_embd,dtype = tf.float32)
+            y_p = tf.cast(tf.tile(tf.expand_dims(y,axis=-1),[1,1,n_embd]),tf.float32)# y(Batch,3) -> y(Batch,3,Embedding)
+            y_prev = y_p*y_mult
             # X(Batch,3,Embedding) + y ==> X_new(Batch,3+3,Embedding)
+            #y2 = targets[:,-lidx+2]
+            #y2_prev = tf.cast(tf.tile(tf.expand_dims(y2,axis=-1),[1,1,n_embd+4]),tf.float32)# y(Batch,3) -> y(Batch,3,Embedding)
             x_concated = tf.concat([x_concated,y_prev],axis=1)
             #Layer information added
-            #! Experimental
+
             currentLayer = tf.ones(x_concated.shape)*(MAX_LAYER-lidx)
             x_concated = tf.concat([x_concated,currentLayer],axis=1)
             perm_indexes = np.random.permutation(x_concated.shape[0])
