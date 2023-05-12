@@ -3,7 +3,7 @@ from hyperparams import *
 import math
 import numpy as np
 from scipy.spatial import distance_matrix
-from itertools import product
+
 
 phLF = tf.keras.losses.MeanSquaredError()
 thLF = tf.keras.losses.MeanSquaredError()
@@ -17,12 +17,12 @@ class FeedFoward(tf.Module):
     Only its tensorflow version.  
 
     """
-
+    #TODO: Upgrade to Automatic
     def __init__(self, n_embd):
         super().__init__()
         self.net = tf.keras.models.Sequential([
-            tf.keras.layers.Dense(units = 4 * n_embd ,activation='relu',input_shape=(6,n_embd,) ), # 6 ha y prevet úgy adjuk hozzá ahogy most én
-            tf.keras.layers.Dense(units = n_embd),
+            tf.keras.layers.Dense(units = 4 * n_embd ,activation='relu',input_shape=(18,12) ), # 6 ha y prevet úgy adjuk hozzá ahogy most én
+            tf.keras.layers.Dense(units = n_embd+4),
             tf.keras.layers.Dropout(dropout),
         ])
 
@@ -49,7 +49,6 @@ class Block(tf.Module):
 
     def __call__(self, x):
         Lnormed = self.ln1(x)
-        #Note: We use Lnormed 2 titmes because Multihead Attention requires 2 inputs, since it's self-attention, we use the same input twice.
         x = x + self.sa(Lnormed, Lnormed)
         Lnormed = self.ln2(x)
         x = x + self.ffwd(Lnormed)
@@ -78,7 +77,6 @@ class RandomFourierFeatures(tf.keras.layers.Layer):
     """
     def __init__(self,target_dim:int = n_embd//2,xmin:int=-160,xmax:int=160,n:int = None,scale:int = 1.,):
         super().__init__()
-        #TODO: xmax-min helyett delta X és N
         self.target_dim = target_dim
         self.xmin =  xmin
         self.xmax =  xmax
@@ -130,7 +128,7 @@ class PCT_Transformer(tf.keras.Model):
     Model fit is implemented.
     
     """
-    def __init__(self, batch_size = 16):
+    def __init__(self, batch_size = 16)->tf.keras.Model:
         super().__init__()
         self.xffeatures = RandomFourierFeatures(n = 9*1024)
         self.yffeatures = RandomFourierFeatures(n = 12*512 )
@@ -152,23 +150,29 @@ class PCT_Transformer(tf.keras.Model):
         ypos = self.yffeatures(X[:,:,1])
         dE = self.deffeatures(X[:,:,2])
         XS = tf.stack([xpos,ypos,dE],axis=2)# X stacked... Other name would be better perhaps.
-        
-        losses = []
-        preds = []
-        individual_losses = []
 
-        for lidx in range(1, XS.shape[1]):
+        preds = []
+        phi_losses = []
+        theta_losses = []
+        energy_losses = []
+
+        for lidx in range(2, XS.shape[1]+1):
             xc = XS[:,-lidx]
             xp = XS[:,-lidx+1]
-            
-            x_concated = tf.concat([xc,xp],axis=2) 
+            xpp = XS[:,-lidx+2]
+            x_concated = tf.concat([xc,xp,xpp],axis=2)
             # Highly experimental method
-            y = targets[:,-lidx+1]
-            y_prev = tf.cast(tf.tile(tf.expand_dims(y,axis=-1),[1,1,n_embd]),tf.float32)# y(Batch,3) -> y(Batch,3,Embedding)
+            y = tf.cast(targets[:,-lidx+1],tf.float32)
+            y_mult = tf.one_hot([0],depth = n_embd+4,dtype = tf.float32)
+            y_p = tf.cast(tf.tile(tf.expand_dims(y,axis=-1),[1,1,n_embd+4]),tf.float32)# y(Batch,3) -> y(Batch,3,Embedding)
+            y_prev = y_p*y_mult
             # X(Batch,3,Embedding) + y ==> X_new(Batch,3+3,Embedding)
-            x_concated = tf.concat([x_concated,y_prev],axis=1)
+            y2 = targets[:,-lidx+2]
+            y_p2 = tf.cast(tf.tile(tf.expand_dims(y2,axis=-1),[1,1,n_embd+4]),tf.float32)# y(Batch,3) -> y(Batch,3,Embedding)
+            y2_prev = y_p2*y_mult
+            x_concated = tf.concat([x_concated,y_prev,y2_prev],axis=1)
             #Layer information added
-            #! Experimental
+
             currentLayer = tf.ones(x_concated.shape)*(MAX_LAYER-lidx)
             x_concated = tf.concat([x_concated,currentLayer],axis=1)
             perm_indexes = np.random.permutation(x_concated.shape[0])
@@ -181,32 +185,38 @@ class PCT_Transformer(tf.keras.Model):
             #target_indexes = tf.argmin(distance_matrix(logits,targets[:,-lidx]))
             target_indexes = self.match(logits,targets[:,-lidx])
             logits = tf.gather(logits,target_indexes)
-            model_loss = self.loss(targets[:,-lidx], logits)
-            phi_loss = phLF(logits[:,0],targets[:,-lidx,0])
-            theta_loss = thLF(logits[:,1],targets[:,-lidx,1])
-            dE_loss = ELF(logits[:,2],targets[:,-lidx,2])
+            #model_loss = self.loss(targets[:,-lidx], logits)
+            phi_losses.append(self.loss(logits[:,0],targets[:,-lidx,0])* ((lidx-2)/25))
+            theta_losses.append( self.loss(logits[:,1],targets[:,-lidx,1]) * ((lidx-2)/25))
+            energy_losses.append( self.loss(logits[:,2],targets[:,-lidx,2])*((3*(lidx-2)/25) + 1 ))
+
             preds.append(logits)
-            losses.append( model_loss)
-            individual_losses.append([phi_loss,theta_loss,dE_loss])
-        mean_loss = tf.reduce_mean(losses)
         
-        return preds, mean_loss, individual_losses
+        l1 = tf.reduce_mean(phi_losses)
+        l2 = tf.reduce_mean(theta_losses)
+        l3 = tf.reduce_mean(energy_losses)
+        return preds, tf.reduce_mean([l1,l2,l3]) ,l1,l2,l3
     
     def fit(self, X:tf.Tensor, targets:tf.Tensor, valX:tf.Tensor = None,valY:tf.Tensor=None)->tf.Tensor:
         """
         It means multiple batches should go inside the model
         """
         with tf.GradientTape() as tape:
-            preds, loss, ind_losses = self(X,targets)
-        grads = tape.gradient(loss, self.trainable_weights)
+            preds, model_loss, philoss,thetaloss,ekinloss = self(X,targets)
+        loss = philoss + thetaloss + ekinloss
+        grads = tape.gradient(model_loss, self.trainable_weights)
         self.optimizer.apply_gradients(zip(grads, self.trainable_weights))
 
-        print(f"    Loss: {loss:.4f}")
-        print(f"    Phi Loss: {tf.reduce_mean(np.array(ind_losses)[:,0]):.4f}",end=" ")
-        print(f" Theata Loss: {tf.reduce_mean(np.array(ind_losses)[:,1]):.4f}",end=" ")
-        print(f" E Loss: {tf.reduce_mean(np.array(ind_losses)[:,2]):.4f}")
+        print(f"    Loss: {model_loss:.4f}")
+        print(f"    Phi Loss: {philoss:.4f}",end=" ")
+        print(f" Theata Loss: {thetaloss:.4f}",end=" ")
+        print(f" E Loss: {ekinloss:.4f}")
 
         if valX is not None:
-            _, val_loss, _ = self(valX,valY)
-            print(f"    Val Loss: {val_loss:.4f}\n")
-        return preds, loss, val_loss, ind_losses
+            _, _,phi_val_loss, phi_thetaloss, phi_ekinloss = self(valX,valY)
+            val_loss = phi_val_loss + phi_thetaloss + phi_ekinloss
+            print(f"    Val Loss: {val_loss:.4f}")
+            print(f"    Val Phi Loss: {phi_val_loss:.4f}",end=" ")
+            print(f" Val Theata Loss: {phi_thetaloss:.4f}",end=" ")
+            print(f" Val E Loss: {phi_ekinloss:.4f}\n")
+        return preds, loss, val_loss, (philoss,thetaloss,ekinloss)

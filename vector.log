@@ -1,0 +1,3030 @@
+Epoch:  0
+    Loss: 10.8489
+    Phi Loss: 0.3656  Theata Loss: 0.4359  E Loss: 10.0474
+    Val Loss: 14.8164
+    Val Phi Loss: 0.9171  Val Theata Loss: 0.6301  Val E Loss: 13.2692
+
+    Loss: 11.2975
+    Phi Loss: 0.7677  Theata Loss: 0.4593  E Loss: 10.0705
+    Val Loss: 4.9022
+    Val Phi Loss: 1.5427  Val Theata Loss: 0.4064  Val E Loss: 2.9531
+
+    Loss: 9.3189
+    Phi Loss: 0.8041  Theata Loss: 0.2497  E Loss: 8.2651
+    Val Loss: 9.9651
+    Val Phi Loss: 0.5570  Val Theata Loss: 0.4320  Val E Loss: 8.9762
+
+    Loss: 7.7873
+    Phi Loss: 0.7735  Theata Loss: 0.5312  E Loss: 6.4825
+    Val Loss: 20.0785
+    Val Phi Loss: 0.5672  Val Theata Loss: 0.3134  Val E Loss: 19.1979
+
+    Loss: 6.5681
+    Phi Loss: 0.5211  Theata Loss: 1.7309  E Loss: 4.3161
+    Val Loss: 12.4794
+    Val Phi Loss: 0.4226  Val Theata Loss: 1.9616  Val E Loss: 10.0952
+
+    Loss: 3.0088
+    Phi Loss: 1.2004  Theata Loss: 0.3882  E Loss: 1.4202
+    Val Loss: 8.6431
+    Val Phi Loss: 0.4332  Val Theata Loss: 0.9988  Val E Loss: 7.2111
+
+    Loss: 3.3195
+    Phi Loss: 0.4154  Theata Loss: 0.2543  E Loss: 2.6498
+    Val Loss: 12.0319
+    Val Phi Loss: 0.7419  Val Theata Loss: 0.1798  Val E Loss: 11.1103
+
+    Loss: 4.2227
+    Phi Loss: 1.0195  Theata Loss: 0.1966  E Loss: 3.0065
+    Val Loss: 4.7688
+    Val Phi Loss: 0.4835  Val Theata Loss: 0.2628  Val E Loss: 4.0224
+
+    Loss: 5.8564
+    Phi Loss: 1.0018  Theata Loss: 0.5929  E Loss: 4.2617
+    Val Loss: 3.9720
+    Val Phi Loss: 0.4404  Val Theata Loss: 0.4447  Val E Loss: 3.0869
+
+    Loss: 6.0157
+    Phi Loss: 1.0795  Theata Loss: 0.8281  E Loss: 4.1081
+    Val Loss: 4.5051
+    Val Phi Loss: 1.4699  Val Theata Loss: 0.3400  Val E Loss: 2.6952
+
+    Loss: 2.4026
+    Phi Loss: 1.1318  Theata Loss: 0.3950  E Loss: 0.8757
+    Val Loss: 6.1117
+    Val Phi Loss: 0.7086  Val Theata Loss: 1.1404  Val E Loss: 4.2626
+
+    Loss: 2.8499
+    Phi Loss: 1.0846  Theata Loss: 0.2250  E Loss: 1.5403
+    Val Loss: 8.4088
+    Val Phi Loss: 0.4142  Val Theata Loss: 0.6094  Val E Loss: 7.3852
+
+    Loss: 5.4521
+    Phi Loss: 0.4457  Theata Loss: 0.9292  E Loss: 4.0772
+    Val Loss: 3.0524
+    Val Phi Loss: 0.4531  Val Theata Loss: 0.5513  Val E Loss: 2.0480
+
+    Loss: 12.9516
+    Phi Loss: 0.5306  Theata Loss: 0.5122  E Loss: 11.9088
+    Val Loss: 4.2574
+    Val Phi Loss: 0.7104  Val Theata Loss: 0.7910  Val E Loss: 2.7559
+
+    Loss: 8.1447
+    Phi Loss: 0.4075  Theata Loss: 1.6273  E Loss: 6.1099
+    Val Loss: 7.0953
+    Val Phi Loss: 0.9714  Val Theata Loss: 0.9467  Val E Loss: 5.1772
+
+    Loss: 9.7540
+    Phi Loss: 0.3657  Theata Loss: 0.7998  E Loss: 8.5885
+    Val Loss: 2.8790
+    Val Phi Loss: 0.3748  Val Theata Loss: 1.4756  Val E Loss: 1.0287
+
+    Loss: 3.8262
+    Phi Loss: 0.5115  Theata Loss: 0.2787  E Loss: 3.0360
+    Val Loss: 5.0878
+    Val Phi Loss: 0.5667  Val Theata Loss: 0.5008  Val E Loss: 4.0203
+
+    Loss: 9.8974
+    Phi Loss: 0.5162  Theata Loss: 0.2204  E Loss: 9.1608
+    Val Loss: 2.7021
+    Val Phi Loss: 0.6680  Val Theata Loss: 0.6289  Val E Loss: 1.4052
+
+    Loss: 2.0939
+    Phi Loss: 0.3596  Theata Loss: 0.3747  E Loss: 1.3595
+    Val Loss: 2.2706
+    Val Phi Loss: 0.7871  Val Theata Loss: 0.2649  Val E Loss: 1.2185
+
+    Loss: 4.7643
+    Phi Loss: 0.3941  Theata Loss: 0.4401  E Loss: 3.9301
+    Val Loss: 2.9870
+    Val Phi Loss: 0.9903  Val Theata Loss: 1.2842  Val E Loss: 0.7125
+
+Epoch:  1
+    Loss: 3.0492
+    Phi Loss: 1.1265  Theata Loss: 0.1131  E Loss: 1.8096
+    Val Loss: 2.5593
+    Val Phi Loss: 0.4910  Val Theata Loss: 0.2841  Val E Loss: 1.7842
+
+    Loss: 2.6183
+    Phi Loss: 0.4833  Theata Loss: 0.1996  E Loss: 1.9354
+    Val Loss: 2.8352
+    Val Phi Loss: 0.4330  Val Theata Loss: 0.3123  Val E Loss: 2.0899
+
+    Loss: 5.8349
+    Phi Loss: 0.5885  Theata Loss: 0.2475  E Loss: 4.9989
+    Val Loss: 6.9126
+    Val Phi Loss: 0.4099  Val Theata Loss: 0.5411  Val E Loss: 5.9616
+
+    Loss: 1.9760
+    Phi Loss: 0.5319  Theata Loss: 0.2726  E Loss: 1.1715
+    Val Loss: 3.1752
+    Val Phi Loss: 0.4735  Val Theata Loss: 0.1624  Val E Loss: 2.5392
+
+    Loss: 2.7654
+    Phi Loss: 0.8431  Theata Loss: 0.5957  E Loss: 1.3266
+    Val Loss: 1.8911
+    Val Phi Loss: 0.6840  Val Theata Loss: 0.2416  Val E Loss: 0.9655
+
+    Loss: 2.5633
+    Phi Loss: 0.4692  Theata Loss: 0.6335  E Loss: 1.4607
+    Val Loss: 1.8088
+    Val Phi Loss: 0.6606  Val Theata Loss: 0.1111  Val E Loss: 1.0371
+
+    Loss: 2.3300
+    Phi Loss: 0.4728  Theata Loss: 0.2363  E Loss: 1.6209
+    Val Loss: 2.7185
+    Val Phi Loss: 0.4344  Val Theata Loss: 0.4697  Val E Loss: 1.8145
+
+    Loss: 1.6785
+    Phi Loss: 0.4401  Theata Loss: 0.3852  E Loss: 0.8532
+    Val Loss: 1.5952
+    Val Phi Loss: 0.5498  Val Theata Loss: 0.1201  Val E Loss: 0.9253
+
+    Loss: 1.8368
+    Phi Loss: 0.6052  Theata Loss: 0.3495  E Loss: 0.8820
+    Val Loss: 1.8261
+    Val Phi Loss: 0.4213  Val Theata Loss: 0.2198  Val E Loss: 1.1849
+
+    Loss: 2.4556
+    Phi Loss: 0.8405  Theata Loss: 0.7925  E Loss: 0.8226
+    Val Loss: 2.6269
+    Val Phi Loss: 0.4085  Val Theata Loss: 1.1491  Val E Loss: 1.0693
+
+    Loss: 2.1313
+    Phi Loss: 1.0105  Theata Loss: 0.2110  E Loss: 0.9098
+    Val Loss: 4.5669
+    Val Phi Loss: 0.3802  Val Theata Loss: 0.0953  Val E Loss: 4.0914
+
+    Loss: 2.8611
+    Phi Loss: 0.4993  Theata Loss: 0.2307  E Loss: 2.1311
+    Val Loss: 2.3880
+    Val Phi Loss: 0.4352  Val Theata Loss: 0.4813  Val E Loss: 1.4715
+
+    Loss: 2.9088
+    Phi Loss: 0.5299  Theata Loss: 1.5291  E Loss: 0.8498
+    Val Loss: 6.0536
+    Val Phi Loss: 0.4405  Val Theata Loss: 0.4614  Val E Loss: 5.1517
+
+    Loss: 6.7222
+    Phi Loss: 0.4084  Theata Loss: 0.5455  E Loss: 5.7682
+    Val Loss: 2.1422
+    Val Phi Loss: 0.4218  Val Theata Loss: 0.2138  Val E Loss: 1.5066
+
+    Loss: 3.7452
+    Phi Loss: 0.4492  Theata Loss: 0.0626  E Loss: 3.2334
+    Val Loss: 2.1616
+    Val Phi Loss: 0.4490  Val Theata Loss: 0.5367  Val E Loss: 1.1759
+
+    Loss: 2.1740
+    Phi Loss: 0.4619  Theata Loss: 0.8911  E Loss: 0.8209
+    Val Loss: 2.2489
+    Val Phi Loss: 0.3828  Val Theata Loss: 0.4035  Val E Loss: 1.4626
+
+    Loss: 5.0589
+    Phi Loss: 0.4973  Theata Loss: 0.9606  E Loss: 3.6010
+    Val Loss: 4.0574
+    Val Phi Loss: 0.4036  Val Theata Loss: 0.1800  Val E Loss: 3.4738
+
+    Loss: 2.4018
+    Phi Loss: 0.4370  Theata Loss: 0.1661  E Loss: 1.7988
+    Val Loss: 2.0412
+    Val Phi Loss: 0.6454  Val Theata Loss: 0.4720  Val E Loss: 0.9238
+
+    Loss: 4.6910
+    Phi Loss: 0.5990  Theata Loss: 0.1693  E Loss: 3.9228
+    Val Loss: 1.8525
+    Val Phi Loss: 0.6090  Val Theata Loss: 0.3046  Val E Loss: 0.9389
+
+    Loss: 2.0075
+    Phi Loss: 0.6453  Theata Loss: 0.3005  E Loss: 1.0617
+    Val Loss: 1.5482
+    Val Phi Loss: 0.4097  Val Theata Loss: 0.2256  Val E Loss: 0.9129
+
+Epoch:  2
+    Loss: 1.6408
+    Phi Loss: 0.4396  Theata Loss: 0.5093  E Loss: 0.6919
+    Val Loss: 2.7206
+    Val Phi Loss: 0.6998  Val Theata Loss: 0.1449  Val E Loss: 1.8760
+
+    Loss: 1.8175
+    Phi Loss: 0.8015  Theata Loss: 0.4205  E Loss: 0.5954
+    Val Loss: 2.0350
+    Val Phi Loss: 0.3562  Val Theata Loss: 0.2872  Val E Loss: 1.3917
+
+    Loss: 2.0135
+    Phi Loss: 0.4832  Theata Loss: 0.2530  E Loss: 1.2773
+    Val Loss: 2.7589
+    Val Phi Loss: 0.4121  Val Theata Loss: 0.0401  Val E Loss: 2.3066
+
+    Loss: 1.8908
+    Phi Loss: 0.9356  Theata Loss: 0.4049  E Loss: 0.5503
+    Val Loss: 1.7846
+    Val Phi Loss: 0.5624  Val Theata Loss: 0.1364  Val E Loss: 1.0858
+
+    Loss: 2.9198
+    Phi Loss: 0.9810  Theata Loss: 0.1448  E Loss: 1.7941
+    Val Loss: 3.3531
+    Val Phi Loss: 1.5321  Val Theata Loss: 0.5209  Val E Loss: 1.3001
+
+    Loss: 1.2718
+    Phi Loss: 0.4857  Theata Loss: 0.0771  E Loss: 0.7090
+    Val Loss: 2.7609
+    Val Phi Loss: 0.4175  Val Theata Loss: 0.5120  Val E Loss: 1.8314
+
+    Loss: 1.6663
+    Phi Loss: 0.4363  Theata Loss: 0.2738  E Loss: 0.9561
+    Val Loss: 2.8776
+    Val Phi Loss: 0.5061  Val Theata Loss: 0.1225  Val E Loss: 2.2490
+
+    Loss: 4.8845
+    Phi Loss: 1.2265  Theata Loss: 0.0989  E Loss: 3.5591
+    Val Loss: 2.5111
+    Val Phi Loss: 1.0415  Val Theata Loss: 0.1695  Val E Loss: 1.3001
+
+    Loss: 1.3471
+    Phi Loss: 0.5225  Theata Loss: 0.0615  E Loss: 0.7631
+    Val Loss: 1.7097
+    Val Phi Loss: 0.3620  Val Theata Loss: 0.1878  Val E Loss: 1.1598
+
+    Loss: 4.5646
+    Phi Loss: 0.7041  Theata Loss: 0.1766  E Loss: 3.6838
+    Val Loss: 3.4976
+    Val Phi Loss: 0.9403  Val Theata Loss: 0.0706  Val E Loss: 2.4867
+
+    Loss: 1.6900
+    Phi Loss: 0.5523  Theata Loss: 0.5219  E Loss: 0.6158
+    Val Loss: 1.7109
+    Val Phi Loss: 0.4617  Val Theata Loss: 0.2811  Val E Loss: 0.9681
+
+    Loss: 2.3184
+    Phi Loss: 0.3833  Theata Loss: 0.1638  E Loss: 1.7713
+    Val Loss: 1.4340
+    Val Phi Loss: 0.3922  Val Theata Loss: 0.1364  Val E Loss: 0.9054
+
+    Loss: 1.5070
+    Phi Loss: 0.3725  Theata Loss: 0.2236  E Loss: 0.9109
+    Val Loss: 1.1832
+    Val Phi Loss: 0.3609  Val Theata Loss: 0.2520  Val E Loss: 0.5703
+
+    Loss: 2.0619
+    Phi Loss: 0.8289  Theata Loss: 0.1287  E Loss: 1.1042
+    Val Loss: 1.2866
+    Val Phi Loss: 0.4045  Val Theata Loss: 0.2811  Val E Loss: 0.6010
+
+    Loss: 2.4431
+    Phi Loss: 0.4087  Theata Loss: 0.5950  E Loss: 1.4394
+    Val Loss: 3.9921
+    Val Phi Loss: 0.5040  Val Theata Loss: 0.1642  Val E Loss: 3.3239
+
+    Loss: 1.2163
+    Phi Loss: 0.5236  Theata Loss: 0.1010  E Loss: 0.5916
+    Val Loss: 1.6738
+    Val Phi Loss: 0.3398  Val Theata Loss: 0.2142  Val E Loss: 1.1198
+
+    Loss: 1.9750
+    Phi Loss: 0.6181  Theata Loss: 0.1600  E Loss: 1.1969
+    Val Loss: 3.6005
+    Val Phi Loss: 0.4182  Val Theata Loss: 0.2091  Val E Loss: 2.9732
+
+    Loss: 1.8016
+    Phi Loss: 0.7491  Theata Loss: 0.1277  E Loss: 0.9248
+    Val Loss: 2.3534
+    Val Phi Loss: 0.5099  Val Theata Loss: 0.5007  Val E Loss: 1.3428
+
+    Loss: 1.4978
+    Phi Loss: 0.3919  Theata Loss: 0.1334  E Loss: 0.9725
+    Val Loss: 2.0215
+    Val Phi Loss: 0.3702  Val Theata Loss: 0.1236  Val E Loss: 1.5276
+
+    Loss: 2.9654
+    Phi Loss: 0.7087  Theata Loss: 0.0904  E Loss: 2.1664
+    Val Loss: 1.8344
+    Val Phi Loss: 0.5807  Val Theata Loss: 0.0994  Val E Loss: 1.1542
+
+Epoch:  3
+    Loss: 1.6491
+    Phi Loss: 0.3842  Theata Loss: 0.2525  E Loss: 1.0124
+    Val Loss: 2.5584
+    Val Phi Loss: 0.7511  Val Theata Loss: 0.0967  Val E Loss: 1.7106
+
+    Loss: 3.1472
+    Phi Loss: 0.6353  Theata Loss: 0.3181  E Loss: 2.1938
+    Val Loss: 1.6755
+    Val Phi Loss: 0.3999  Val Theata Loss: 0.1994  Val E Loss: 1.0762
+
+    Loss: 2.7375
+    Phi Loss: 0.4838  Theata Loss: 0.1049  E Loss: 2.1488
+    Val Loss: 6.0770
+    Val Phi Loss: 0.3627  Val Theata Loss: 0.1833  Val E Loss: 5.5311
+
+    Loss: 2.4869
+    Phi Loss: 0.4324  Theata Loss: 0.2050  E Loss: 1.8495
+    Val Loss: 4.6445
+    Val Phi Loss: 0.3868  Val Theata Loss: 0.2385  Val E Loss: 4.0193
+
+    Loss: 6.4907
+    Phi Loss: 1.0115  Theata Loss: 0.0805  E Loss: 5.3987
+    Val Loss: 1.4529
+    Val Phi Loss: 0.3946  Val Theata Loss: 0.0947  Val E Loss: 0.9636
+
+    Loss: 3.7426
+    Phi Loss: 0.5845  Theata Loss: 0.0591  E Loss: 3.0991
+    Val Loss: 1.3803
+    Val Phi Loss: 0.4079  Val Theata Loss: 0.0836  Val E Loss: 0.8889
+
+    Loss: 1.3564
+    Phi Loss: 0.3190  Theata Loss: 0.1438  E Loss: 0.8935
+    Val Loss: 1.5743
+    Val Phi Loss: 0.6056  Val Theata Loss: 0.0711  Val E Loss: 0.8977
+
+    Loss: 2.3816
+    Phi Loss: 0.3750  Theata Loss: 0.0797  E Loss: 1.9269
+    Val Loss: 1.3489
+    Val Phi Loss: 0.3604  Val Theata Loss: 0.1118  Val E Loss: 0.8767
+
+    Loss: 1.7913
+    Phi Loss: 0.6327  Theata Loss: 0.1728  E Loss: 0.9858
+    Val Loss: 3.9718
+    Val Phi Loss: 0.4158  Val Theata Loss: 0.1040  Val E Loss: 3.4520
+
+    Loss: 1.7225
+    Phi Loss: 0.3282  Theata Loss: 0.2007  E Loss: 1.1936
+    Val Loss: 1.9592
+    Val Phi Loss: 0.9954  Val Theata Loss: 0.1112  Val E Loss: 0.8526
+
+    Loss: 1.6065
+    Phi Loss: 0.4866  Theata Loss: 0.0710  E Loss: 1.0489
+    Val Loss: 1.3924
+    Val Phi Loss: 0.3751  Val Theata Loss: 0.1598  Val E Loss: 0.8575
+
+    Loss: 1.7307
+    Phi Loss: 0.5432  Theata Loss: 0.3127  E Loss: 0.8747
+    Val Loss: 1.4527
+    Val Phi Loss: 0.4314  Val Theata Loss: 0.2392  Val E Loss: 0.7820
+
+    Loss: 6.7721
+    Phi Loss: 0.3879  Theata Loss: 0.0750  E Loss: 6.3091
+    Val Loss: 2.3559
+    Val Phi Loss: 0.4304  Val Theata Loss: 0.0800  Val E Loss: 1.8455
+
+    Loss: 1.3933
+    Phi Loss: 0.3577  Theata Loss: 0.0964  E Loss: 0.9393
+    Val Loss: 1.9169
+    Val Phi Loss: 0.4464  Val Theata Loss: 0.5176  Val E Loss: 0.9530
+
+    Loss: 1.1260
+    Phi Loss: 0.4811  Theata Loss: 0.1999  E Loss: 0.4451
+    Val Loss: 1.1471
+    Val Phi Loss: 0.3824  Val Theata Loss: 0.0992  Val E Loss: 0.6656
+
+    Loss: 1.6499
+    Phi Loss: 0.4328  Theata Loss: 0.0688  E Loss: 1.1483
+    Val Loss: 1.5518
+    Val Phi Loss: 0.3562  Val Theata Loss: 0.1984  Val E Loss: 0.9972
+
+    Loss: 1.7496
+    Phi Loss: 0.8249  Theata Loss: 0.1934  E Loss: 0.7314
+    Val Loss: 4.1423
+    Val Phi Loss: 0.3593  Val Theata Loss: 0.1804  Val E Loss: 3.6026
+
+    Loss: 2.0824
+    Phi Loss: 0.5158  Theata Loss: 0.2412  E Loss: 1.3254
+    Val Loss: 1.3878
+    Val Phi Loss: 0.5217  Val Theata Loss: 0.1698  Val E Loss: 0.6962
+
+    Loss: 1.4542
+    Phi Loss: 0.3960  Theata Loss: 0.4756  E Loss: 0.5826
+    Val Loss: 2.1285
+    Val Phi Loss: 0.3891  Val Theata Loss: 0.6192  Val E Loss: 1.1201
+
+    Loss: 3.1962
+    Phi Loss: 0.5678  Theata Loss: 0.3371  E Loss: 2.2914
+    Val Loss: 3.1168
+    Val Phi Loss: 0.4087  Val Theata Loss: 0.5666  Val E Loss: 2.1415
+
+Epoch:  4
+    Loss: 1.2788
+    Phi Loss: 0.3304  Theata Loss: 0.4461  E Loss: 0.5022
+    Val Loss: 1.1431
+    Val Phi Loss: 0.3547  Val Theata Loss: 0.1034  Val E Loss: 0.6850
+
+    Loss: 2.2506
+    Phi Loss: 0.4785  Theata Loss: 0.1099  E Loss: 1.6622
+    Val Loss: 3.0644
+    Val Phi Loss: 0.4160  Val Theata Loss: 0.1692  Val E Loss: 2.4792
+
+    Loss: 1.3668
+    Phi Loss: 0.4079  Theata Loss: 0.1328  E Loss: 0.8262
+    Val Loss: 2.0924
+    Val Phi Loss: 0.4220  Val Theata Loss: 0.1589  Val E Loss: 1.5116
+
+    Loss: 3.6781
+    Phi Loss: 0.8604  Theata Loss: 0.1191  E Loss: 2.6986
+    Val Loss: 1.2755
+    Val Phi Loss: 0.4745  Val Theata Loss: 0.1071  Val E Loss: 0.6940
+
+    Loss: 3.7244
+    Phi Loss: 0.8679  Theata Loss: 0.0966  E Loss: 2.7598
+    Val Loss: 1.6309
+    Val Phi Loss: 0.2974  Val Theata Loss: 0.0375  Val E Loss: 1.2960
+
+    Loss: 1.4080
+    Phi Loss: 0.4754  Theata Loss: 0.1187  E Loss: 0.8139
+    Val Loss: 3.3561
+    Val Phi Loss: 0.3640  Val Theata Loss: 0.5484  Val E Loss: 2.4438
+
+    Loss: 2.5290
+    Phi Loss: 0.6041  Theata Loss: 0.0630  E Loss: 1.8619
+    Val Loss: 1.3646
+    Val Phi Loss: 0.4934  Val Theata Loss: 0.1856  Val E Loss: 0.6856
+
+    Loss: 1.6513
+    Phi Loss: 0.4457  Theata Loss: 0.1715  E Loss: 1.0342
+    Val Loss: 1.5486
+    Val Phi Loss: 0.6408  Val Theata Loss: 0.1800  Val E Loss: 0.7278
+
+    Loss: 1.9869
+    Phi Loss: 0.5363  Theata Loss: 0.1682  E Loss: 1.2824
+    Val Loss: 3.9190
+    Val Phi Loss: 0.3816  Val Theata Loss: 1.1307  Val E Loss: 2.4067
+
+    Loss: 3.1391
+    Phi Loss: 0.8740  Theata Loss: 0.0630  E Loss: 2.2021
+    Val Loss: 1.7404
+    Val Phi Loss: 0.6670  Val Theata Loss: 0.3934  Val E Loss: 0.6800
+
+    Loss: 3.4991
+    Phi Loss: 0.4657  Theata Loss: 0.3555  E Loss: 2.6779
+    Val Loss: 1.3643
+    Val Phi Loss: 0.6502  Val Theata Loss: 0.1797  Val E Loss: 0.5344
+
+    Loss: 2.3065
+    Phi Loss: 0.3967  Theata Loss: 0.7182  E Loss: 1.1916
+    Val Loss: 4.1051
+    Val Phi Loss: 0.3905  Val Theata Loss: 0.1445  Val E Loss: 3.5702
+
+    Loss: 1.8767
+    Phi Loss: 0.4093  Theata Loss: 0.0594  E Loss: 1.4080
+    Val Loss: 2.2784
+    Val Phi Loss: 0.3657  Val Theata Loss: 0.2327  Val E Loss: 1.6800
+
+    Loss: 1.1328
+    Phi Loss: 0.6188  Theata Loss: 0.0753  E Loss: 0.4387
+    Val Loss: 1.0699
+    Val Phi Loss: 0.3729  Val Theata Loss: 0.1043  Val E Loss: 0.5927
+
+    Loss: 2.3910
+    Phi Loss: 0.4785  Theata Loss: 0.1080  E Loss: 1.8045
+    Val Loss: 1.5798
+    Val Phi Loss: 0.4854  Val Theata Loss: 0.2437  Val E Loss: 0.8507
+
+    Loss: 1.5541
+    Phi Loss: 0.3512  Theata Loss: 0.1486  E Loss: 1.0543
+    Val Loss: 1.3542
+    Val Phi Loss: 0.7700  Val Theata Loss: 0.1268  Val E Loss: 0.4574
+
+    Loss: 1.4244
+    Phi Loss: 0.3817  Theata Loss: 0.2069  E Loss: 0.8357
+    Val Loss: 1.1130
+    Val Phi Loss: 0.4205  Val Theata Loss: 0.1314  Val E Loss: 0.5611
+
+    Loss: 1.4037
+    Phi Loss: 0.4469  Theata Loss: 0.3669  E Loss: 0.5899
+    Val Loss: 1.2825
+    Val Phi Loss: 0.3079  Val Theata Loss: 0.0462  Val E Loss: 0.9284
+
+    Loss: 1.5309
+    Phi Loss: 0.3659  Theata Loss: 0.2023  E Loss: 0.9627
+    Val Loss: 2.6912
+    Val Phi Loss: 0.3736  Val Theata Loss: 0.2511  Val E Loss: 2.0665
+
+    Loss: 3.1887
+    Phi Loss: 0.7126  Theata Loss: 0.2155  E Loss: 2.2606
+    Val Loss: 1.0346
+    Val Phi Loss: 0.3931  Val Theata Loss: 0.0829  Val E Loss: 0.5586
+
+Epoch:  5
+    Loss: 1.4790
+    Phi Loss: 0.3273  Theata Loss: 0.0973  E Loss: 1.0544
+    Val Loss: 1.2547
+    Val Phi Loss: 0.4340  Val Theata Loss: 0.0387  Val E Loss: 0.7820
+
+    Loss: 1.2874
+    Phi Loss: 0.5543  Theata Loss: 0.0581  E Loss: 0.6750
+    Val Loss: 2.3275
+    Val Phi Loss: 0.5754  Val Theata Loss: 0.1401  Val E Loss: 1.6120
+
+    Loss: 1.7801
+    Phi Loss: 0.4875  Theata Loss: 0.1537  E Loss: 1.1390
+    Val Loss: 1.6027
+    Val Phi Loss: 0.3488  Val Theata Loss: 0.1603  Val E Loss: 1.0936
+
+    Loss: 2.4272
+    Phi Loss: 0.7725  Theata Loss: 0.0940  E Loss: 1.5606
+    Val Loss: 1.5085
+    Val Phi Loss: 0.4422  Val Theata Loss: 0.0848  Val E Loss: 0.9815
+
+    Loss: 1.2182
+    Phi Loss: 0.4581  Theata Loss: 0.0660  E Loss: 0.6940
+    Val Loss: 1.0623
+    Val Phi Loss: 0.4898  Val Theata Loss: 0.0631  Val E Loss: 0.5094
+
+    Loss: 3.1945
+    Phi Loss: 0.4139  Theata Loss: 0.1213  E Loss: 2.6593
+    Val Loss: 1.2744
+    Val Phi Loss: 0.3381  Val Theata Loss: 0.1237  Val E Loss: 0.8126
+
+    Loss: 1.7878
+    Phi Loss: 0.3977  Theata Loss: 0.1168  E Loss: 1.2734
+    Val Loss: 2.8214
+    Val Phi Loss: 0.4330  Val Theata Loss: 0.0909  Val E Loss: 2.2975
+
+    Loss: 2.0019
+    Phi Loss: 0.3552  Theata Loss: 0.0626  E Loss: 1.5840
+    Val Loss: 1.7185
+    Val Phi Loss: 0.6455  Val Theata Loss: 0.3734  Val E Loss: 0.6996
+
+    Loss: 1.2352
+    Phi Loss: 0.3870  Theata Loss: 0.0576  E Loss: 0.7907
+    Val Loss: 1.1042
+    Val Phi Loss: 0.4229  Val Theata Loss: 0.0981  Val E Loss: 0.5832
+
+    Loss: 0.8839
+    Phi Loss: 0.4864  Theata Loss: 0.0285  E Loss: 0.3691
+    Val Loss: 1.0423
+    Val Phi Loss: 0.4208  Val Theata Loss: 0.0891  Val E Loss: 0.5324
+
+    Loss: 2.5214
+    Phi Loss: 0.4913  Theata Loss: 0.0878  E Loss: 1.9423
+    Val Loss: 1.0075
+    Val Phi Loss: 0.3342  Val Theata Loss: 0.0961  Val E Loss: 0.5772
+
+    Loss: 1.5258
+    Phi Loss: 0.5316  Theata Loss: 0.2983  E Loss: 0.6959
+    Val Loss: 1.7483
+    Val Phi Loss: 0.4208  Val Theata Loss: 0.1210  Val E Loss: 1.2065
+
+    Loss: 1.8258
+    Phi Loss: 0.4776  Theata Loss: 0.1926  E Loss: 1.1556
+    Val Loss: 1.5705
+    Val Phi Loss: 0.4519  Val Theata Loss: 0.0501  Val E Loss: 1.0685
+
+    Loss: 1.4385
+    Phi Loss: 0.5638  Theata Loss: 0.0888  E Loss: 0.7859
+    Val Loss: 1.8538
+    Val Phi Loss: 0.4308  Val Theata Loss: 0.1429  Val E Loss: 1.2802
+
+    Loss: 1.2575
+    Phi Loss: 0.5370  Theata Loss: 0.1266  E Loss: 0.5939
+    Val Loss: 1.1233
+    Val Phi Loss: 0.4295  Val Theata Loss: 0.1403  Val E Loss: 0.5534
+
+    Loss: 1.0936
+    Phi Loss: 0.3440  Theata Loss: 0.0473  E Loss: 0.7023
+    Val Loss: 1.5481
+    Val Phi Loss: 0.4405  Val Theata Loss: 0.1816  Val E Loss: 0.9261
+
+    Loss: 1.1813
+    Phi Loss: 0.5131  Theata Loss: 0.0580  E Loss: 0.6102
+    Val Loss: 1.2271
+    Val Phi Loss: 0.3869  Val Theata Loss: 0.1452  Val E Loss: 0.6951
+
+    Loss: 1.1049
+    Phi Loss: 0.3941  Theata Loss: 0.0648  E Loss: 0.6460
+    Val Loss: 1.8509
+    Val Phi Loss: 0.3924  Val Theata Loss: 0.1410  Val E Loss: 1.3175
+
+    Loss: 1.1494
+    Phi Loss: 0.4112  Theata Loss: 0.0744  E Loss: 0.6637
+    Val Loss: 1.8413
+    Val Phi Loss: 0.3577  Val Theata Loss: 0.3405  Val E Loss: 1.1430
+
+    Loss: 1.0093
+    Phi Loss: 0.4692  Theata Loss: 0.1343  E Loss: 0.4058
+    Val Loss: 1.2683
+    Val Phi Loss: 0.4242  Val Theata Loss: 0.1497  Val E Loss: 0.6944
+
+Epoch:  6
+    Loss: 2.0368
+    Phi Loss: 0.4316  Theata Loss: 0.1703  E Loss: 1.4349
+    Val Loss: 3.1322
+    Val Phi Loss: 0.3473  Val Theata Loss: 0.0974  Val E Loss: 2.6875
+
+    Loss: 1.2612
+    Phi Loss: 0.6108  Theata Loss: 0.0478  E Loss: 0.6027
+    Val Loss: 1.1933
+    Val Phi Loss: 0.4746  Val Theata Loss: 0.2346  Val E Loss: 0.4842
+
+    Loss: 1.4959
+    Phi Loss: 0.4438  Theata Loss: 0.0732  E Loss: 0.9788
+    Val Loss: 0.9278
+    Val Phi Loss: 0.3671  Val Theata Loss: 0.0758  Val E Loss: 0.4849
+
+    Loss: 1.3637
+    Phi Loss: 0.5182  Theata Loss: 0.0880  E Loss: 0.7575
+    Val Loss: 1.4937
+    Val Phi Loss: 0.3891  Val Theata Loss: 0.0634  Val E Loss: 1.0412
+
+    Loss: 1.5176
+    Phi Loss: 0.3947  Theata Loss: 0.1520  E Loss: 0.9709
+    Val Loss: 1.6175
+    Val Phi Loss: 0.5984  Val Theata Loss: 0.1475  Val E Loss: 0.8716
+
+    Loss: 2.7317
+    Phi Loss: 0.3906  Theata Loss: 0.1565  E Loss: 2.1845
+    Val Loss: 1.4914
+    Val Phi Loss: 0.3516  Val Theata Loss: 0.1492  Val E Loss: 0.9906
+
+    Loss: 1.1314
+    Phi Loss: 0.5144  Theata Loss: 0.0438  E Loss: 0.5732
+    Val Loss: 1.1982
+    Val Phi Loss: 0.4042  Val Theata Loss: 0.0590  Val E Loss: 0.7350
+
+    Loss: 1.5010
+    Phi Loss: 0.4242  Theata Loss: 0.0314  E Loss: 1.0454
+    Val Loss: 1.0074
+    Val Phi Loss: 0.3780  Val Theata Loss: 0.0787  Val E Loss: 0.5507
+
+    Loss: 2.8007
+    Phi Loss: 0.3939  Theata Loss: 0.1321  E Loss: 2.2747
+    Val Loss: 2.6075
+    Val Phi Loss: 0.3878  Val Theata Loss: 0.2352  Val E Loss: 1.9845
+
+    Loss: 1.9289
+    Phi Loss: 0.4475  Theata Loss: 0.0488  E Loss: 1.4326
+    Val Loss: 1.4736
+    Val Phi Loss: 0.3302  Val Theata Loss: 0.1351  Val E Loss: 1.0083
+
+    Loss: 0.8984
+    Phi Loss: 0.3958  Theata Loss: 0.0220  E Loss: 0.4806
+    Val Loss: 4.4666
+    Val Phi Loss: 0.4444  Val Theata Loss: 0.2337  Val E Loss: 3.7885
+
+    Loss: 1.3183
+    Phi Loss: 0.3794  Theata Loss: 0.2003  E Loss: 0.7386
+    Val Loss: 1.2033
+    Val Phi Loss: 0.4372  Val Theata Loss: 0.0577  Val E Loss: 0.7085
+
+    Loss: 1.8822
+    Phi Loss: 0.4802  Theata Loss: 0.1284  E Loss: 1.2737
+    Val Loss: 0.9855
+    Val Phi Loss: 0.4104  Val Theata Loss: 0.0305  Val E Loss: 0.5445
+
+    Loss: 0.8142
+    Phi Loss: 0.4039  Theata Loss: 0.0397  E Loss: 0.3706
+    Val Loss: 1.5855
+    Val Phi Loss: 0.7679  Val Theata Loss: 0.0495  Val E Loss: 0.7681
+
+    Loss: 1.6936
+    Phi Loss: 0.3829  Theata Loss: 0.6295  E Loss: 0.6811
+    Val Loss: 1.1450
+    Val Phi Loss: 0.3609  Val Theata Loss: 0.1438  Val E Loss: 0.6403
+
+    Loss: 1.2130
+    Phi Loss: 0.3343  Theata Loss: 0.0671  E Loss: 0.8117
+    Val Loss: 1.3308
+    Val Phi Loss: 0.3548  Val Theata Loss: 0.3394  Val E Loss: 0.6366
+
+    Loss: 2.4740
+    Phi Loss: 0.4159  Theata Loss: 0.1745  E Loss: 1.8836
+    Val Loss: 1.5944
+    Val Phi Loss: 0.6456  Val Theata Loss: 0.1918  Val E Loss: 0.7571
+
+    Loss: 3.3352
+    Phi Loss: 0.3775  Theata Loss: 0.0674  E Loss: 2.8903
+    Val Loss: 1.5156
+    Val Phi Loss: 0.3717  Val Theata Loss: 0.0746  Val E Loss: 1.0693
+
+    Loss: 2.1913
+    Phi Loss: 0.4460  Theata Loss: 0.0837  E Loss: 1.6616
+    Val Loss: 2.6105
+    Val Phi Loss: 0.4550  Val Theata Loss: 0.0516  Val E Loss: 2.1039
+
+    Loss: 1.3509
+    Phi Loss: 0.4275  Theata Loss: 0.2776  E Loss: 0.6458
+    Val Loss: 1.0914
+    Val Phi Loss: 0.4672  Val Theata Loss: 0.0214  Val E Loss: 0.6029
+
+Epoch:  7
+    Loss: 1.2257
+    Phi Loss: 0.4209  Theata Loss: 0.1994  E Loss: 0.6053
+    Val Loss: 0.9246
+    Val Phi Loss: 0.4508  Val Theata Loss: 0.0971  Val E Loss: 0.3767
+
+    Loss: 0.8448
+    Phi Loss: 0.3624  Theata Loss: 0.0200  E Loss: 0.4624
+    Val Loss: 1.5963
+    Val Phi Loss: 0.4326  Val Theata Loss: 0.0973  Val E Loss: 1.0665
+
+    Loss: 1.0845
+    Phi Loss: 0.4175  Theata Loss: 0.0896  E Loss: 0.5775
+    Val Loss: 3.1238
+    Val Phi Loss: 0.4715  Val Theata Loss: 0.1936  Val E Loss: 2.4587
+
+    Loss: 1.0965
+    Phi Loss: 0.3546  Theata Loss: 0.1303  E Loss: 0.6115
+    Val Loss: 1.1078
+    Val Phi Loss: 0.5864  Val Theata Loss: 0.0826  Val E Loss: 0.4387
+
+    Loss: 1.7812
+    Phi Loss: 0.3881  Theata Loss: 0.1392  E Loss: 1.2539
+    Val Loss: 1.9112
+    Val Phi Loss: 0.3722  Val Theata Loss: 0.1295  Val E Loss: 1.4095
+
+    Loss: 1.1933
+    Phi Loss: 0.3690  Theata Loss: 0.0659  E Loss: 0.7584
+    Val Loss: 3.2358
+    Val Phi Loss: 0.3346  Val Theata Loss: 0.3418  Val E Loss: 2.5594
+
+    Loss: 1.5362
+    Phi Loss: 0.6088  Theata Loss: 0.3433  E Loss: 0.5841
+    Val Loss: 1.3569
+    Val Phi Loss: 0.5249  Val Theata Loss: 0.1283  Val E Loss: 0.7037
+
+    Loss: 1.2012
+    Phi Loss: 0.3822  Theata Loss: 0.1259  E Loss: 0.6932
+    Val Loss: 1.3383
+    Val Phi Loss: 0.3860  Val Theata Loss: 0.0776  Val E Loss: 0.8746
+
+    Loss: 1.3073
+    Phi Loss: 0.3751  Theata Loss: 0.0745  E Loss: 0.8577
+    Val Loss: 1.6638
+    Val Phi Loss: 0.5802  Val Theata Loss: 0.0783  Val E Loss: 1.0052
+
+    Loss: 1.8727
+    Phi Loss: 0.3433  Theata Loss: 0.2864  E Loss: 1.2431
+    Val Loss: 1.3598
+    Val Phi Loss: 0.3717  Val Theata Loss: 0.0626  Val E Loss: 0.9255
+
+    Loss: 1.0223
+    Phi Loss: 0.3764  Theata Loss: 0.1099  E Loss: 0.5360
+    Val Loss: 1.3198
+    Val Phi Loss: 0.3946  Val Theata Loss: 0.0404  Val E Loss: 0.8848
+
+    Loss: 2.3676
+    Phi Loss: 0.3557  Theata Loss: 0.3970  E Loss: 1.6150
+    Val Loss: 1.0669
+    Val Phi Loss: 0.4168  Val Theata Loss: 0.0692  Val E Loss: 0.5809
+
+    Loss: 1.3540
+    Phi Loss: 0.3944  Theata Loss: 0.1307  E Loss: 0.8289
+    Val Loss: 3.0056
+    Val Phi Loss: 0.4318  Val Theata Loss: 0.0665  Val E Loss: 2.5072
+
+    Loss: 1.1536
+    Phi Loss: 0.3729  Theata Loss: 0.0445  E Loss: 0.7362
+    Val Loss: 1.0118
+    Val Phi Loss: 0.5141  Val Theata Loss: 0.0843  Val E Loss: 0.4134
+
+    Loss: 0.9964
+    Phi Loss: 0.4626  Theata Loss: 0.0536  E Loss: 0.4802
+    Val Loss: 2.1454
+    Val Phi Loss: 0.3228  Val Theata Loss: 0.0277  Val E Loss: 1.7949
+
+    Loss: 1.8649
+    Phi Loss: 0.3684  Theata Loss: 0.0857  E Loss: 1.4108
+    Val Loss: 1.7620
+    Val Phi Loss: 0.3777  Val Theata Loss: 0.0931  Val E Loss: 1.2912
+
+    Loss: 1.4234
+    Phi Loss: 0.4250  Theata Loss: 0.0682  E Loss: 0.9302
+    Val Loss: 1.4412
+    Val Phi Loss: 0.4067  Val Theata Loss: 0.1470  Val E Loss: 0.8875
+
+    Loss: 1.2670
+    Phi Loss: 0.3525  Theata Loss: 0.0414  E Loss: 0.8730
+    Val Loss: 1.0804
+    Val Phi Loss: 0.3430  Val Theata Loss: 0.0518  Val E Loss: 0.6855
+
+    Loss: 1.3231
+    Phi Loss: 0.5089  Theata Loss: 0.0976  E Loss: 0.7166
+    Val Loss: 1.1893
+    Val Phi Loss: 0.3705  Val Theata Loss: 0.1213  Val E Loss: 0.6975
+
+    Loss: 1.1477
+    Phi Loss: 0.4228  Theata Loss: 0.0452  E Loss: 0.6797
+    Val Loss: 0.7956
+    Val Phi Loss: 0.3892  Val Theata Loss: 0.0647  Val E Loss: 0.3417
+
+Epoch:  8
+    Loss: 1.2423
+    Phi Loss: 0.4035  Theata Loss: 0.3681  E Loss: 0.4708
+    Val Loss: 1.8575
+    Val Phi Loss: 0.3699  Val Theata Loss: 0.0960  Val E Loss: 1.3917
+
+    Loss: 1.4065
+    Phi Loss: 0.4291  Theata Loss: 0.0506  E Loss: 0.9268
+    Val Loss: 1.0228
+    Val Phi Loss: 0.3627  Val Theata Loss: 0.0511  Val E Loss: 0.6091
+
+    Loss: 0.9032
+    Phi Loss: 0.3423  Theata Loss: 0.0218  E Loss: 0.5391
+    Val Loss: 1.0393
+    Val Phi Loss: 0.3515  Val Theata Loss: 0.0759  Val E Loss: 0.6119
+
+    Loss: 1.2175
+    Phi Loss: 0.5091  Theata Loss: 0.1522  E Loss: 0.5562
+    Val Loss: 2.2780
+    Val Phi Loss: 0.4406  Val Theata Loss: 0.0184  Val E Loss: 1.8189
+
+    Loss: 1.3467
+    Phi Loss: 0.4977  Theata Loss: 0.1968  E Loss: 0.6522
+    Val Loss: 1.0464
+    Val Phi Loss: 0.4102  Val Theata Loss: 0.0177  Val E Loss: 0.6185
+
+    Loss: 1.0904
+    Phi Loss: 0.4572  Theata Loss: 0.0370  E Loss: 0.5963
+    Val Loss: 1.2898
+    Val Phi Loss: 0.5457  Val Theata Loss: 0.2816  Val E Loss: 0.4625
+
+    Loss: 1.7217
+    Phi Loss: 0.4593  Theata Loss: 0.1932  E Loss: 1.0692
+    Val Loss: 1.2622
+    Val Phi Loss: 0.3346  Val Theata Loss: 0.1576  Val E Loss: 0.7700
+
+    Loss: 1.1471
+    Phi Loss: 0.4207  Theata Loss: 0.2131  E Loss: 0.5133
+    Val Loss: 1.6680
+    Val Phi Loss: 0.4109  Val Theata Loss: 0.1156  Val E Loss: 1.1415
+
+    Loss: 0.8794
+    Phi Loss: 0.4033  Theata Loss: 0.0152  E Loss: 0.4609
+    Val Loss: 0.9097
+    Val Phi Loss: 0.3661  Val Theata Loss: 0.0166  Val E Loss: 0.5270
+
+    Loss: 1.8757
+    Phi Loss: 0.6783  Theata Loss: 0.0682  E Loss: 1.1291
+    Val Loss: 1.4752
+    Val Phi Loss: 0.3763  Val Theata Loss: 0.1140  Val E Loss: 0.9850
+
+    Loss: 1.1203
+    Phi Loss: 0.4370  Theata Loss: 0.0590  E Loss: 0.6243
+    Val Loss: 1.3363
+    Val Phi Loss: 0.3657  Val Theata Loss: 0.1274  Val E Loss: 0.8432
+
+    Loss: 2.9724
+    Phi Loss: 0.4568  Theata Loss: 0.2444  E Loss: 2.2712
+    Val Loss: 1.2294
+    Val Phi Loss: 0.3963  Val Theata Loss: 0.0516  Val E Loss: 0.7815
+
+    Loss: 1.0804
+    Phi Loss: 0.3993  Theata Loss: 0.1760  E Loss: 0.5051
+    Val Loss: 1.6391
+    Val Phi Loss: 0.4641  Val Theata Loss: 0.0603  Val E Loss: 1.1148
+
+    Loss: 1.1939
+    Phi Loss: 0.4327  Theata Loss: 0.1621  E Loss: 0.5992
+    Val Loss: 1.4420
+    Val Phi Loss: 0.3894  Val Theata Loss: 0.0554  Val E Loss: 0.9973
+
+    Loss: 1.2185
+    Phi Loss: 0.4618  Theata Loss: 0.2121  E Loss: 0.5446
+    Val Loss: 1.0130
+    Val Phi Loss: 0.4294  Val Theata Loss: 0.0859  Val E Loss: 0.4976
+
+    Loss: 0.8298
+    Phi Loss: 0.3448  Theata Loss: 0.0200  E Loss: 0.4651
+    Val Loss: 1.1314
+    Val Phi Loss: 0.4246  Val Theata Loss: 0.1647  Val E Loss: 0.5421
+
+    Loss: 1.5549
+    Phi Loss: 0.4996  Theata Loss: 0.0932  E Loss: 0.9621
+    Val Loss: 1.2730
+    Val Phi Loss: 0.3661  Val Theata Loss: 0.0423  Val E Loss: 0.8646
+
+    Loss: 1.0981
+    Phi Loss: 0.4750  Theata Loss: 0.0407  E Loss: 0.5825
+    Val Loss: 1.0583
+    Val Phi Loss: 0.4784  Val Theata Loss: 0.1035  Val E Loss: 0.4763
+
+    Loss: 2.5861
+    Phi Loss: 0.4728  Theata Loss: 0.0751  E Loss: 2.0382
+    Val Loss: 0.7435
+    Val Phi Loss: 0.4003  Val Theata Loss: 0.0184  Val E Loss: 0.3248
+
+    Loss: 1.0494
+    Phi Loss: 0.4232  Theata Loss: 0.1247  E Loss: 0.5014
+    Val Loss: 1.1689
+    Val Phi Loss: 0.3944  Val Theata Loss: 0.0980  Val E Loss: 0.6764
+
+Epoch:  9
+    Loss: 1.0176
+    Phi Loss: 0.3696  Theata Loss: 0.0746  E Loss: 0.5735
+    Val Loss: 1.0175
+    Val Phi Loss: 0.3747  Val Theata Loss: 0.0398  Val E Loss: 0.6030
+
+    Loss: 0.9465
+    Phi Loss: 0.3640  Theata Loss: 0.1031  E Loss: 0.4794
+    Val Loss: 1.7390
+    Val Phi Loss: 0.3973  Val Theata Loss: 0.1215  Val E Loss: 1.2203
+
+    Loss: 1.6364
+    Phi Loss: 0.4131  Theata Loss: 0.0555  E Loss: 1.1678
+    Val Loss: 2.3911
+    Val Phi Loss: 0.3869  Val Theata Loss: 0.4752  Val E Loss: 1.5290
+
+    Loss: 1.0080
+    Phi Loss: 0.4802  Theata Loss: 0.0233  E Loss: 0.5045
+    Val Loss: 1.4430
+    Val Phi Loss: 0.5075  Val Theata Loss: 0.1039  Val E Loss: 0.8316
+
+    Loss: 1.2999
+    Phi Loss: 0.5452  Theata Loss: 0.0833  E Loss: 0.6714
+    Val Loss: 1.1663
+    Val Phi Loss: 0.4714  Val Theata Loss: 0.0860  Val E Loss: 0.6089
+
+    Loss: 1.1401
+    Phi Loss: 0.4039  Theata Loss: 0.0114  E Loss: 0.7249
+    Val Loss: 1.0527
+    Val Phi Loss: 0.3972  Val Theata Loss: 0.0297  Val E Loss: 0.6258
+
+    Loss: 1.7065
+    Phi Loss: 0.3841  Theata Loss: 0.1254  E Loss: 1.1970
+    Val Loss: 2.1744
+    Val Phi Loss: 0.3732  Val Theata Loss: 0.0805  Val E Loss: 1.7207
+
+    Loss: 1.0321
+    Phi Loss: 0.4083  Theata Loss: 0.1049  E Loss: 0.5189
+    Val Loss: 2.3743
+    Val Phi Loss: 0.3671  Val Theata Loss: 0.3369  Val E Loss: 1.6703
+
+    Loss: 1.5114
+    Phi Loss: 0.3666  Theata Loss: 0.0573  E Loss: 1.0875
+    Val Loss: 1.0491
+    Val Phi Loss: 0.6558  Val Theata Loss: 0.0809  Val E Loss: 0.3124
+
+    Loss: 1.0053
+    Phi Loss: 0.4002  Theata Loss: 0.0446  E Loss: 0.5605
+    Val Loss: 0.8001
+    Val Phi Loss: 0.3951  Val Theata Loss: 0.0214  Val E Loss: 0.3836
+
+    Loss: 2.7101
+    Phi Loss: 0.3569  Theata Loss: 0.3899  E Loss: 1.9632
+    Val Loss: 1.0363
+    Val Phi Loss: 0.4478  Val Theata Loss: 0.0713  Val E Loss: 0.5172
+
+    Loss: 1.3791
+    Phi Loss: 0.8212  Theata Loss: 0.1393  E Loss: 0.4185
+    Val Loss: 2.0846
+    Val Phi Loss: 0.3976  Val Theata Loss: 0.1779  Val E Loss: 1.5092
+
+    Loss: 1.3117
+    Phi Loss: 0.5711  Theata Loss: 0.0505  E Loss: 0.6901
+    Val Loss: 1.4902
+    Val Phi Loss: 0.3640  Val Theata Loss: 0.0657  Val E Loss: 1.0606
+
+    Loss: 1.7502
+    Phi Loss: 0.6382  Theata Loss: 0.2775  E Loss: 0.8345
+    Val Loss: 0.8934
+    Val Phi Loss: 0.5000  Val Theata Loss: 0.0459  Val E Loss: 0.3475
+
+    Loss: 1.3914
+    Phi Loss: 0.4085  Theata Loss: 0.1445  E Loss: 0.8384
+    Val Loss: 0.7802
+    Val Phi Loss: 0.3194  Val Theata Loss: 0.0597  Val E Loss: 0.4012
+
+    Loss: 1.2373
+    Phi Loss: 0.4801  Theata Loss: 0.1943  E Loss: 0.5629
+    Val Loss: 0.8268
+    Val Phi Loss: 0.4011  Val Theata Loss: 0.0351  Val E Loss: 0.3906
+
+    Loss: 0.7261
+    Phi Loss: 0.3924  Theata Loss: 0.0102  E Loss: 0.3235
+    Val Loss: 1.5628
+    Val Phi Loss: 0.6190  Val Theata Loss: 0.0459  Val E Loss: 0.8979
+
+    Loss: 1.3257
+    Phi Loss: 0.3758  Theata Loss: 0.0998  E Loss: 0.8501
+    Val Loss: 1.1358
+    Val Phi Loss: 0.4502  Val Theata Loss: 0.1390  Val E Loss: 0.5466
+
+    Loss: 1.0830
+    Phi Loss: 0.3626  Theata Loss: 0.2513  E Loss: 0.4691
+    Val Loss: 1.0102
+    Val Phi Loss: 0.5439  Val Theata Loss: 0.0450  Val E Loss: 0.4213
+
+    Loss: 1.9759
+    Phi Loss: 0.4574  Theata Loss: 0.0300  E Loss: 1.4885
+    Val Loss: 2.2154
+    Val Phi Loss: 0.3800  Val Theata Loss: 0.2883  Val E Loss: 1.5472
+
+Epoch:  10
+    Loss: 0.8793
+    Phi Loss: 0.4545  Theata Loss: 0.0107  E Loss: 0.4140
+    Val Loss: 1.0952
+    Val Phi Loss: 0.3556  Val Theata Loss: 0.1560  Val E Loss: 0.5837
+
+    Loss: 1.4046
+    Phi Loss: 0.3487  Theata Loss: 0.0376  E Loss: 1.0182
+    Val Loss: 0.7803
+    Val Phi Loss: 0.3421  Val Theata Loss: 0.0214  Val E Loss: 0.4168
+
+    Loss: 1.2922
+    Phi Loss: 0.4002  Theata Loss: 0.2629  E Loss: 0.6290
+    Val Loss: 1.4248
+    Val Phi Loss: 0.3912  Val Theata Loss: 0.0641  Val E Loss: 0.9696
+
+    Loss: 1.1070
+    Phi Loss: 0.4499  Theata Loss: 0.0777  E Loss: 0.5794
+    Val Loss: 1.0878
+    Val Phi Loss: 0.3636  Val Theata Loss: 0.0241  Val E Loss: 0.7001
+
+    Loss: 1.0053
+    Phi Loss: 0.3935  Theata Loss: 0.0504  E Loss: 0.5614
+    Val Loss: 1.2372
+    Val Phi Loss: 0.3490  Val Theata Loss: 0.1500  Val E Loss: 0.7382
+
+    Loss: 1.1102
+    Phi Loss: 0.4835  Theata Loss: 0.2665  E Loss: 0.3601
+    Val Loss: 1.1049
+    Val Phi Loss: 0.4184  Val Theata Loss: 0.1922  Val E Loss: 0.4943
+
+    Loss: 1.1362
+    Phi Loss: 0.3894  Theata Loss: 0.2851  E Loss: 0.4617
+    Val Loss: 1.2073
+    Val Phi Loss: 0.4182  Val Theata Loss: 0.0436  Val E Loss: 0.7456
+
+    Loss: 1.0136
+    Phi Loss: 0.3155  Theata Loss: 0.0154  E Loss: 0.6827
+    Val Loss: 2.0098
+    Val Phi Loss: 0.3665  Val Theata Loss: 0.5961  Val E Loss: 1.0473
+
+    Loss: 1.1757
+    Phi Loss: 0.4153  Theata Loss: 0.0416  E Loss: 0.7187
+    Val Loss: 1.0084
+    Val Phi Loss: 0.4992  Val Theata Loss: 0.1506  Val E Loss: 0.3586
+
+    Loss: 0.8352
+    Phi Loss: 0.3833  Theata Loss: 0.0523  E Loss: 0.3996
+    Val Loss: 1.1699
+    Val Phi Loss: 0.3556  Val Theata Loss: 0.0660  Val E Loss: 0.7483
+
+    Loss: 0.7524
+    Phi Loss: 0.3482  Theata Loss: 0.0201  E Loss: 0.3842
+    Val Loss: 0.8600
+    Val Phi Loss: 0.3692  Val Theata Loss: 0.0565  Val E Loss: 0.4342
+
+    Loss: 1.0876
+    Phi Loss: 0.3856  Theata Loss: 0.1160  E Loss: 0.5860
+    Val Loss: 1.3434
+    Val Phi Loss: 0.3808  Val Theata Loss: 0.0687  Val E Loss: 0.8939
+
+    Loss: 1.6363
+    Phi Loss: 0.3694  Theata Loss: 0.0987  E Loss: 1.1682
+    Val Loss: 1.0852
+    Val Phi Loss: 0.4125  Val Theata Loss: 0.1411  Val E Loss: 0.5316
+
+    Loss: 0.9506
+    Phi Loss: 0.4077  Theata Loss: 0.0770  E Loss: 0.4658
+    Val Loss: 0.9222
+    Val Phi Loss: 0.3620  Val Theata Loss: 0.0998  Val E Loss: 0.4604
+
+    Loss: 1.7971
+    Phi Loss: 0.5527  Theata Loss: 0.5303  E Loss: 0.7141
+    Val Loss: 0.9073
+    Val Phi Loss: 0.3722  Val Theata Loss: 0.0360  Val E Loss: 0.4990
+
+    Loss: 1.6615
+    Phi Loss: 0.5524  Theata Loss: 0.1116  E Loss: 0.9974
+    Val Loss: 1.1746
+    Val Phi Loss: 0.4023  Val Theata Loss: 0.0141  Val E Loss: 0.7582
+
+    Loss: 1.0246
+    Phi Loss: 0.4258  Theata Loss: 0.0446  E Loss: 0.5542
+    Val Loss: 1.5715
+    Val Phi Loss: 0.4533  Val Theata Loss: 0.0591  Val E Loss: 1.0591
+
+    Loss: 1.0011
+    Phi Loss: 0.3933  Theata Loss: 0.0480  E Loss: 0.5598
+    Val Loss: 1.0953
+    Val Phi Loss: 0.3484  Val Theata Loss: 0.0739  Val E Loss: 0.6730
+
+    Loss: 0.7911
+    Phi Loss: 0.4207  Theata Loss: 0.0089  E Loss: 0.3615
+    Val Loss: 1.0301
+    Val Phi Loss: 0.3198  Val Theata Loss: 0.0603  Val E Loss: 0.6499
+
+    Loss: 1.2139
+    Phi Loss: 0.3622  Theata Loss: 0.1764  E Loss: 0.6752
+    Val Loss: 0.7387
+    Val Phi Loss: 0.4091  Val Theata Loss: 0.0084  Val E Loss: 0.3212
+
+Epoch:  11
+    Loss: 0.7305
+    Phi Loss: 0.3590  Theata Loss: 0.0208  E Loss: 0.3506
+    Val Loss: 1.5420
+    Val Phi Loss: 0.3806  Val Theata Loss: 0.5160  Val E Loss: 0.6454
+
+    Loss: 2.6243
+    Phi Loss: 0.4014  Theata Loss: 0.0350  E Loss: 2.1879
+    Val Loss: 0.9491
+    Val Phi Loss: 0.4012  Val Theata Loss: 0.0520  Val E Loss: 0.4958
+
+    Loss: 0.8879
+    Phi Loss: 0.4786  Theata Loss: 0.0175  E Loss: 0.3917
+    Val Loss: 1.3709
+    Val Phi Loss: 0.3759  Val Theata Loss: 0.0685  Val E Loss: 0.9264
+
+    Loss: 1.0573
+    Phi Loss: 0.4313  Theata Loss: 0.1193  E Loss: 0.5067
+    Val Loss: 0.8913
+    Val Phi Loss: 0.3961  Val Theata Loss: 0.1201  Val E Loss: 0.3751
+
+    Loss: 0.8896
+    Phi Loss: 0.4550  Theata Loss: 0.0137  E Loss: 0.4209
+    Val Loss: 1.2949
+    Val Phi Loss: 0.4586  Val Theata Loss: 0.0624  Val E Loss: 0.7740
+
+    Loss: 0.9774
+    Phi Loss: 0.3659  Theata Loss: 0.0560  E Loss: 0.5554
+    Val Loss: 0.7971
+    Val Phi Loss: 0.3843  Val Theata Loss: 0.0380  Val E Loss: 0.3747
+
+    Loss: 2.3627
+    Phi Loss: 0.3470  Theata Loss: 0.0322  E Loss: 1.9835
+    Val Loss: 1.0446
+    Val Phi Loss: 0.3148  Val Theata Loss: 0.0323  Val E Loss: 0.6975
+
+    Loss: 1.4967
+    Phi Loss: 0.4544  Theata Loss: 0.0195  E Loss: 1.0228
+    Val Loss: 1.2680
+    Val Phi Loss: 0.3856  Val Theata Loss: 0.0787  Val E Loss: 0.8037
+
+    Loss: 0.9062
+    Phi Loss: 0.3574  Theata Loss: 0.0516  E Loss: 0.4972
+    Val Loss: 0.9514
+    Val Phi Loss: 0.3512  Val Theata Loss: 0.0269  Val E Loss: 0.5733
+
+    Loss: 0.9907
+    Phi Loss: 0.3815  Theata Loss: 0.2456  E Loss: 0.3636
+    Val Loss: 1.2686
+    Val Phi Loss: 0.3319  Val Theata Loss: 0.0258  Val E Loss: 0.9109
+
+    Loss: 1.0500
+    Phi Loss: 0.4363  Theata Loss: 0.1694  E Loss: 0.4443
+    Val Loss: 1.4677
+    Val Phi Loss: 0.4168  Val Theata Loss: 0.0431  Val E Loss: 1.0077
+
+    Loss: 0.8907
+    Phi Loss: 0.3780  Theata Loss: 0.0579  E Loss: 0.4549
+    Val Loss: 1.0142
+    Val Phi Loss: 0.3236  Val Theata Loss: 0.0851  Val E Loss: 0.6055
+
+    Loss: 1.2306
+    Phi Loss: 0.4863  Theata Loss: 0.0305  E Loss: 0.7139
+    Val Loss: 0.9363
+    Val Phi Loss: 0.4008  Val Theata Loss: 0.0381  Val E Loss: 0.4973
+
+    Loss: 1.0506
+    Phi Loss: 0.3389  Theata Loss: 0.0266  E Loss: 0.6851
+    Val Loss: 1.1827
+    Val Phi Loss: 0.3878  Val Theata Loss: 0.0217  Val E Loss: 0.7731
+
+    Loss: 1.6627
+    Phi Loss: 0.4996  Theata Loss: 0.0571  E Loss: 1.1060
+    Val Loss: 1.1333
+    Val Phi Loss: 0.3800  Val Theata Loss: 0.1284  Val E Loss: 0.6249
+
+    Loss: 0.7850
+    Phi Loss: 0.4522  Theata Loss: 0.0580  E Loss: 0.2747
+    Val Loss: 1.0710
+    Val Phi Loss: 0.4325  Val Theata Loss: 0.0697  Val E Loss: 0.5689
+
+    Loss: 1.1518
+    Phi Loss: 0.4148  Theata Loss: 0.0273  E Loss: 0.7097
+    Val Loss: 0.8229
+    Val Phi Loss: 0.4291  Val Theata Loss: 0.0748  Val E Loss: 0.3190
+
+    Loss: 0.7619
+    Phi Loss: 0.3709  Theata Loss: 0.0932  E Loss: 0.2978
+    Val Loss: 0.8995
+    Val Phi Loss: 0.4029  Val Theata Loss: 0.0746  Val E Loss: 0.4220
+
+    Loss: 0.7718
+    Phi Loss: 0.4132  Theata Loss: 0.0274  E Loss: 0.3312
+    Val Loss: 1.0132
+    Val Phi Loss: 0.3665  Val Theata Loss: 0.0854  Val E Loss: 0.5613
+
+    Loss: 1.3830
+    Phi Loss: 0.4454  Theata Loss: 0.0351  E Loss: 0.9026
+    Val Loss: 1.3095
+    Val Phi Loss: 0.3764  Val Theata Loss: 0.1049  Val E Loss: 0.8282
+
+Epoch:  12
+    Loss: 1.1030
+    Phi Loss: 0.3734  Theata Loss: 0.0240  E Loss: 0.7055
+    Val Loss: 1.0663
+    Val Phi Loss: 0.3669  Val Theata Loss: 0.0627  Val E Loss: 0.6367
+
+    Loss: 1.2368
+    Phi Loss: 0.3543  Theata Loss: 0.0360  E Loss: 0.8465
+    Val Loss: 1.1747
+    Val Phi Loss: 0.3905  Val Theata Loss: 0.0353  Val E Loss: 0.7490
+
+    Loss: 0.9117
+    Phi Loss: 0.3702  Theata Loss: 0.0153  E Loss: 0.5262
+    Val Loss: 0.7578
+    Val Phi Loss: 0.3619  Val Theata Loss: 0.0211  Val E Loss: 0.3747
+
+    Loss: 1.7531
+    Phi Loss: 0.3776  Theata Loss: 0.0096  E Loss: 1.3659
+    Val Loss: 1.6020
+    Val Phi Loss: 0.5508  Val Theata Loss: 0.0554  Val E Loss: 0.9959
+
+    Loss: 1.1298
+    Phi Loss: 0.4011  Theata Loss: 0.1204  E Loss: 0.6082
+    Val Loss: 1.5412
+    Val Phi Loss: 0.3503  Val Theata Loss: 0.0269  Val E Loss: 1.1640
+
+    Loss: 1.0596
+    Phi Loss: 0.3553  Theata Loss: 0.0651  E Loss: 0.6392
+    Val Loss: 0.9622
+    Val Phi Loss: 0.3492  Val Theata Loss: 0.0348  Val E Loss: 0.5783
+
+    Loss: 1.6927
+    Phi Loss: 0.3890  Theata Loss: 0.2348  E Loss: 1.0689
+    Val Loss: 1.7903
+    Val Phi Loss: 0.4082  Val Theata Loss: 0.3376  Val E Loss: 1.0444
+
+    Loss: 0.7924
+    Phi Loss: 0.3770  Theata Loss: 0.0415  E Loss: 0.3739
+    Val Loss: 2.1506
+    Val Phi Loss: 0.5373  Val Theata Loss: 0.1010  Val E Loss: 1.5123
+
+    Loss: 1.1289
+    Phi Loss: 0.4466  Theata Loss: 0.0584  E Loss: 0.6239
+    Val Loss: 0.8716
+    Val Phi Loss: 0.3854  Val Theata Loss: 0.0274  Val E Loss: 0.4588
+
+    Loss: 0.9254
+    Phi Loss: 0.3779  Theata Loss: 0.0937  E Loss: 0.4538
+    Val Loss: 0.9440
+    Val Phi Loss: 0.3388  Val Theata Loss: 0.0285  Val E Loss: 0.5767
+
+    Loss: 1.9928
+    Phi Loss: 0.4054  Theata Loss: 0.0256  E Loss: 1.5618
+    Val Loss: 0.8919
+    Val Phi Loss: 0.4077  Val Theata Loss: 0.0821  Val E Loss: 0.4021
+
+    Loss: 1.0539
+    Phi Loss: 0.3669  Theata Loss: 0.0448  E Loss: 0.6423
+    Val Loss: 0.8293
+    Val Phi Loss: 0.3750  Val Theata Loss: 0.0174  Val E Loss: 0.4369
+
+    Loss: 0.8486
+    Phi Loss: 0.4291  Theata Loss: 0.0077  E Loss: 0.4119
+    Val Loss: 0.9807
+    Val Phi Loss: 0.3867  Val Theata Loss: 0.2346  Val E Loss: 0.3594
+
+    Loss: 1.0988
+    Phi Loss: 0.3509  Theata Loss: 0.1935  E Loss: 0.5545
+    Val Loss: 0.7963
+    Val Phi Loss: 0.4221  Val Theata Loss: 0.0557  Val E Loss: 0.3184
+
+    Loss: 1.4366
+    Phi Loss: 0.4031  Theata Loss: 0.0178  E Loss: 1.0157
+    Val Loss: 0.7418
+    Val Phi Loss: 0.3645  Val Theata Loss: 0.0585  Val E Loss: 0.3188
+
+    Loss: 1.1911
+    Phi Loss: 0.4362  Theata Loss: 0.0680  E Loss: 0.6869
+    Val Loss: 2.0751
+    Val Phi Loss: 0.4175  Val Theata Loss: 0.0242  Val E Loss: 1.6335
+
+    Loss: 2.0277
+    Phi Loss: 0.4033  Theata Loss: 0.0501  E Loss: 1.5744
+    Val Loss: 1.0958
+    Val Phi Loss: 0.4020  Val Theata Loss: 0.1220  Val E Loss: 0.5718
+
+    Loss: 1.0945
+    Phi Loss: 0.4313  Theata Loss: 0.0408  E Loss: 0.6224
+    Val Loss: 0.8156
+    Val Phi Loss: 0.3311  Val Theata Loss: 0.0207  Val E Loss: 0.4638
+
+    Loss: 1.8577
+    Phi Loss: 0.4479  Theata Loss: 0.0738  E Loss: 1.3360
+    Val Loss: 0.7497
+    Val Phi Loss: 0.4103  Val Theata Loss: 0.0128  Val E Loss: 0.3266
+
+    Loss: 0.7863
+    Phi Loss: 0.3649  Theata Loss: 0.0476  E Loss: 0.3738
+    Val Loss: 0.9724
+    Val Phi Loss: 0.4999  Val Theata Loss: 0.0208  Val E Loss: 0.4517
+
+Epoch:  13
+    Loss: 0.8163
+    Phi Loss: 0.3548  Theata Loss: 0.0136  E Loss: 0.4479
+    Val Loss: 0.8021
+    Val Phi Loss: 0.4150  Val Theata Loss: 0.0725  Val E Loss: 0.3146
+
+    Loss: 1.2337
+    Phi Loss: 0.4412  Theata Loss: 0.0361  E Loss: 0.7564
+    Val Loss: 1.2249
+    Val Phi Loss: 0.4609  Val Theata Loss: 0.0177  Val E Loss: 0.7464
+
+    Loss: 1.6272
+    Phi Loss: 0.4301  Theata Loss: 0.0435  E Loss: 1.1536
+    Val Loss: 1.0753
+    Val Phi Loss: 0.3860  Val Theata Loss: 0.0410  Val E Loss: 0.6482
+
+    Loss: 0.8870
+    Phi Loss: 0.4040  Theata Loss: 0.0760  E Loss: 0.4069
+    Val Loss: 1.2490
+    Val Phi Loss: 0.3733  Val Theata Loss: 0.3120  Val E Loss: 0.5637
+
+    Loss: 1.0346
+    Phi Loss: 0.4137  Theata Loss: 0.0157  E Loss: 0.6053
+    Val Loss: 1.0162
+    Val Phi Loss: 0.3215  Val Theata Loss: 0.0485  Val E Loss: 0.6462
+
+    Loss: 1.5065
+    Phi Loss: 0.4755  Theata Loss: 0.0423  E Loss: 0.9886
+    Val Loss: 1.8874
+    Val Phi Loss: 0.4794  Val Theata Loss: 0.0777  Val E Loss: 1.3302
+
+    Loss: 1.9976
+    Phi Loss: 0.4171  Theata Loss: 0.0267  E Loss: 1.5538
+    Val Loss: 0.9833
+    Val Phi Loss: 0.3733  Val Theata Loss: 0.1232  Val E Loss: 0.4868
+
+    Loss: 1.0639
+    Phi Loss: 0.3638  Theata Loss: 0.0578  E Loss: 0.6423
+    Val Loss: 0.6389
+    Val Phi Loss: 0.3845  Val Theata Loss: 0.0236  Val E Loss: 0.2307
+
+    Loss: 1.1410
+    Phi Loss: 0.5594  Theata Loss: 0.1291  E Loss: 0.4525
+    Val Loss: 1.4876
+    Val Phi Loss: 0.3780  Val Theata Loss: 0.0291  Val E Loss: 1.0805
+
+    Loss: 0.8983
+    Phi Loss: 0.4376  Theata Loss: 0.0357  E Loss: 0.4251
+    Val Loss: 0.7200
+    Val Phi Loss: 0.3619  Val Theata Loss: 0.0442  Val E Loss: 0.3138
+
+    Loss: 0.9838
+    Phi Loss: 0.3548  Theata Loss: 0.1167  E Loss: 0.5123
+    Val Loss: 1.3624
+    Val Phi Loss: 0.4270  Val Theata Loss: 0.0198  Val E Loss: 0.9157
+
+    Loss: 1.0973
+    Phi Loss: 0.4487  Theata Loss: 0.1826  E Loss: 0.4660
+    Val Loss: 0.9227
+    Val Phi Loss: 0.3371  Val Theata Loss: 0.0391  Val E Loss: 0.5466
+
+    Loss: 0.9071
+    Phi Loss: 0.4651  Theata Loss: 0.0295  E Loss: 0.4125
+    Val Loss: 0.8376
+    Val Phi Loss: 0.4288  Val Theata Loss: 0.0339  Val E Loss: 0.3749
+
+    Loss: 1.2289
+    Phi Loss: 0.3808  Theata Loss: 0.0169  E Loss: 0.8312
+    Val Loss: 0.8558
+    Val Phi Loss: 0.3788  Val Theata Loss: 0.0398  Val E Loss: 0.4372
+
+    Loss: 0.9731
+    Phi Loss: 0.3987  Theata Loss: 0.0305  E Loss: 0.5439
+    Val Loss: 2.3889
+    Val Phi Loss: 0.4220  Val Theata Loss: 0.2536  Val E Loss: 1.7133
+
+    Loss: 1.0551
+    Phi Loss: 0.3680  Theata Loss: 0.0427  E Loss: 0.6445
+    Val Loss: 0.9937
+    Val Phi Loss: 0.3740  Val Theata Loss: 0.0290  Val E Loss: 0.5906
+
+    Loss: 0.8525
+    Phi Loss: 0.3324  Theata Loss: 0.0110  E Loss: 0.5091
+    Val Loss: 0.8850
+    Val Phi Loss: 0.3874  Val Theata Loss: 0.0425  Val E Loss: 0.4551
+
+    Loss: 1.1546
+    Phi Loss: 0.3956  Theata Loss: 0.0515  E Loss: 0.7075
+    Val Loss: 0.9091
+    Val Phi Loss: 0.3387  Val Theata Loss: 0.0141  Val E Loss: 0.5563
+
+    Loss: 1.2683
+    Phi Loss: 0.3999  Theata Loss: 0.0813  E Loss: 0.7871
+    Val Loss: 1.0860
+    Val Phi Loss: 0.4031  Val Theata Loss: 0.1679  Val E Loss: 0.5150
+
+    Loss: 0.9207
+    Phi Loss: 0.4359  Theata Loss: 0.0626  E Loss: 0.4222
+    Val Loss: 0.8948
+    Val Phi Loss: 0.3549  Val Theata Loss: 0.1307  Val E Loss: 0.4092
+
+Epoch:  14
+    Loss: 1.3014
+    Phi Loss: 0.4363  Theata Loss: 0.0361  E Loss: 0.8291
+    Val Loss: 1.5138
+    Val Phi Loss: 0.3981  Val Theata Loss: 0.0375  Val E Loss: 1.0782
+
+    Loss: 0.8827
+    Phi Loss: 0.4290  Theata Loss: 0.0351  E Loss: 0.4186
+    Val Loss: 1.0198
+    Val Phi Loss: 0.4320  Val Theata Loss: 0.0413  Val E Loss: 0.5466
+
+    Loss: 1.2606
+    Phi Loss: 0.4301  Theata Loss: 0.0839  E Loss: 0.7466
+    Val Loss: 0.9991
+    Val Phi Loss: 0.4418  Val Theata Loss: 0.0468  Val E Loss: 0.5105
+
+    Loss: 0.8801
+    Phi Loss: 0.3919  Theata Loss: 0.0131  E Loss: 0.4750
+    Val Loss: 1.2069
+    Val Phi Loss: 0.3645  Val Theata Loss: 0.0239  Val E Loss: 0.8184
+
+    Loss: 0.8757
+    Phi Loss: 0.4737  Theata Loss: 0.0079  E Loss: 0.3940
+    Val Loss: 0.7541
+    Val Phi Loss: 0.3623  Val Theata Loss: 0.0388  Val E Loss: 0.3531
+
+    Loss: 1.9520
+    Phi Loss: 0.4084  Theata Loss: 0.0086  E Loss: 1.5351
+    Val Loss: 0.8814
+    Val Phi Loss: 0.3828  Val Theata Loss: 0.0627  Val E Loss: 0.4360
+
+    Loss: 1.1963
+    Phi Loss: 0.4145  Theata Loss: 0.0342  E Loss: 0.7477
+    Val Loss: 0.8082
+    Val Phi Loss: 0.3822  Val Theata Loss: 0.0499  Val E Loss: 0.3760
+
+    Loss: 1.8214
+    Phi Loss: 0.4484  Theata Loss: 0.0383  E Loss: 1.3348
+    Val Loss: 0.9186
+    Val Phi Loss: 0.3445  Val Theata Loss: 0.0847  Val E Loss: 0.4895
+
+    Loss: 0.8184
+    Phi Loss: 0.3732  Theata Loss: 0.0223  E Loss: 0.4229
+    Val Loss: 0.8585
+    Val Phi Loss: 0.3995  Val Theata Loss: 0.0294  Val E Loss: 0.4296
+
+    Loss: 0.7708
+    Phi Loss: 0.3884  Theata Loss: 0.0268  E Loss: 0.3557
+    Val Loss: 0.8620
+    Val Phi Loss: 0.3390  Val Theata Loss: 0.0148  Val E Loss: 0.5082
+
+    Loss: 0.7562
+    Phi Loss: 0.3752  Theata Loss: 0.0381  E Loss: 0.3429
+    Val Loss: 1.2099
+    Val Phi Loss: 0.4227  Val Theata Loss: 0.0138  Val E Loss: 0.7733
+
+    Loss: 0.8912
+    Phi Loss: 0.3786  Theata Loss: 0.0280  E Loss: 0.4846
+    Val Loss: 0.9973
+    Val Phi Loss: 0.3366  Val Theata Loss: 0.0701  Val E Loss: 0.5905
+
+    Loss: 0.9473
+    Phi Loss: 0.3950  Theata Loss: 0.0220  E Loss: 0.5303
+    Val Loss: 1.3284
+    Val Phi Loss: 0.4312  Val Theata Loss: 0.0218  Val E Loss: 0.8754
+
+    Loss: 1.0662
+    Phi Loss: 0.3578  Theata Loss: 0.0505  E Loss: 0.6578
+    Val Loss: 0.7777
+    Val Phi Loss: 0.4172  Val Theata Loss: 0.0150  Val E Loss: 0.3455
+
+    Loss: 0.6451
+    Phi Loss: 0.3731  Theata Loss: 0.0056  E Loss: 0.2664
+    Val Loss: 1.1734
+    Val Phi Loss: 0.4421  Val Theata Loss: 0.0592  Val E Loss: 0.6722
+
+    Loss: 1.0561
+    Phi Loss: 0.4308  Theata Loss: 0.0101  E Loss: 0.6153
+    Val Loss: 0.8305
+    Val Phi Loss: 0.3427  Val Theata Loss: 0.0427  Val E Loss: 0.4451
+
+    Loss: 0.7710
+    Phi Loss: 0.3323  Theata Loss: 0.1104  E Loss: 0.3283
+    Val Loss: 0.7963
+    Val Phi Loss: 0.3973  Val Theata Loss: 0.0216  Val E Loss: 0.3774
+
+    Loss: 1.0075
+    Phi Loss: 0.4247  Theata Loss: 0.0517  E Loss: 0.5312
+    Val Loss: 0.9035
+    Val Phi Loss: 0.3307  Val Theata Loss: 0.0278  Val E Loss: 0.5450
+
+    Loss: 0.9921
+    Phi Loss: 0.3347  Theata Loss: 0.0313  E Loss: 0.6261
+    Val Loss: 1.0675
+    Val Phi Loss: 0.4289  Val Theata Loss: 0.1101  Val E Loss: 0.5285
+
+    Loss: 0.9547
+    Phi Loss: 0.3539  Theata Loss: 0.0654  E Loss: 0.5354
+    Val Loss: 0.8825
+    Val Phi Loss: 0.3803  Val Theata Loss: 0.0186  Val E Loss: 0.4837
+
+Epoch:  15
+    Loss: 0.7751
+    Phi Loss: 0.4142  Theata Loss: 0.0251  E Loss: 0.3357
+    Val Loss: 0.6461
+    Val Phi Loss: 0.3662  Val Theata Loss: 0.0244  Val E Loss: 0.2555
+
+    Loss: 0.6985
+    Phi Loss: 0.3617  Theata Loss: 0.0132  E Loss: 0.3236
+    Val Loss: 1.2188
+    Val Phi Loss: 0.6719  Val Theata Loss: 0.0769  Val E Loss: 0.4700
+
+    Loss: 1.3091
+    Phi Loss: 0.5510  Theata Loss: 0.0161  E Loss: 0.7420
+    Val Loss: 0.7848
+    Val Phi Loss: 0.3731  Val Theata Loss: 0.0127  Val E Loss: 0.3990
+
+    Loss: 0.7613
+    Phi Loss: 0.3466  Theata Loss: 0.0150  E Loss: 0.3996
+    Val Loss: 0.7586
+    Val Phi Loss: 0.4024  Val Theata Loss: 0.0517  Val E Loss: 0.3045
+
+    Loss: 1.3148
+    Phi Loss: 0.3570  Theata Loss: 0.2067  E Loss: 0.7511
+    Val Loss: 0.7371
+    Val Phi Loss: 0.3705  Val Theata Loss: 0.0430  Val E Loss: 0.3235
+
+    Loss: 1.1467
+    Phi Loss: 0.4494  Theata Loss: 0.0244  E Loss: 0.6728
+    Val Loss: 1.5144
+    Val Phi Loss: 0.4097  Val Theata Loss: 0.0439  Val E Loss: 1.0607
+
+    Loss: 1.1280
+    Phi Loss: 0.3789  Theata Loss: 0.0297  E Loss: 0.7194
+    Val Loss: 0.9264
+    Val Phi Loss: 0.3533  Val Theata Loss: 0.0305  Val E Loss: 0.5426
+
+    Loss: 0.8594
+    Phi Loss: 0.4179  Theata Loss: 0.0172  E Loss: 0.4243
+    Val Loss: 0.7039
+    Val Phi Loss: 0.3696  Val Theata Loss: 0.0259  Val E Loss: 0.3084
+
+    Loss: 1.4379
+    Phi Loss: 0.3945  Theata Loss: 0.0367  E Loss: 1.0067
+    Val Loss: 0.8549
+    Val Phi Loss: 0.3889  Val Theata Loss: 0.0404  Val E Loss: 0.4256
+
+    Loss: 0.9763
+    Phi Loss: 0.4265  Theata Loss: 0.0549  E Loss: 0.4950
+    Val Loss: 1.0846
+    Val Phi Loss: 0.3943  Val Theata Loss: 0.0451  Val E Loss: 0.6452
+
+    Loss: 0.9267
+    Phi Loss: 0.3943  Theata Loss: 0.0593  E Loss: 0.4731
+    Val Loss: 0.9847
+    Val Phi Loss: 0.3590  Val Theata Loss: 0.0328  Val E Loss: 0.5929
+
+    Loss: 0.8284
+    Phi Loss: 0.3841  Theata Loss: 0.0256  E Loss: 0.4186
+    Val Loss: 1.0224
+    Val Phi Loss: 0.3641  Val Theata Loss: 0.0339  Val E Loss: 0.6244
+
+    Loss: 1.0716
+    Phi Loss: 0.3775  Theata Loss: 0.2133  E Loss: 0.4807
+    Val Loss: 2.1849
+    Val Phi Loss: 0.4782  Val Theata Loss: 0.0372  Val E Loss: 1.6694
+
+    Loss: 1.1513
+    Phi Loss: 0.4461  Theata Loss: 0.3474  E Loss: 0.3578
+    Val Loss: 1.5399
+    Val Phi Loss: 0.3804  Val Theata Loss: 0.0670  Val E Loss: 1.0925
+
+    Loss: 1.6239
+    Phi Loss: 0.3570  Theata Loss: 0.0299  E Loss: 1.2371
+    Val Loss: 1.3401
+    Val Phi Loss: 0.3932  Val Theata Loss: 0.1274  Val E Loss: 0.8196
+
+    Loss: 1.0743
+    Phi Loss: 0.3459  Theata Loss: 0.0257  E Loss: 0.7027
+    Val Loss: 0.6492
+    Val Phi Loss: 0.3748  Val Theata Loss: 0.0188  Val E Loss: 0.2556
+
+    Loss: 0.9789
+    Phi Loss: 0.4099  Theata Loss: 0.0377  E Loss: 0.5313
+    Val Loss: 0.7942
+    Val Phi Loss: 0.3744  Val Theata Loss: 0.0130  Val E Loss: 0.4068
+
+    Loss: 0.9777
+    Phi Loss: 0.3345  Theata Loss: 0.0945  E Loss: 0.5487
+    Val Loss: 0.7181
+    Val Phi Loss: 0.3909  Val Theata Loss: 0.0170  Val E Loss: 0.3102
+
+    Loss: 0.8815
+    Phi Loss: 0.4054  Theata Loss: 0.0425  E Loss: 0.4336
+    Val Loss: 1.3803
+    Val Phi Loss: 0.4110  Val Theata Loss: 0.1026  Val E Loss: 0.8667
+
+    Loss: 0.7818
+    Phi Loss: 0.3831  Theata Loss: 0.0511  E Loss: 0.3476
+    Val Loss: 1.0936
+    Val Phi Loss: 0.3261  Val Theata Loss: 0.0255  Val E Loss: 0.7420
+
+Epoch:  16
+    Loss: 0.8343
+    Phi Loss: 0.3684  Theata Loss: 0.0191  E Loss: 0.4469
+    Val Loss: 0.9894
+    Val Phi Loss: 0.3319  Val Theata Loss: 0.0472  Val E Loss: 0.6104
+
+    Loss: 0.9047
+    Phi Loss: 0.3413  Theata Loss: 0.0186  E Loss: 0.5448
+    Val Loss: 0.9773
+    Val Phi Loss: 0.3492  Val Theata Loss: 0.1733  Val E Loss: 0.4548
+
+    Loss: 0.6624
+    Phi Loss: 0.3427  Theata Loss: 0.0322  E Loss: 0.2875
+    Val Loss: 2.7240
+    Val Phi Loss: 0.4972  Val Theata Loss: 0.1195  Val E Loss: 2.1073
+
+    Loss: 0.8416
+    Phi Loss: 0.4009  Theata Loss: 0.0185  E Loss: 0.4222
+    Val Loss: 0.8227
+    Val Phi Loss: 0.3481  Val Theata Loss: 0.0236  Val E Loss: 0.4510
+
+    Loss: 0.9570
+    Phi Loss: 0.3433  Theata Loss: 0.0152  E Loss: 0.5985
+    Val Loss: 0.8455
+    Val Phi Loss: 0.5073  Val Theata Loss: 0.0147  Val E Loss: 0.3235
+
+    Loss: 0.9800
+    Phi Loss: 0.3947  Theata Loss: 0.0382  E Loss: 0.5472
+    Val Loss: 1.0114
+    Val Phi Loss: 0.3496  Val Theata Loss: 0.0487  Val E Loss: 0.6131
+
+    Loss: 0.8285
+    Phi Loss: 0.4327  Theata Loss: 0.0207  E Loss: 0.3751
+    Val Loss: 0.9417
+    Val Phi Loss: 0.3822  Val Theata Loss: 0.1279  Val E Loss: 0.4315
+
+    Loss: 1.1131
+    Phi Loss: 0.4621  Theata Loss: 0.0259  E Loss: 0.6251
+    Val Loss: 0.8774
+    Val Phi Loss: 0.3830  Val Theata Loss: 0.0587  Val E Loss: 0.4356
+
+    Loss: 1.0103
+    Phi Loss: 0.4608  Theata Loss: 0.1371  E Loss: 0.4123
+    Val Loss: 1.2316
+    Val Phi Loss: 0.3252  Val Theata Loss: 0.0466  Val E Loss: 0.8598
+
+    Loss: 1.1000
+    Phi Loss: 0.4876  Theata Loss: 0.1464  E Loss: 0.4660
+    Val Loss: 0.6210
+    Val Phi Loss: 0.3181  Val Theata Loss: 0.0427  Val E Loss: 0.2603
+
+    Loss: 0.8572
+    Phi Loss: 0.3467  Theata Loss: 0.0363  E Loss: 0.4741
+    Val Loss: 1.6157
+    Val Phi Loss: 0.2945  Val Theata Loss: 0.1392  Val E Loss: 1.1820
+
+    Loss: 0.8871
+    Phi Loss: 0.4296  Theata Loss: 0.0476  E Loss: 0.4099
+    Val Loss: 0.9954
+    Val Phi Loss: 0.3176  Val Theata Loss: 0.0819  Val E Loss: 0.5959
+
+    Loss: 0.7096
+    Phi Loss: 0.3483  Theata Loss: 0.0115  E Loss: 0.3497
+    Val Loss: 1.0586
+    Val Phi Loss: 0.3911  Val Theata Loss: 0.0215  Val E Loss: 0.6461
+
+    Loss: 1.5118
+    Phi Loss: 0.3733  Theata Loss: 0.0220  E Loss: 1.1165
+    Val Loss: 0.9460
+    Val Phi Loss: 0.3711  Val Theata Loss: 0.0724  Val E Loss: 0.5025
+
+    Loss: 1.2413
+    Phi Loss: 0.3995  Theata Loss: 0.2484  E Loss: 0.5934
+    Val Loss: 1.0820
+    Val Phi Loss: 0.4755  Val Theata Loss: 0.0859  Val E Loss: 0.5206
+
+    Loss: 0.7637
+    Phi Loss: 0.3801  Theata Loss: 0.0207  E Loss: 0.3629
+    Val Loss: 1.2993
+    Val Phi Loss: 0.3276  Val Theata Loss: 0.0503  Val E Loss: 0.9215
+
+    Loss: 0.8775
+    Phi Loss: 0.3314  Theata Loss: 0.0177  E Loss: 0.5284
+    Val Loss: 0.8404
+    Val Phi Loss: 0.4332  Val Theata Loss: 0.0309  Val E Loss: 0.3763
+
+    Loss: 0.7117
+    Phi Loss: 0.4107  Theata Loss: 0.0240  E Loss: 0.2770
+    Val Loss: 0.7376
+    Val Phi Loss: 0.3896  Val Theata Loss: 0.0242  Val E Loss: 0.3238
+
+    Loss: 1.3629
+    Phi Loss: 0.3950  Theata Loss: 0.0217  E Loss: 0.9462
+    Val Loss: 0.8930
+    Val Phi Loss: 0.3887  Val Theata Loss: 0.0275  Val E Loss: 0.4768
+
+    Loss: 0.9407
+    Phi Loss: 0.4064  Theata Loss: 0.0476  E Loss: 0.4867
+    Val Loss: 0.6911
+    Val Phi Loss: 0.4315  Val Theata Loss: 0.0141  Val E Loss: 0.2455
+
+Epoch:  17
+    Loss: 0.8919
+    Phi Loss: 0.3941  Theata Loss: 0.0254  E Loss: 0.4724
+    Val Loss: 0.7017
+    Val Phi Loss: 0.3181  Val Theata Loss: 0.0293  Val E Loss: 0.3542
+
+    Loss: 1.0413
+    Phi Loss: 0.3513  Theata Loss: 0.1558  E Loss: 0.5343
+    Val Loss: 0.7886
+    Val Phi Loss: 0.3899  Val Theata Loss: 0.0196  Val E Loss: 0.3791
+
+    Loss: 0.7418
+    Phi Loss: 0.3988  Theata Loss: 0.0356  E Loss: 0.3074
+    Val Loss: 1.0008
+    Val Phi Loss: 0.4340  Val Theata Loss: 0.0361  Val E Loss: 0.5307
+
+    Loss: 0.8256
+    Phi Loss: 0.3681  Theata Loss: 0.0068  E Loss: 0.4507
+    Val Loss: 1.3245
+    Val Phi Loss: 0.3561  Val Theata Loss: 0.0162  Val E Loss: 0.9522
+
+    Loss: 0.8723
+    Phi Loss: 0.3900  Theata Loss: 0.0419  E Loss: 0.4404
+    Val Loss: 1.0924
+    Val Phi Loss: 0.3460  Val Theata Loss: 0.2038  Val E Loss: 0.5425
+
+    Loss: 0.9560
+    Phi Loss: 0.4443  Theata Loss: 0.0082  E Loss: 0.5035
+    Val Loss: 0.9994
+    Val Phi Loss: 0.3885  Val Theata Loss: 0.1194  Val E Loss: 0.4915
+
+    Loss: 0.8617
+    Phi Loss: 0.3411  Theata Loss: 0.0241  E Loss: 0.4965
+    Val Loss: 0.8517
+    Val Phi Loss: 0.3960  Val Theata Loss: 0.0175  Val E Loss: 0.4382
+
+    Loss: 0.8690
+    Phi Loss: 0.3405  Theata Loss: 0.0271  E Loss: 0.5014
+    Val Loss: 0.8196
+    Val Phi Loss: 0.4166  Val Theata Loss: 0.0495  Val E Loss: 0.3535
+
+    Loss: 1.0388
+    Phi Loss: 0.3697  Theata Loss: 0.1500  E Loss: 0.5191
+    Val Loss: 0.8175
+    Val Phi Loss: 0.3799  Val Theata Loss: 0.0864  Val E Loss: 0.3512
+
+    Loss: 0.6765
+    Phi Loss: 0.3940  Theata Loss: 0.0098  E Loss: 0.2726
+    Val Loss: 0.8391
+    Val Phi Loss: 0.3476  Val Theata Loss: 0.0064  Val E Loss: 0.4851
+
+    Loss: 1.0549
+    Phi Loss: 0.5101  Theata Loss: 0.0341  E Loss: 0.5106
+    Val Loss: 0.8877
+    Val Phi Loss: 0.4292  Val Theata Loss: 0.0090  Val E Loss: 0.4495
+
+    Loss: 1.1830
+    Phi Loss: 0.4357  Theata Loss: 0.2217  E Loss: 0.5256
+    Val Loss: 0.7040
+    Val Phi Loss: 0.3719  Val Theata Loss: 0.0145  Val E Loss: 0.3176
+
+    Loss: 1.3900
+    Phi Loss: 0.3287  Theata Loss: 0.0254  E Loss: 1.0359
+    Val Loss: 0.7927
+    Val Phi Loss: 0.3751  Val Theata Loss: 0.0743  Val E Loss: 0.3432
+
+    Loss: 0.7202
+    Phi Loss: 0.4022  Theata Loss: 0.0170  E Loss: 0.3010
+    Val Loss: 1.4229
+    Val Phi Loss: 0.4111  Val Theata Loss: 0.0315  Val E Loss: 0.9803
+
+    Loss: 1.0699
+    Phi Loss: 0.3577  Theata Loss: 0.0368  E Loss: 0.6754
+    Val Loss: 0.8346
+    Val Phi Loss: 0.4845  Val Theata Loss: 0.0272  Val E Loss: 0.3229
+
+    Loss: 0.7911
+    Phi Loss: 0.3525  Theata Loss: 0.1191  E Loss: 0.3195
+    Val Loss: 0.9074
+    Val Phi Loss: 0.3687  Val Theata Loss: 0.0165  Val E Loss: 0.5222
+
+    Loss: 1.0886
+    Phi Loss: 0.3473  Theata Loss: 0.0150  E Loss: 0.7263
+    Val Loss: 0.6642
+    Val Phi Loss: 0.3958  Val Theata Loss: 0.0050  Val E Loss: 0.2633
+
+    Loss: 0.8238
+    Phi Loss: 0.4096  Theata Loss: 0.0187  E Loss: 0.3955
+    Val Loss: 0.6731
+    Val Phi Loss: 0.3197  Val Theata Loss: 0.0079  Val E Loss: 0.3455
+
+    Loss: 1.1664
+    Phi Loss: 0.3774  Theata Loss: 0.0092  E Loss: 0.7797
+    Val Loss: 0.9686
+    Val Phi Loss: 0.4218  Val Theata Loss: 0.0295  Val E Loss: 0.5173
+
+    Loss: 0.6873
+    Phi Loss: 0.3772  Theata Loss: 0.0151  E Loss: 0.2949
+    Val Loss: 0.7517
+    Val Phi Loss: 0.3726  Val Theata Loss: 0.0117  Val E Loss: 0.3674
+
+Epoch:  18
+    Loss: 0.8898
+    Phi Loss: 0.3770  Theata Loss: 0.0178  E Loss: 0.4949
+    Val Loss: 0.9876
+    Val Phi Loss: 0.4577  Val Theata Loss: 0.0529  Val E Loss: 0.4771
+
+    Loss: 1.8443
+    Phi Loss: 0.4075  Theata Loss: 0.0166  E Loss: 1.4203
+    Val Loss: 0.7011
+    Val Phi Loss: 0.3772  Val Theata Loss: 0.0274  Val E Loss: 0.2965
+
+    Loss: 1.0596
+    Phi Loss: 0.4027  Theata Loss: 0.0103  E Loss: 0.6466
+    Val Loss: 0.7967
+    Val Phi Loss: 0.3907  Val Theata Loss: 0.0118  Val E Loss: 0.3942
+
+    Loss: 0.7168
+    Phi Loss: 0.3787  Theata Loss: 0.0223  E Loss: 0.3158
+    Val Loss: 0.8007
+    Val Phi Loss: 0.3113  Val Theata Loss: 0.0636  Val E Loss: 0.4258
+
+    Loss: 1.0221
+    Phi Loss: 0.3989  Theata Loss: 0.1050  E Loss: 0.5182
+    Val Loss: 0.7219
+    Val Phi Loss: 0.3828  Val Theata Loss: 0.0421  Val E Loss: 0.2970
+
+    Loss: 0.7456
+    Phi Loss: 0.4304  Theata Loss: 0.0119  E Loss: 0.3033
+    Val Loss: 0.9539
+    Val Phi Loss: 0.3376  Val Theata Loss: 0.0641  Val E Loss: 0.5522
+
+    Loss: 0.7498
+    Phi Loss: 0.4491  Theata Loss: 0.0108  E Loss: 0.2899
+    Val Loss: 1.2242
+    Val Phi Loss: 0.4018  Val Theata Loss: 0.0268  Val E Loss: 0.7956
+
+    Loss: 0.7695
+    Phi Loss: 0.3848  Theata Loss: 0.0142  E Loss: 0.3705
+    Val Loss: 0.6489
+    Val Phi Loss: 0.3624  Val Theata Loss: 0.0198  Val E Loss: 0.2667
+
+    Loss: 0.7924
+    Phi Loss: 0.3905  Theata Loss: 0.0129  E Loss: 0.3889
+    Val Loss: 0.9142
+    Val Phi Loss: 0.3641  Val Theata Loss: 0.0253  Val E Loss: 0.5248
+
+    Loss: 1.1719
+    Phi Loss: 0.4595  Theata Loss: 0.0700  E Loss: 0.6424
+    Val Loss: 1.0532
+    Val Phi Loss: 0.4060  Val Theata Loss: 0.0154  Val E Loss: 0.6319
+
+    Loss: 0.8915
+    Phi Loss: 0.3631  Theata Loss: 0.0142  E Loss: 0.5142
+    Val Loss: 0.9443
+    Val Phi Loss: 0.3294  Val Theata Loss: 0.0923  Val E Loss: 0.5226
+
+    Loss: 0.7649
+    Phi Loss: 0.3979  Theata Loss: 0.0304  E Loss: 0.3366
+    Val Loss: 0.8449
+    Val Phi Loss: 0.3738  Val Theata Loss: 0.0213  Val E Loss: 0.4498
+
+    Loss: 0.9793
+    Phi Loss: 0.4053  Theata Loss: 0.0080  E Loss: 0.5660
+    Val Loss: 0.9957
+    Val Phi Loss: 0.3726  Val Theata Loss: 0.0817  Val E Loss: 0.5413
+
+    Loss: 0.7717
+    Phi Loss: 0.3594  Theata Loss: 0.0446  E Loss: 0.3677
+    Val Loss: 0.9214
+    Val Phi Loss: 0.4533  Val Theata Loss: 0.0290  Val E Loss: 0.4391
+
+    Loss: 0.9387
+    Phi Loss: 0.4808  Theata Loss: 0.0634  E Loss: 0.3944
+    Val Loss: 0.7257
+    Val Phi Loss: 0.3550  Val Theata Loss: 0.0234  Val E Loss: 0.3474
+
+    Loss: 0.7794
+    Phi Loss: 0.3710  Theata Loss: 0.0107  E Loss: 0.3977
+    Val Loss: 0.7280
+    Val Phi Loss: 0.3342  Val Theata Loss: 0.0593  Val E Loss: 0.3345
+
+    Loss: 1.4795
+    Phi Loss: 0.4064  Theata Loss: 0.0747  E Loss: 0.9984
+    Val Loss: 0.8378
+    Val Phi Loss: 0.3895  Val Theata Loss: 0.0509  Val E Loss: 0.3974
+
+    Loss: 0.9747
+    Phi Loss: 0.3335  Theata Loss: 0.0229  E Loss: 0.6183
+    Val Loss: 0.9091
+    Val Phi Loss: 0.3704  Val Theata Loss: 0.0345  Val E Loss: 0.5042
+
+    Loss: 0.8897
+    Phi Loss: 0.3598  Theata Loss: 0.0146  E Loss: 0.5153
+    Val Loss: 0.8593
+    Val Phi Loss: 0.3463  Val Theata Loss: 0.0123  Val E Loss: 0.5008
+
+    Loss: 0.9956
+    Phi Loss: 0.4954  Theata Loss: 0.0776  E Loss: 0.4226
+    Val Loss: 0.7765
+    Val Phi Loss: 0.3507  Val Theata Loss: 0.0142  Val E Loss: 0.4117
+
+Epoch:  19
+    Loss: 0.7933
+    Phi Loss: 0.3264  Theata Loss: 0.0735  E Loss: 0.3934
+    Val Loss: 0.7933
+    Val Phi Loss: 0.5016  Val Theata Loss: 0.0168  Val E Loss: 0.2748
+
+    Loss: 0.7291
+    Phi Loss: 0.3846  Theata Loss: 0.0551  E Loss: 0.2893
+    Val Loss: 0.8329
+    Val Phi Loss: 0.3824  Val Theata Loss: 0.0382  Val E Loss: 0.4123
+
+    Loss: 0.7799
+    Phi Loss: 0.3875  Theata Loss: 0.0274  E Loss: 0.3650
+    Val Loss: 0.9687
+    Val Phi Loss: 0.4324  Val Theata Loss: 0.0234  Val E Loss: 0.5129
+
+    Loss: 0.8131
+    Phi Loss: 0.3819  Theata Loss: 0.0230  E Loss: 0.4082
+    Val Loss: 0.8229
+    Val Phi Loss: 0.3801  Val Theata Loss: 0.0133  Val E Loss: 0.4295
+
+    Loss: 1.2506
+    Phi Loss: 0.3580  Theata Loss: 0.0145  E Loss: 0.8781
+    Val Loss: 0.8903
+    Val Phi Loss: 0.3328  Val Theata Loss: 0.0152  Val E Loss: 0.5423
+
+    Loss: 1.0337
+    Phi Loss: 0.4095  Theata Loss: 0.0464  E Loss: 0.5778
+    Val Loss: 0.9633
+    Val Phi Loss: 0.4200  Val Theata Loss: 0.0812  Val E Loss: 0.4621
+
+    Loss: 1.0954
+    Phi Loss: 0.3746  Theata Loss: 0.0224  E Loss: 0.6984
+    Val Loss: 1.1915
+    Val Phi Loss: 0.4032  Val Theata Loss: 0.0082  Val E Loss: 0.7802
+
+    Loss: 0.9871
+    Phi Loss: 0.4108  Theata Loss: 0.0781  E Loss: 0.4982
+    Val Loss: 0.6910
+    Val Phi Loss: 0.4054  Val Theata Loss: 0.0076  Val E Loss: 0.2779
+
+    Loss: 0.7950
+    Phi Loss: 0.4221  Theata Loss: 0.0359  E Loss: 0.3370
+    Val Loss: 1.0983
+    Val Phi Loss: 0.4944  Val Theata Loss: 0.0330  Val E Loss: 0.5709
+
+    Loss: 0.7605
+    Phi Loss: 0.3582  Theata Loss: 0.0120  E Loss: 0.3903
+    Val Loss: 0.7128
+    Val Phi Loss: 0.3865  Val Theata Loss: 0.0105  Val E Loss: 0.3158
+
+    Loss: 0.7984
+    Phi Loss: 0.4443  Theata Loss: 0.0156  E Loss: 0.3385
+    Val Loss: 1.0837
+    Val Phi Loss: 0.3917  Val Theata Loss: 0.0599  Val E Loss: 0.6321
+
+    Loss: 1.0032
+    Phi Loss: 0.3630  Theata Loss: 0.0117  E Loss: 0.6284
+    Val Loss: 1.1621
+    Val Phi Loss: 0.3340  Val Theata Loss: 0.0313  Val E Loss: 0.7967
+
+    Loss: 0.9547
+    Phi Loss: 0.4501  Theata Loss: 0.0169  E Loss: 0.4877
+    Val Loss: 0.7197
+    Val Phi Loss: 0.4364  Val Theata Loss: 0.0146  Val E Loss: 0.2686
+
+    Loss: 0.8896
+    Phi Loss: 0.3455  Theata Loss: 0.0232  E Loss: 0.5209
+    Val Loss: 0.6794
+    Val Phi Loss: 0.3456  Val Theata Loss: 0.0119  Val E Loss: 0.3219
+
+    Loss: 0.7958
+    Phi Loss: 0.3672  Theata Loss: 0.0252  E Loss: 0.4035
+    Val Loss: 0.7637
+    Val Phi Loss: 0.4084  Val Theata Loss: 0.0315  Val E Loss: 0.3238
+
+    Loss: 0.8252
+    Phi Loss: 0.2894  Theata Loss: 0.0205  E Loss: 0.5153
+    Val Loss: 1.8488
+    Val Phi Loss: 0.4334  Val Theata Loss: 0.1119  Val E Loss: 1.3035
+
+    Loss: 0.8805
+    Phi Loss: 0.4273  Theata Loss: 0.0280  E Loss: 0.4252
+    Val Loss: 1.3595
+    Val Phi Loss: 0.3047  Val Theata Loss: 0.0243  Val E Loss: 1.0305
+
+    Loss: 0.6950
+    Phi Loss: 0.3847  Theata Loss: 0.0135  E Loss: 0.2967
+    Val Loss: 1.2247
+    Val Phi Loss: 0.3449  Val Theata Loss: 0.0507  Val E Loss: 0.8291
+
+    Loss: 0.8207
+    Phi Loss: 0.3531  Theata Loss: 0.0809  E Loss: 0.3867
+    Val Loss: 0.8891
+    Val Phi Loss: 0.3277  Val Theata Loss: 0.0544  Val E Loss: 0.5071
+
+    Loss: 0.7667
+    Phi Loss: 0.3379  Theata Loss: 0.0202  E Loss: 0.4085
+    Val Loss: 0.5941
+    Val Phi Loss: 0.3917  Val Theata Loss: 0.0103  Val E Loss: 0.1921
+
+Epoch:  20
+    Loss: 0.7452
+    Phi Loss: 0.4031  Theata Loss: 0.0266  E Loss: 0.3156
+    Val Loss: 1.3837
+    Val Phi Loss: 0.4644  Val Theata Loss: 0.0113  Val E Loss: 0.9080
+
+    Loss: 0.6952
+    Phi Loss: 0.4034  Theata Loss: 0.0118  E Loss: 0.2800
+    Val Loss: 0.7068
+    Val Phi Loss: 0.3344  Val Theata Loss: 0.0546  Val E Loss: 0.3178
+
+    Loss: 0.8551
+    Phi Loss: 0.3645  Theata Loss: 0.0736  E Loss: 0.4170
+    Val Loss: 0.9053
+    Val Phi Loss: 0.4138  Val Theata Loss: 0.0111  Val E Loss: 0.4804
+
+    Loss: 0.6615
+    Phi Loss: 0.3934  Theata Loss: 0.0076  E Loss: 0.2605
+    Val Loss: 0.9116
+    Val Phi Loss: 0.3489  Val Theata Loss: 0.0516  Val E Loss: 0.5110
+
+    Loss: 0.8395
+    Phi Loss: 0.3689  Theata Loss: 0.0875  E Loss: 0.3831
+    Val Loss: 0.6889
+    Val Phi Loss: 0.3985  Val Theata Loss: 0.0134  Val E Loss: 0.2770
+
+    Loss: 0.7229
+    Phi Loss: 0.3012  Theata Loss: 0.0352  E Loss: 0.3864
+    Val Loss: 1.4696
+    Val Phi Loss: 0.3846  Val Theata Loss: 0.0285  Val E Loss: 1.0566
+
+    Loss: 0.6833
+    Phi Loss: 0.3278  Theata Loss: 0.0083  E Loss: 0.3471
+    Val Loss: 1.5785
+    Val Phi Loss: 0.3744  Val Theata Loss: 0.0242  Val E Loss: 1.1799
+
+    Loss: 0.8728
+    Phi Loss: 0.3428  Theata Loss: 0.2011  E Loss: 0.3288
+    Val Loss: 0.7188
+    Val Phi Loss: 0.4003  Val Theata Loss: 0.0283  Val E Loss: 0.2903
+
+    Loss: 0.8125
+    Phi Loss: 0.3771  Theata Loss: 0.0975  E Loss: 0.3379
+    Val Loss: 0.6139
+    Val Phi Loss: 0.3329  Val Theata Loss: 0.0091  Val E Loss: 0.2719
+
+    Loss: 1.2615
+    Phi Loss: 0.3831  Theata Loss: 0.0500  E Loss: 0.8283
+    Val Loss: 0.9063
+    Val Phi Loss: 0.4607  Val Theata Loss: 0.0237  Val E Loss: 0.4218
+
+    Loss: 0.7513
+    Phi Loss: 0.3472  Theata Loss: 0.0148  E Loss: 0.3892
+    Val Loss: 0.6743
+    Val Phi Loss: 0.3709  Val Theata Loss: 0.0263  Val E Loss: 0.2771
+
+    Loss: 0.8585
+    Phi Loss: 0.3517  Theata Loss: 0.0511  E Loss: 0.4557
+    Val Loss: 0.8760
+    Val Phi Loss: 0.3505  Val Theata Loss: 0.1184  Val E Loss: 0.4070
+
+    Loss: 1.1600
+    Phi Loss: 0.4025  Theata Loss: 0.1372  E Loss: 0.6203
+    Val Loss: 0.8809
+    Val Phi Loss: 0.4082  Val Theata Loss: 0.0231  Val E Loss: 0.4496
+
+    Loss: 2.6969
+    Phi Loss: 0.4063  Theata Loss: 0.0153  E Loss: 2.2752
+    Val Loss: 0.9197
+    Val Phi Loss: 0.4272  Val Theata Loss: 0.0437  Val E Loss: 0.4487
+
+    Loss: 0.6619
+    Phi Loss: 0.3215  Theata Loss: 0.0064  E Loss: 0.3340
+    Val Loss: 1.1093
+    Val Phi Loss: 0.4558  Val Theata Loss: 0.0234  Val E Loss: 0.6301
+
+    Loss: 0.6473
+    Phi Loss: 0.3199  Theata Loss: 0.0496  E Loss: 0.2778
+    Val Loss: 1.0214
+    Val Phi Loss: 0.3637  Val Theata Loss: 0.0068  Val E Loss: 0.6510
+
+    Loss: 0.7863
+    Phi Loss: 0.4363  Theata Loss: 0.0354  E Loss: 0.3145
+    Val Loss: 0.6526
+    Val Phi Loss: 0.3243  Val Theata Loss: 0.0210  Val E Loss: 0.3073
+
+    Loss: 0.6623
+    Phi Loss: 0.3640  Theata Loss: 0.0142  E Loss: 0.2841
+    Val Loss: 0.6428
+    Val Phi Loss: 0.3231  Val Theata Loss: 0.0077  Val E Loss: 0.3120
+
+    Loss: 0.6477
+    Phi Loss: 0.3650  Theata Loss: 0.0065  E Loss: 0.2762
+    Val Loss: 0.7312
+    Val Phi Loss: 0.3972  Val Theata Loss: 0.0263  Val E Loss: 0.3077
+
+    Loss: 0.8999
+    Phi Loss: 0.3242  Theata Loss: 0.0221  E Loss: 0.5536
+    Val Loss: 1.3895
+    Val Phi Loss: 0.3283  Val Theata Loss: 0.0172  Val E Loss: 1.0440
+
+Epoch:  21
+    Loss: 0.9132
+    Phi Loss: 0.3614  Theata Loss: 0.0602  E Loss: 0.4915
+    Val Loss: 0.7554
+    Val Phi Loss: 0.3560  Val Theata Loss: 0.0189  Val E Loss: 0.3805
+
+    Loss: 1.1738
+    Phi Loss: 0.3990  Theata Loss: 0.0153  E Loss: 0.7595
+    Val Loss: 0.9168
+    Val Phi Loss: 0.3873  Val Theata Loss: 0.0349  Val E Loss: 0.4946
+
+    Loss: 1.4470
+    Phi Loss: 0.3834  Theata Loss: 0.0364  E Loss: 1.0271
+    Val Loss: 0.7931
+    Val Phi Loss: 0.3992  Val Theata Loss: 0.0558  Val E Loss: 0.3381
+
+    Loss: 0.7470
+    Phi Loss: 0.3199  Theata Loss: 0.0328  E Loss: 0.3942
+    Val Loss: 0.7162
+    Val Phi Loss: 0.3421  Val Theata Loss: 0.0324  Val E Loss: 0.3416
+
+    Loss: 0.6996
+    Phi Loss: 0.3747  Theata Loss: 0.0241  E Loss: 0.3009
+    Val Loss: 0.8746
+    Val Phi Loss: 0.3871  Val Theata Loss: 0.0196  Val E Loss: 0.4679
+
+    Loss: 0.7330
+    Phi Loss: 0.3947  Theata Loss: 0.0857  E Loss: 0.2526
+    Val Loss: 1.0700
+    Val Phi Loss: 0.3483  Val Theata Loss: 0.1012  Val E Loss: 0.6205
+
+    Loss: 0.7064
+    Phi Loss: 0.4080  Theata Loss: 0.0172  E Loss: 0.2812
+    Val Loss: 1.0542
+    Val Phi Loss: 0.4077  Val Theata Loss: 0.0218  Val E Loss: 0.6247
+
+    Loss: 0.6956
+    Phi Loss: 0.3429  Theata Loss: 0.0205  E Loss: 0.3322
+    Val Loss: 0.7976
+    Val Phi Loss: 0.3935  Val Theata Loss: 0.0122  Val E Loss: 0.3919
+
+    Loss: 0.7425
+    Phi Loss: 0.3478  Theata Loss: 0.0583  E Loss: 0.3364
+    Val Loss: 0.7360
+    Val Phi Loss: 0.4087  Val Theata Loss: 0.0144  Val E Loss: 0.3130
+
+    Loss: 1.2581
+    Phi Loss: 0.4127  Theata Loss: 0.0166  E Loss: 0.8288
+    Val Loss: 0.7606
+    Val Phi Loss: 0.3584  Val Theata Loss: 0.0142  Val E Loss: 0.3880
+
+    Loss: 0.9666
+    Phi Loss: 0.5130  Theata Loss: 0.0206  E Loss: 0.4330
+    Val Loss: 0.8991
+    Val Phi Loss: 0.3834  Val Theata Loss: 0.0089  Val E Loss: 0.5069
+
+    Loss: 0.7663
+    Phi Loss: 0.3782  Theata Loss: 0.0109  E Loss: 0.3772
+    Val Loss: 0.9728
+    Val Phi Loss: 0.3810  Val Theata Loss: 0.0848  Val E Loss: 0.5070
+
+    Loss: 0.8851
+    Phi Loss: 0.3636  Theata Loss: 0.0070  E Loss: 0.5145
+    Val Loss: 1.6888
+    Val Phi Loss: 0.3156  Val Theata Loss: 0.0351  Val E Loss: 1.3382
+
+    Loss: 0.7560
+    Phi Loss: 0.4124  Theata Loss: 0.0352  E Loss: 0.3084
+    Val Loss: 0.8032
+    Val Phi Loss: 0.3615  Val Theata Loss: 0.0263  Val E Loss: 0.4155
+
+    Loss: 1.0951
+    Phi Loss: 0.3871  Theata Loss: 0.0079  E Loss: 0.7001
+    Val Loss: 0.7654
+    Val Phi Loss: 0.3718  Val Theata Loss: 0.0396  Val E Loss: 0.3540
+
+    Loss: 0.6794
+    Phi Loss: 0.3807  Theata Loss: 0.0232  E Loss: 0.2755
+    Val Loss: 0.6430
+    Val Phi Loss: 0.3695  Val Theata Loss: 0.0095  Val E Loss: 0.2641
+
+    Loss: 0.7243
+    Phi Loss: 0.3597  Theata Loss: 0.0119  E Loss: 0.3527
+    Val Loss: 1.1303
+    Val Phi Loss: 0.3406  Val Theata Loss: 0.0485  Val E Loss: 0.7412
+
+    Loss: 0.7771
+    Phi Loss: 0.4370  Theata Loss: 0.0640  E Loss: 0.2761
+    Val Loss: 1.2844
+    Val Phi Loss: 0.4454  Val Theata Loss: 0.0322  Val E Loss: 0.8068
+
+    Loss: 1.1030
+    Phi Loss: 0.3378  Theata Loss: 0.0172  E Loss: 0.7481
+    Val Loss: 0.8207
+    Val Phi Loss: 0.3767  Val Theata Loss: 0.0328  Val E Loss: 0.4112
+
+    Loss: 1.5945
+    Phi Loss: 0.3431  Theata Loss: 0.0312  E Loss: 1.2203
+    Val Loss: 1.1792
+    Val Phi Loss: 0.3774  Val Theata Loss: 0.0353  Val E Loss: 0.7665
+
+Epoch:  22
+    Loss: 0.6268
+    Phi Loss: 0.3480  Theata Loss: 0.0181  E Loss: 0.2606
+    Val Loss: 0.9639
+    Val Phi Loss: 0.4277  Val Theata Loss: 0.0160  Val E Loss: 0.5202
+
+    Loss: 0.8810
+    Phi Loss: 0.2972  Theata Loss: 0.0349  E Loss: 0.5489
+    Val Loss: 0.7281
+    Val Phi Loss: 0.3537  Val Theata Loss: 0.0152  Val E Loss: 0.3591
+
+    Loss: 0.9911
+    Phi Loss: 0.3783  Theata Loss: 0.0160  E Loss: 0.5968
+    Val Loss: 0.8968
+    Val Phi Loss: 0.2989  Val Theata Loss: 0.0094  Val E Loss: 0.5885
+
+    Loss: 0.6329
+    Phi Loss: 0.3447  Theata Loss: 0.0349  E Loss: 0.2533
+    Val Loss: 0.7069
+    Val Phi Loss: 0.3849  Val Theata Loss: 0.0332  Val E Loss: 0.2888
+
+    Loss: 0.6746
+    Phi Loss: 0.3636  Theata Loss: 0.0221  E Loss: 0.2888
+    Val Loss: 1.3159
+    Val Phi Loss: 0.5605  Val Theata Loss: 0.0061  Val E Loss: 0.7493
+
+    Loss: 0.6899
+    Phi Loss: 0.3536  Theata Loss: 0.0163  E Loss: 0.3200
+    Val Loss: 0.9978
+    Val Phi Loss: 0.3058  Val Theata Loss: 0.0120  Val E Loss: 0.6799
+
+    Loss: 0.8077
+    Phi Loss: 0.3435  Theata Loss: 0.0338  E Loss: 0.4304
+    Val Loss: 1.4721
+    Val Phi Loss: 0.3893  Val Theata Loss: 0.0074  Val E Loss: 1.0753
+
+    Loss: 0.7403
+    Phi Loss: 0.3615  Theata Loss: 0.0176  E Loss: 0.3611
+    Val Loss: 0.6245
+    Val Phi Loss: 0.3539  Val Theata Loss: 0.0190  Val E Loss: 0.2516
+
+    Loss: 0.8866
+    Phi Loss: 0.4276  Theata Loss: 0.1415  E Loss: 0.3174
+    Val Loss: 0.7481
+    Val Phi Loss: 0.3655  Val Theata Loss: 0.0102  Val E Loss: 0.3724
+
+    Loss: 0.6511
+    Phi Loss: 0.3527  Theata Loss: 0.0193  E Loss: 0.2791
+    Val Loss: 0.6314
+    Val Phi Loss: 0.3222  Val Theata Loss: 0.0126  Val E Loss: 0.2966
+
+    Loss: 0.9144
+    Phi Loss: 0.5162  Theata Loss: 0.0204  E Loss: 0.3779
+    Val Loss: 0.8260
+    Val Phi Loss: 0.4368  Val Theata Loss: 0.0148  Val E Loss: 0.3744
+
+    Loss: 0.6956
+    Phi Loss: 0.3791  Theata Loss: 0.0128  E Loss: 0.3037
+    Val Loss: 0.8708
+    Val Phi Loss: 0.3784  Val Theata Loss: 0.1309  Val E Loss: 0.3615
+
+    Loss: 0.7138
+    Phi Loss: 0.3659  Theata Loss: 0.0157  E Loss: 0.3323
+    Val Loss: 0.9678
+    Val Phi Loss: 0.4142  Val Theata Loss: 0.0354  Val E Loss: 0.5183
+
+    Loss: 0.7832
+    Phi Loss: 0.3349  Theata Loss: 0.0124  E Loss: 0.4359
+    Val Loss: 0.6276
+    Val Phi Loss: 0.3565  Val Theata Loss: 0.0406  Val E Loss: 0.2305
+
+    Loss: 0.8207
+    Phi Loss: 0.3854  Theata Loss: 0.0263  E Loss: 0.4090
+    Val Loss: 0.9160
+    Val Phi Loss: 0.3667  Val Theata Loss: 0.0081  Val E Loss: 0.5412
+
+    Loss: 1.5711
+    Phi Loss: 0.3821  Theata Loss: 0.0149  E Loss: 1.1741
+    Val Loss: 0.7715
+    Val Phi Loss: 0.4760  Val Theata Loss: 0.0214  Val E Loss: 0.2741
+
+    Loss: 0.6431
+    Phi Loss: 0.3563  Theata Loss: 0.0119  E Loss: 0.2750
+    Val Loss: 1.0066
+    Val Phi Loss: 0.3949  Val Theata Loss: 0.0282  Val E Loss: 0.5834
+
+    Loss: 1.8155
+    Phi Loss: 0.4345  Theata Loss: 0.0291  E Loss: 1.3520
+    Val Loss: 0.7584
+    Val Phi Loss: 0.3705  Val Theata Loss: 0.0142  Val E Loss: 0.3737
+
+    Loss: 0.8086
+    Phi Loss: 0.3734  Theata Loss: 0.0107  E Loss: 0.4245
+    Val Loss: 1.2676
+    Val Phi Loss: 0.3241  Val Theata Loss: 0.0156  Val E Loss: 0.9278
+
+    Loss: 0.7576
+    Phi Loss: 0.4373  Theata Loss: 0.0132  E Loss: 0.3071
+    Val Loss: 0.6848
+    Val Phi Loss: 0.3886  Val Theata Loss: 0.0171  Val E Loss: 0.2791
+
+Epoch:  23
+    Loss: 0.6834
+    Phi Loss: 0.3490  Theata Loss: 0.0165  E Loss: 0.3179
+    Val Loss: 0.7475
+    Val Phi Loss: 0.3758  Val Theata Loss: 0.0167  Val E Loss: 0.3550
+
+    Loss: 0.6788
+    Phi Loss: 0.3704  Theata Loss: 0.0408  E Loss: 0.2676
+    Val Loss: 0.8020
+    Val Phi Loss: 0.3993  Val Theata Loss: 0.0299  Val E Loss: 0.3728
+
+    Loss: 0.7131
+    Phi Loss: 0.2983  Theata Loss: 0.0626  E Loss: 0.3522
+    Val Loss: 0.9255
+    Val Phi Loss: 0.4053  Val Theata Loss: 0.0172  Val E Loss: 0.5030
+
+    Loss: 0.7824
+    Phi Loss: 0.3334  Theata Loss: 0.0053  E Loss: 0.4437
+    Val Loss: 0.8917
+    Val Phi Loss: 0.3686  Val Theata Loss: 0.0115  Val E Loss: 0.5117
+
+    Loss: 0.8037
+    Phi Loss: 0.4240  Theata Loss: 0.0261  E Loss: 0.3536
+    Val Loss: 0.7639
+    Val Phi Loss: 0.3144  Val Theata Loss: 0.0107  Val E Loss: 0.4388
+
+    Loss: 1.0926
+    Phi Loss: 0.3980  Theata Loss: 0.0164  E Loss: 0.6782
+    Val Loss: 0.7588
+    Val Phi Loss: 0.3396  Val Theata Loss: 0.0442  Val E Loss: 0.3750
+
+    Loss: 0.6974
+    Phi Loss: 0.3696  Theata Loss: 0.0166  E Loss: 0.3113
+    Val Loss: 0.8672
+    Val Phi Loss: 0.3968  Val Theata Loss: 0.0895  Val E Loss: 0.3809
+
+    Loss: 0.8350
+    Phi Loss: 0.4379  Theata Loss: 0.0232  E Loss: 0.3739
+    Val Loss: 0.6985
+    Val Phi Loss: 0.3365  Val Theata Loss: 0.0911  Val E Loss: 0.2710
+
+    Loss: 0.9792
+    Phi Loss: 0.4812  Theata Loss: 0.0270  E Loss: 0.4710
+    Val Loss: 0.7913
+    Val Phi Loss: 0.3206  Val Theata Loss: 0.0334  Val E Loss: 0.4373
+
+    Loss: 0.9646
+    Phi Loss: 0.3702  Theata Loss: 0.0118  E Loss: 0.5826
+    Val Loss: 0.7994
+    Val Phi Loss: 0.3635  Val Theata Loss: 0.0169  Val E Loss: 0.4190
+
+    Loss: 0.7345
+    Phi Loss: 0.3742  Theata Loss: 0.0066  E Loss: 0.3538
+    Val Loss: 0.8171
+    Val Phi Loss: 0.4288  Val Theata Loss: 0.0212  Val E Loss: 0.3670
+
+    Loss: 0.9783
+    Phi Loss: 0.3734  Theata Loss: 0.1013  E Loss: 0.5036
+    Val Loss: 0.6386
+    Val Phi Loss: 0.3618  Val Theata Loss: 0.0275  Val E Loss: 0.2493
+
+    Loss: 0.6592
+    Phi Loss: 0.3367  Theata Loss: 0.0583  E Loss: 0.2643
+    Val Loss: 0.7392
+    Val Phi Loss: 0.3508  Val Theata Loss: 0.0460  Val E Loss: 0.3423
+
+    Loss: 0.5890
+    Phi Loss: 0.3156  Theata Loss: 0.0104  E Loss: 0.2629
+    Val Loss: 0.6370
+    Val Phi Loss: 0.3663  Val Theata Loss: 0.0082  Val E Loss: 0.2625
+
+    Loss: 0.7235
+    Phi Loss: 0.4272  Theata Loss: 0.0096  E Loss: 0.2867
+    Val Loss: 1.0774
+    Val Phi Loss: 0.4075  Val Theata Loss: 0.0061  Val E Loss: 0.6639
+
+    Loss: 1.0070
+    Phi Loss: 0.4638  Theata Loss: 0.0144  E Loss: 0.5288
+    Val Loss: 0.7937
+    Val Phi Loss: 0.3871  Val Theata Loss: 0.0232  Val E Loss: 0.3834
+
+    Loss: 0.9007
+    Phi Loss: 0.3383  Theata Loss: 0.0315  E Loss: 0.5309
+    Val Loss: 0.6890
+    Val Phi Loss: 0.3540  Val Theata Loss: 0.0097  Val E Loss: 0.3254
+
+    Loss: 0.6514
+    Phi Loss: 0.3637  Theata Loss: 0.0092  E Loss: 0.2786
+    Val Loss: 0.6594
+    Val Phi Loss: 0.3564  Val Theata Loss: 0.0185  Val E Loss: 0.2845
+
+    Loss: 0.6831
+    Phi Loss: 0.3781  Theata Loss: 0.0180  E Loss: 0.2870
+    Val Loss: 0.7238
+    Val Phi Loss: 0.3466  Val Theata Loss: 0.0100  Val E Loss: 0.3673
+
+    Loss: 0.7655
+    Phi Loss: 0.3570  Theata Loss: 0.0268  E Loss: 0.3817
+    Val Loss: 0.8397
+    Val Phi Loss: 0.3416  Val Theata Loss: 0.0049  Val E Loss: 0.4933
+
+Epoch:  24
+    Loss: 0.8856
+    Phi Loss: 0.3930  Theata Loss: 0.0198  E Loss: 0.4729
+    Val Loss: 1.0092
+    Val Phi Loss: 0.4198  Val Theata Loss: 0.0345  Val E Loss: 0.5549
+
+    Loss: 0.7414
+    Phi Loss: 0.3742  Theata Loss: 0.0064  E Loss: 0.3608
+    Val Loss: 0.8764
+    Val Phi Loss: 0.3442  Val Theata Loss: 0.0081  Val E Loss: 0.5241
+
+    Loss: 0.8421
+    Phi Loss: 0.4300  Theata Loss: 0.0838  E Loss: 0.3282
+    Val Loss: 0.8452
+    Val Phi Loss: 0.3624  Val Theata Loss: 0.0220  Val E Loss: 0.4608
+
+    Loss: 0.6632
+    Phi Loss: 0.3718  Theata Loss: 0.0100  E Loss: 0.2814
+    Val Loss: 0.9770
+    Val Phi Loss: 0.4361  Val Theata Loss: 0.0396  Val E Loss: 0.5013
+
+    Loss: 0.6573
+    Phi Loss: 0.3978  Theata Loss: 0.0379  E Loss: 0.2215
+    Val Loss: 1.6479
+    Val Phi Loss: 0.4145  Val Theata Loss: 0.0367  Val E Loss: 1.1967
+
+    Loss: 0.8791
+    Phi Loss: 0.3711  Theata Loss: 0.0094  E Loss: 0.4987
+    Val Loss: 0.7200
+    Val Phi Loss: 0.4600  Val Theata Loss: 0.0189  Val E Loss: 0.2411
+
+    Loss: 0.7198
+    Phi Loss: 0.3551  Theata Loss: 0.0118  E Loss: 0.3528
+    Val Loss: 0.7212
+    Val Phi Loss: 0.3788  Val Theata Loss: 0.0341  Val E Loss: 0.3084
+
+    Loss: 1.3824
+    Phi Loss: 0.4128  Theata Loss: 0.0655  E Loss: 0.9040
+    Val Loss: 1.2979
+    Val Phi Loss: 0.4483  Val Theata Loss: 0.0332  Val E Loss: 0.8163
+
+    Loss: 0.6552
+    Phi Loss: 0.3747  Theata Loss: 0.0310  E Loss: 0.2494
+    Val Loss: 0.7040
+    Val Phi Loss: 0.3115  Val Theata Loss: 0.0221  Val E Loss: 0.3703
+
+    Loss: 0.7484
+    Phi Loss: 0.3998  Theata Loss: 0.0141  E Loss: 0.3345
+    Val Loss: 0.7958
+    Val Phi Loss: 0.3380  Val Theata Loss: 0.0540  Val E Loss: 0.4038
+
+    Loss: 1.6257
+    Phi Loss: 0.4064  Theata Loss: 0.0636  E Loss: 1.1557
+    Val Loss: 1.4685
+    Val Phi Loss: 0.4255  Val Theata Loss: 0.0050  Val E Loss: 1.0381
+
+    Loss: 0.7491
+    Phi Loss: 0.3472  Theata Loss: 0.0273  E Loss: 0.3746
+    Val Loss: 0.9309
+    Val Phi Loss: 0.4290  Val Theata Loss: 0.0195  Val E Loss: 0.4824
+
+    Loss: 0.7722
+    Phi Loss: 0.3072  Theata Loss: 0.0051  E Loss: 0.4599
+    Val Loss: 0.9460
+    Val Phi Loss: 0.3296  Val Theata Loss: 0.0345  Val E Loss: 0.5819
+
+    Loss: 0.8337
+    Phi Loss: 0.3994  Theata Loss: 0.0088  E Loss: 0.4255
+    Val Loss: 0.8392
+    Val Phi Loss: 0.4365  Val Theata Loss: 0.0812  Val E Loss: 0.3215
+
+    Loss: 0.6973
+    Phi Loss: 0.3194  Theata Loss: 0.0138  E Loss: 0.3641
+    Val Loss: 0.8093
+    Val Phi Loss: 0.3961  Val Theata Loss: 0.0761  Val E Loss: 0.3372
+
+    Loss: 1.6005
+    Phi Loss: 0.4417  Theata Loss: 0.0106  E Loss: 1.1482
+    Val Loss: 0.7845
+    Val Phi Loss: 0.3945  Val Theata Loss: 0.0669  Val E Loss: 0.3230
+
+    Loss: 0.9166
+    Phi Loss: 0.4404  Theata Loss: 0.0215  E Loss: 0.4548
+    Val Loss: 0.8637
+    Val Phi Loss: 0.3518  Val Theata Loss: 0.0650  Val E Loss: 0.4469
+
+    Loss: 0.8077
+    Phi Loss: 0.3716  Theata Loss: 0.0252  E Loss: 0.4109
+    Val Loss: 1.3478
+    Val Phi Loss: 0.3670  Val Theata Loss: 0.0184  Val E Loss: 0.9624
+
+    Loss: 0.8268
+    Phi Loss: 0.4147  Theata Loss: 0.0140  E Loss: 0.3982
+    Val Loss: 0.7739
+    Val Phi Loss: 0.3895  Val Theata Loss: 0.0255  Val E Loss: 0.3590
+
+    Loss: 1.3336
+    Phi Loss: 0.3293  Theata Loss: 0.0464  E Loss: 0.9579
+    Val Loss: 0.5803
+    Val Phi Loss: 0.3600  Val Theata Loss: 0.0225  Val E Loss: 0.1978
+
+Epoch:  25
+    Loss: 0.6497
+    Phi Loss: 0.3829  Theata Loss: 0.0087  E Loss: 0.2581
+    Val Loss: 0.9944
+    Val Phi Loss: 0.3550  Val Theata Loss: 0.0161  Val E Loss: 0.6233
+
+    Loss: 0.7034
+    Phi Loss: 0.3504  Theata Loss: 0.0180  E Loss: 0.3350
+    Val Loss: 0.9867
+    Val Phi Loss: 0.3685  Val Theata Loss: 0.0298  Val E Loss: 0.5884
+
+    Loss: 0.7265
+    Phi Loss: 0.3898  Theata Loss: 0.0147  E Loss: 0.3221
+    Val Loss: 0.6268
+    Val Phi Loss: 0.2966  Val Theata Loss: 0.0086  Val E Loss: 0.3216
+
+    Loss: 0.8126
+    Phi Loss: 0.3902  Theata Loss: 0.0122  E Loss: 0.4102
+    Val Loss: 0.7969
+    Val Phi Loss: 0.3573  Val Theata Loss: 0.0083  Val E Loss: 0.4312
+
+    Loss: 0.7800
+    Phi Loss: 0.3055  Theata Loss: 0.0792  E Loss: 0.3954
+    Val Loss: 0.6794
+    Val Phi Loss: 0.3555  Val Theata Loss: 0.0172  Val E Loss: 0.3067
+
+    Loss: 0.8129
+    Phi Loss: 0.4029  Theata Loss: 0.0151  E Loss: 0.3949
+    Val Loss: 0.8135
+    Val Phi Loss: 0.3597  Val Theata Loss: 0.0382  Val E Loss: 0.4156
+
+    Loss: 0.5617
+    Phi Loss: 0.3011  Theata Loss: 0.0093  E Loss: 0.2512
+    Val Loss: 0.7450
+    Val Phi Loss: 0.3294  Val Theata Loss: 0.0765  Val E Loss: 0.3391
+
+    Loss: 0.6350
+    Phi Loss: 0.3711  Theata Loss: 0.0239  E Loss: 0.2400
+    Val Loss: 0.7973
+    Val Phi Loss: 0.3964  Val Theata Loss: 0.0063  Val E Loss: 0.3946
+
+    Loss: 0.8212
+    Phi Loss: 0.3866  Theata Loss: 0.0189  E Loss: 0.4158
+    Val Loss: 0.8060
+    Val Phi Loss: 0.4022  Val Theata Loss: 0.0053  Val E Loss: 0.3985
+
+    Loss: 0.9544
+    Phi Loss: 0.4077  Theata Loss: 0.0503  E Loss: 0.4964
+    Val Loss: 0.7991
+    Val Phi Loss: 0.3609  Val Theata Loss: 0.0231  Val E Loss: 0.4150
+
+    Loss: 0.6031
+    Phi Loss: 0.3294  Theata Loss: 0.0100  E Loss: 0.2637
+    Val Loss: 0.7166
+    Val Phi Loss: 0.4161  Val Theata Loss: 0.0037  Val E Loss: 0.2968
+
+    Loss: 0.8395
+    Phi Loss: 0.4015  Theata Loss: 0.0955  E Loss: 0.3425
+    Val Loss: 0.6326
+    Val Phi Loss: 0.3563  Val Theata Loss: 0.0069  Val E Loss: 0.2694
+
+    Loss: 0.8664
+    Phi Loss: 0.3751  Theata Loss: 0.0069  E Loss: 0.4844
+    Val Loss: 0.9280
+    Val Phi Loss: 0.3979  Val Theata Loss: 0.0671  Val E Loss: 0.4630
+
+    Loss: 0.7799
+    Phi Loss: 0.3460  Theata Loss: 0.0083  E Loss: 0.4257
+    Val Loss: 1.0882
+    Val Phi Loss: 0.4285  Val Theata Loss: 0.0346  Val E Loss: 0.6251
+
+    Loss: 1.1468
+    Phi Loss: 0.3788  Theata Loss: 0.0152  E Loss: 0.7528
+    Val Loss: 0.7332
+    Val Phi Loss: 0.3748  Val Theata Loss: 0.0251  Val E Loss: 0.3333
+
+    Loss: 0.8734
+    Phi Loss: 0.4760  Theata Loss: 0.0223  E Loss: 0.3752
+    Val Loss: 0.7536
+    Val Phi Loss: 0.3202  Val Theata Loss: 0.0810  Val E Loss: 0.3524
+
+    Loss: 0.6514
+    Phi Loss: 0.3491  Theata Loss: 0.0240  E Loss: 0.2783
+    Val Loss: 0.6495
+    Val Phi Loss: 0.3278  Val Theata Loss: 0.0066  Val E Loss: 0.3151
+
+    Loss: 0.8055
+    Phi Loss: 0.3489  Theata Loss: 0.0179  E Loss: 0.4386
+    Val Loss: 0.6233
+    Val Phi Loss: 0.3616  Val Theata Loss: 0.0500  Val E Loss: 0.2118
+
+    Loss: 0.7845
+    Phi Loss: 0.3840  Theata Loss: 0.0343  E Loss: 0.3662
+    Val Loss: 0.8713
+    Val Phi Loss: 0.3769  Val Theata Loss: 0.0076  Val E Loss: 0.4867
+
+    Loss: 0.8780
+    Phi Loss: 0.3225  Theata Loss: 0.0131  E Loss: 0.5424
+    Val Loss: 0.6525
+    Val Phi Loss: 0.3413  Val Theata Loss: 0.0261  Val E Loss: 0.2850
+
+Epoch:  26
+    Loss: 0.8904
+    Phi Loss: 0.4381  Theata Loss: 0.0340  E Loss: 0.4183
+    Val Loss: 0.9133
+    Val Phi Loss: 0.4045  Val Theata Loss: 0.0241  Val E Loss: 0.4846
+
+    Loss: 0.8044
+    Phi Loss: 0.3364  Theata Loss: 0.0320  E Loss: 0.4360
+    Val Loss: 0.6353
+    Val Phi Loss: 0.3366  Val Theata Loss: 0.0252  Val E Loss: 0.2735
+
+    Loss: 1.1946
+    Phi Loss: 0.3792  Theata Loss: 0.0342  E Loss: 0.7812
+    Val Loss: 0.8404
+    Val Phi Loss: 0.3607  Val Theata Loss: 0.0211  Val E Loss: 0.4586
+
+    Loss: 0.7193
+    Phi Loss: 0.3604  Theata Loss: 0.0473  E Loss: 0.3116
+    Val Loss: 0.8004
+    Val Phi Loss: 0.3504  Val Theata Loss: 0.0077  Val E Loss: 0.4424
+
+    Loss: 0.7438
+    Phi Loss: 0.3535  Theata Loss: 0.0502  E Loss: 0.3401
+    Val Loss: 0.6311
+    Val Phi Loss: 0.3546  Val Theata Loss: 0.0137  Val E Loss: 0.2628
+
+    Loss: 0.6512
+    Phi Loss: 0.3670  Theata Loss: 0.0039  E Loss: 0.2802
+    Val Loss: 1.3091
+    Val Phi Loss: 0.4126  Val Theata Loss: 0.0166  Val E Loss: 0.8799
+
+    Loss: 0.6389
+    Phi Loss: 0.3753  Theata Loss: 0.0333  E Loss: 0.2303
+    Val Loss: 0.7298
+    Val Phi Loss: 0.3128  Val Theata Loss: 0.0165  Val E Loss: 0.4005
+
+    Loss: 0.8278
+    Phi Loss: 0.4670  Theata Loss: 0.0214  E Loss: 0.3394
+    Val Loss: 0.6047
+    Val Phi Loss: 0.3347  Val Theata Loss: 0.0750  Val E Loss: 0.1950
+
+    Loss: 0.7820
+    Phi Loss: 0.3746  Theata Loss: 0.0116  E Loss: 0.3958
+    Val Loss: 0.6734
+    Val Phi Loss: 0.3945  Val Theata Loss: 0.0095  Val E Loss: 0.2694
+
+    Loss: 0.8681
+    Phi Loss: 0.3693  Theata Loss: 0.0503  E Loss: 0.4485
+    Val Loss: 2.0609
+    Val Phi Loss: 0.3304  Val Theata Loss: 0.0169  Val E Loss: 1.7136
+
+    Loss: 0.8800
+    Phi Loss: 0.3661  Theata Loss: 0.0174  E Loss: 0.4965
+    Val Loss: 0.7846
+    Val Phi Loss: 0.4171  Val Theata Loss: 0.0340  Val E Loss: 0.3335
+
+    Loss: 0.6935
+    Phi Loss: 0.3904  Theata Loss: 0.0174  E Loss: 0.2858
+    Val Loss: 1.4075
+    Val Phi Loss: 0.4359  Val Theata Loss: 0.0313  Val E Loss: 0.9404
+
+    Loss: 1.3480
+    Phi Loss: 0.3648  Theata Loss: 0.0279  E Loss: 0.9552
+    Val Loss: 0.8883
+    Val Phi Loss: 0.3909  Val Theata Loss: 0.0125  Val E Loss: 0.4849
+
+    Loss: 0.7164
+    Phi Loss: 0.3533  Theata Loss: 0.0069  E Loss: 0.3562
+    Val Loss: 0.9027
+    Val Phi Loss: 0.3466  Val Theata Loss: 0.0089  Val E Loss: 0.5472
+
+    Loss: 1.6993
+    Phi Loss: 0.3383  Theata Loss: 0.0935  E Loss: 1.2676
+    Val Loss: 0.6523
+    Val Phi Loss: 0.4297  Val Theata Loss: 0.0295  Val E Loss: 0.1932
+
+    Loss: 0.6846
+    Phi Loss: 0.3149  Theata Loss: 0.0051  E Loss: 0.3645
+    Val Loss: 0.7696
+    Val Phi Loss: 0.3347  Val Theata Loss: 0.0233  Val E Loss: 0.4115
+
+    Loss: 0.7208
+    Phi Loss: 0.3199  Theata Loss: 0.0279  E Loss: 0.3730
+    Val Loss: 0.9869
+    Val Phi Loss: 0.3671  Val Theata Loss: 0.0786  Val E Loss: 0.5412
+
+    Loss: 1.3093
+    Phi Loss: 0.3966  Theata Loss: 0.0163  E Loss: 0.8964
+    Val Loss: 0.6814
+    Val Phi Loss: 0.3807  Val Theata Loss: 0.0183  Val E Loss: 0.2824
+
+    Loss: 0.6847
+    Phi Loss: 0.3821  Theata Loss: 0.0077  E Loss: 0.2949
+    Val Loss: 0.7342
+    Val Phi Loss: 0.4099  Val Theata Loss: 0.0088  Val E Loss: 0.3156
+
+    Loss: 0.6872
+    Phi Loss: 0.2988  Theata Loss: 0.0062  E Loss: 0.3823
+    Val Loss: 0.5707
+    Val Phi Loss: 0.3630  Val Theata Loss: 0.0269  Val E Loss: 0.1808
+
+Epoch:  27
+    Loss: 0.6827
+    Phi Loss: 0.4019  Theata Loss: 0.0176  E Loss: 0.2632
+    Val Loss: 0.7162
+    Val Phi Loss: 0.3915  Val Theata Loss: 0.0162  Val E Loss: 0.3085
+
+    Loss: 0.7171
+    Phi Loss: 0.3967  Theata Loss: 0.0102  E Loss: 0.3103
+    Val Loss: 0.7298
+    Val Phi Loss: 0.3346  Val Theata Loss: 0.0155  Val E Loss: 0.3797
+
+    Loss: 1.0692
+    Phi Loss: 0.3832  Theata Loss: 0.0135  E Loss: 0.6725
+    Val Loss: 0.6026
+    Val Phi Loss: 0.3577  Val Theata Loss: 0.0070  Val E Loss: 0.2380
+
+    Loss: 0.8419
+    Phi Loss: 0.4113  Theata Loss: 0.0151  E Loss: 0.4155
+    Val Loss: 0.7940
+    Val Phi Loss: 0.4481  Val Theata Loss: 0.1356  Val E Loss: 0.2103
+
+    Loss: 0.6772
+    Phi Loss: 0.4142  Theata Loss: 0.0106  E Loss: 0.2524
+    Val Loss: 0.8260
+    Val Phi Loss: 0.4429  Val Theata Loss: 0.0484  Val E Loss: 0.3347
+
+    Loss: 0.8735
+    Phi Loss: 0.3125  Theata Loss: 0.0183  E Loss: 0.5426
+    Val Loss: 0.5684
+    Val Phi Loss: 0.3030  Val Theata Loss: 0.0292  Val E Loss: 0.2363
+
+    Loss: 0.9946
+    Phi Loss: 0.3247  Theata Loss: 0.0378  E Loss: 0.6320
+    Val Loss: 1.3805
+    Val Phi Loss: 0.3428  Val Theata Loss: 0.0219  Val E Loss: 1.0158
+
+    Loss: 0.7854
+    Phi Loss: 0.3689  Theata Loss: 0.0388  E Loss: 0.3777
+    Val Loss: 0.7814
+    Val Phi Loss: 0.3735  Val Theata Loss: 0.0279  Val E Loss: 0.3801
+
+    Loss: 0.8312
+    Phi Loss: 0.3663  Theata Loss: 0.0089  E Loss: 0.4560
+    Val Loss: 1.0035
+    Val Phi Loss: 0.4019  Val Theata Loss: 0.1162  Val E Loss: 0.4855
+
+    Loss: 1.2115
+    Phi Loss: 0.4139  Theata Loss: 0.0107  E Loss: 0.7869
+    Val Loss: 0.7076
+    Val Phi Loss: 0.3921  Val Theata Loss: 0.0047  Val E Loss: 0.3109
+
+    Loss: 0.7623
+    Phi Loss: 0.3602  Theata Loss: 0.0428  E Loss: 0.3593
+    Val Loss: 0.8856
+    Val Phi Loss: 0.3992  Val Theata Loss: 0.0276  Val E Loss: 0.4588
+
+    Loss: 0.6402
+    Phi Loss: 0.3820  Theata Loss: 0.0147  E Loss: 0.2435
+    Val Loss: 0.6959
+    Val Phi Loss: 0.3858  Val Theata Loss: 0.0217  Val E Loss: 0.2884
+
+    Loss: 0.7300
+    Phi Loss: 0.3376  Theata Loss: 0.0166  E Loss: 0.3757
+    Val Loss: 0.6357
+    Val Phi Loss: 0.3197  Val Theata Loss: 0.0071  Val E Loss: 0.3089
+
+    Loss: 0.7422
+    Phi Loss: 0.4092  Theata Loss: 0.0394  E Loss: 0.2936
+    Val Loss: 0.6885
+    Val Phi Loss: 0.3624  Val Theata Loss: 0.0331  Val E Loss: 0.2930
+
+    Loss: 1.1055
+    Phi Loss: 0.3659  Theata Loss: 0.0150  E Loss: 0.7246
+    Val Loss: 0.9074
+    Val Phi Loss: 0.3102  Val Theata Loss: 0.0127  Val E Loss: 0.5845
+
+    Loss: 0.7386
+    Phi Loss: 0.3690  Theata Loss: 0.0041  E Loss: 0.3656
+    Val Loss: 0.6649
+    Val Phi Loss: 0.3860  Val Theata Loss: 0.0190  Val E Loss: 0.2600
+
+    Loss: 0.7995
+    Phi Loss: 0.3777  Theata Loss: 0.0241  E Loss: 0.3977
+    Val Loss: 0.6794
+    Val Phi Loss: 0.3712  Val Theata Loss: 0.0363  Val E Loss: 0.2719
+
+    Loss: 1.2819
+    Phi Loss: 0.3505  Theata Loss: 0.0127  E Loss: 0.9187
+    Val Loss: 0.7102
+    Val Phi Loss: 0.3229  Val Theata Loss: 0.0106  Val E Loss: 0.3767
+
+    Loss: 0.6494
+    Phi Loss: 0.3660  Theata Loss: 0.0280  E Loss: 0.2554
+    Val Loss: 0.8151
+    Val Phi Loss: 0.3851  Val Theata Loss: 0.0870  Val E Loss: 0.3430
+
+    Loss: 0.7367
+    Phi Loss: 0.3267  Theata Loss: 0.0410  E Loss: 0.3691
+    Val Loss: 1.1307
+    Val Phi Loss: 0.4137  Val Theata Loss: 0.0068  Val E Loss: 0.7102
+
+Epoch:  28
+    Loss: 0.5828
+    Phi Loss: 0.3150  Theata Loss: 0.0073  E Loss: 0.2605
+    Val Loss: 0.8241
+    Val Phi Loss: 0.3234  Val Theata Loss: 0.0224  Val E Loss: 0.4782
+
+    Loss: 0.7082
+    Phi Loss: 0.3532  Theata Loss: 0.0166  E Loss: 0.3384
+    Val Loss: 0.7429
+    Val Phi Loss: 0.4277  Val Theata Loss: 0.0217  Val E Loss: 0.2935
+
+    Loss: 0.8095
+    Phi Loss: 0.3652  Theata Loss: 0.0062  E Loss: 0.4381
+    Val Loss: 0.7069
+    Val Phi Loss: 0.3753  Val Theata Loss: 0.0154  Val E Loss: 0.3162
+
+    Loss: 0.8442
+    Phi Loss: 0.3742  Theata Loss: 0.0083  E Loss: 0.4618
+    Val Loss: 0.6757
+    Val Phi Loss: 0.3645  Val Theata Loss: 0.0161  Val E Loss: 0.2950
+
+    Loss: 0.8305
+    Phi Loss: 0.3204  Theata Loss: 0.0187  E Loss: 0.4914
+    Val Loss: 1.1688
+    Val Phi Loss: 0.4978  Val Theata Loss: 0.0174  Val E Loss: 0.6537
+
+    Loss: 0.7829
+    Phi Loss: 0.3904  Theata Loss: 0.0131  E Loss: 0.3794
+    Val Loss: 0.5893
+    Val Phi Loss: 0.3371  Val Theata Loss: 0.0105  Val E Loss: 0.2417
+
+    Loss: 0.7868
+    Phi Loss: 0.3315  Theata Loss: 0.0137  E Loss: 0.4415
+    Val Loss: 0.8652
+    Val Phi Loss: 0.3745  Val Theata Loss: 0.0140  Val E Loss: 0.4766
+
+    Loss: 0.6166
+    Phi Loss: 0.3493  Theata Loss: 0.0112  E Loss: 0.2561
+    Val Loss: 0.7491
+    Val Phi Loss: 0.4127  Val Theata Loss: 0.0152  Val E Loss: 0.3212
+
+    Loss: 0.6972
+    Phi Loss: 0.3488  Theata Loss: 0.0141  E Loss: 0.3343
+    Val Loss: 0.6043
+    Val Phi Loss: 0.3977  Val Theata Loss: 0.0303  Val E Loss: 0.1763
+
+    Loss: 0.8137
+    Phi Loss: 0.3961  Theata Loss: 0.0148  E Loss: 0.4028
+    Val Loss: 0.7159
+    Val Phi Loss: 0.3934  Val Theata Loss: 0.0271  Val E Loss: 0.2955
+
+    Loss: 0.9125
+    Phi Loss: 0.3376  Theata Loss: 0.2296  E Loss: 0.3453
+    Val Loss: 0.8809
+    Val Phi Loss: 0.3837  Val Theata Loss: 0.0432  Val E Loss: 0.4540
+
+    Loss: 0.7083
+    Phi Loss: 0.3362  Theata Loss: 0.0091  E Loss: 0.3629
+    Val Loss: 0.7923
+    Val Phi Loss: 0.3575  Val Theata Loss: 0.0416  Val E Loss: 0.3932
+
+    Loss: 1.1793
+    Phi Loss: 0.3823  Theata Loss: 0.0125  E Loss: 0.7845
+    Val Loss: 0.8077
+    Val Phi Loss: 0.3652  Val Theata Loss: 0.0124  Val E Loss: 0.4301
+
+    Loss: 0.8619
+    Phi Loss: 0.3462  Theata Loss: 0.0231  E Loss: 0.4926
+    Val Loss: 1.1300
+    Val Phi Loss: 0.4085  Val Theata Loss: 0.0074  Val E Loss: 0.7140
+
+    Loss: 0.6651
+    Phi Loss: 0.3767  Theata Loss: 0.0036  E Loss: 0.2848
+    Val Loss: 0.6337
+    Val Phi Loss: 0.3523  Val Theata Loss: 0.0100  Val E Loss: 0.2714
+
+    Loss: 0.9760
+    Phi Loss: 0.3561  Theata Loss: 0.0059  E Loss: 0.6140
+    Val Loss: 0.6285
+    Val Phi Loss: 0.3921  Val Theata Loss: 0.0277  Val E Loss: 0.2086
+
+    Loss: 0.8092
+    Phi Loss: 0.4262  Theata Loss: 0.0624  E Loss: 0.3206
+    Val Loss: 1.2024
+    Val Phi Loss: 0.3972  Val Theata Loss: 0.0122  Val E Loss: 0.7930
+
+    Loss: 0.6117
+    Phi Loss: 0.3928  Theata Loss: 0.0091  E Loss: 0.2098
+    Val Loss: 0.8142
+    Val Phi Loss: 0.4154  Val Theata Loss: 0.0237  Val E Loss: 0.3750
+
+    Loss: 0.6707
+    Phi Loss: 0.4306  Theata Loss: 0.0214  E Loss: 0.2187
+    Val Loss: 0.7192
+    Val Phi Loss: 0.3769  Val Theata Loss: 0.0135  Val E Loss: 0.3287
+
+    Loss: 0.6716
+    Phi Loss: 0.3449  Theata Loss: 0.0071  E Loss: 0.3196
+    Val Loss: 0.7055
+    Val Phi Loss: 0.3774  Val Theata Loss: 0.0117  Val E Loss: 0.3164
+
+Epoch:  29
+    Loss: 1.4146
+    Phi Loss: 0.3445  Theata Loss: 0.0291  E Loss: 1.0409
+    Val Loss: 1.1572
+    Val Phi Loss: 0.4112  Val Theata Loss: 0.0190  Val E Loss: 0.7270
+
+    Loss: 0.8607
+    Phi Loss: 0.3779  Theata Loss: 0.0856  E Loss: 0.3972
+    Val Loss: 1.3302
+    Val Phi Loss: 0.3390  Val Theata Loss: 0.0074  Val E Loss: 0.9837
+
+    Loss: 0.7355
+    Phi Loss: 0.3735  Theata Loss: 0.0058  E Loss: 0.3562
+    Val Loss: 0.6973
+    Val Phi Loss: 0.3940  Val Theata Loss: 0.0149  Val E Loss: 0.2883
+
+    Loss: 0.8536
+    Phi Loss: 0.3926  Theata Loss: 0.0617  E Loss: 0.3993
+    Val Loss: 0.7693
+    Val Phi Loss: 0.4053  Val Theata Loss: 0.0248  Val E Loss: 0.3392
+
+    Loss: 0.7462
+    Phi Loss: 0.4164  Theata Loss: 0.0385  E Loss: 0.2913
+    Val Loss: 0.7792
+    Val Phi Loss: 0.4051  Val Theata Loss: 0.0313  Val E Loss: 0.3427
+
+    Loss: 0.6555
+    Phi Loss: 0.3641  Theata Loss: 0.0082  E Loss: 0.2832
+    Val Loss: 0.8672
+    Val Phi Loss: 0.3371  Val Theata Loss: 0.0086  Val E Loss: 0.5214
+
+    Loss: 0.7379
+    Phi Loss: 0.3862  Theata Loss: 0.0092  E Loss: 0.3425
+    Val Loss: 0.6218
+    Val Phi Loss: 0.3309  Val Theata Loss: 0.0141  Val E Loss: 0.2769
+
+    Loss: 0.7108
+    Phi Loss: 0.3747  Theata Loss: 0.0588  E Loss: 0.2773
+    Val Loss: 0.5729
+    Val Phi Loss: 0.3749  Val Theata Loss: 0.0127  Val E Loss: 0.1852
+
+    Loss: 0.9637
+    Phi Loss: 0.3956  Theata Loss: 0.0058  E Loss: 0.5623
+    Val Loss: 0.9137
+    Val Phi Loss: 0.4516  Val Theata Loss: 0.0108  Val E Loss: 0.4513
+
+    Loss: 0.7220
+    Phi Loss: 0.4263  Theata Loss: 0.0039  E Loss: 0.2919
+    Val Loss: 0.7764
+    Val Phi Loss: 0.3524  Val Theata Loss: 0.0524  Val E Loss: 0.3716
+
+    Loss: 0.6970
+    Phi Loss: 0.3471  Theata Loss: 0.0165  E Loss: 0.3334
+    Val Loss: 0.6317
+    Val Phi Loss: 0.3687  Val Theata Loss: 0.0088  Val E Loss: 0.2542
+
+    Loss: 0.8155
+    Phi Loss: 0.4166  Theata Loss: 0.0168  E Loss: 0.3821
+    Val Loss: 0.7209
+    Val Phi Loss: 0.3492  Val Theata Loss: 0.0957  Val E Loss: 0.2759
+
+    Loss: 1.0506
+    Phi Loss: 0.3965  Theata Loss: 0.0266  E Loss: 0.6276
+    Val Loss: 0.5901
+    Val Phi Loss: 0.3588  Val Theata Loss: 0.0108  Val E Loss: 0.2204
+
+    Loss: 0.8484
+    Phi Loss: 0.3276  Theata Loss: 0.0220  E Loss: 0.4987
+    Val Loss: 0.6984
+    Val Phi Loss: 0.3289  Val Theata Loss: 0.0482  Val E Loss: 0.3213
+
+    Loss: 0.7199
+    Phi Loss: 0.3674  Theata Loss: 0.0191  E Loss: 0.3334
+    Val Loss: 0.8729
+    Val Phi Loss: 0.3334  Val Theata Loss: 0.0336  Val E Loss: 0.5059
+
+    Loss: 0.7775
+    Phi Loss: 0.3935  Theata Loss: 0.0226  E Loss: 0.3614
+    Val Loss: 0.7751
+    Val Phi Loss: 0.3744  Val Theata Loss: 0.0057  Val E Loss: 0.3950
+
+    Loss: 0.8608
+    Phi Loss: 0.3970  Theata Loss: 0.0347  E Loss: 0.4291
+    Val Loss: 0.6278
+    Val Phi Loss: 0.3336  Val Theata Loss: 0.0359  Val E Loss: 0.2584
+
+    Loss: 0.6907
+    Phi Loss: 0.3903  Theata Loss: 0.0113  E Loss: 0.2892
+    Val Loss: 0.6891
+    Val Phi Loss: 0.3608  Val Theata Loss: 0.0175  Val E Loss: 0.3108
+
+    Loss: 0.6112
+    Phi Loss: 0.3177  Theata Loss: 0.0282  E Loss: 0.2653
+    Val Loss: 0.7831
+    Val Phi Loss: 0.3196  Val Theata Loss: 0.0087  Val E Loss: 0.4548
+
+    Loss: 0.6810
+    Phi Loss: 0.3714  Theata Loss: 0.0270  E Loss: 0.2826
+    Val Loss: 0.9016
+    Val Phi Loss: 0.3260  Val Theata Loss: 0.1673  Val E Loss: 0.4083
+
