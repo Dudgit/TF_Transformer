@@ -60,7 +60,7 @@ if __name__ == "__main__":
             all_loss.append(loss)
             vall_losses.append(val_loss)
             all_predictions.append(preds)
-            all_targets.append(Y)
+            all_targets.append(Y[:,:,:-1])
             seperate_losses.append(individual_losses)
 
     np.save(f"configs/{current_time}_config",used_parameters)
