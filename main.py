@@ -37,7 +37,7 @@ if __name__ == "__main__":
     model = PCT_Transformer(batch_size=batch_size)
     optimizer = tf.keras.optimizers.Adam()
     model.compile(optimizer=optimizer,loss=tf.keras.losses.MeanSquaredError())
-    used_parameters = np.array([batch_size, EPOCHS, train_steps, optimizer.get_config()["name"],optimizer.get_config()["learning_rate"],"mean_loss"])
+    used_parameters = np.array([batch_size, EPOCHS, train_steps, optimizer.get_config()["name"],optimizer.get_config()["learning_rate"],"sum_mean_loss+exp+extra_layers"])
     
     all_loss = []
     vall_losses = []
@@ -60,7 +60,7 @@ if __name__ == "__main__":
             all_loss.append(loss)
             vall_losses.append(val_loss)
             all_predictions.append(preds)
-            all_targets.append(Y)
+            all_targets.append(Y[:,:,:-1])
             seperate_losses.append(individual_losses)
 
     np.save(f"configs/{current_time}_config",used_parameters)

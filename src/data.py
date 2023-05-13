@@ -17,8 +17,8 @@ def convert_angles(df:pd.DataFrame)->pd.DataFrame:
     """
     Converts the angles to cartesian coordinates.
     """
-    df["lat"] = np.arctan(df.dY/df.dX)
-    df["long"] = np.arccos(df.dZ /np.sqrt( (df.dX**2+df.dY**2 +df.dZ**2)))
+    df["lat"] = np.arctan(df.dY/df.dX)/  1.5
+    df["long"] = np.arccos(df.dZ /np.sqrt( (df.dX**2+df.dY**2 +df.dZ**2))) / 1.5
     return df
 
 def get_track(apth:str = DEF_ALL_FOLD_PATH,hpth:str = DEF_HIT_PATH )->pd.DataFrame:
