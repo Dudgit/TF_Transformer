@@ -137,6 +137,10 @@ class PCT_Transformer(tf.keras.Model):
         self.blocks = BlockStack(n_embd, n_head, n_layer)
         self.ln_f = tf.keras.layers.LayerNormalization() # final layer norm
         self.flat_l = tf.keras.layers.Flatten()
+        #Added extra layers
+        self.out1 = tf.keras.layers.Dense(64,activation='relu')
+        self.dropout = tf.keras.layers.Dropout(0.3)
+        
         self.outp = tf.keras.layers.Dense(3)
         self.match = BipartateMatching(batch_size)
 
@@ -180,15 +184,17 @@ class PCT_Transformer(tf.keras.Model):
             x = self.blocks(x)
             x = self.ln_f(x) # -> (Batch,6,Embedding) // y = (Batch,3)
             x = self.flat_l(x)
+            x = self.out1(x)
+            x = self.dropout(x)
             logits = self.outp(x) # -> (Batch,3)
             #Reindexing by the closest distance
             #target_indexes = tf.argmin(distance_matrix(logits,targets[:,-lidx]))
             target_indexes = self.match(logits,targets[:,-lidx])
             logits = tf.gather(logits,target_indexes)
             #model_loss = self.loss(targets[:,-lidx], logits)
-            phi_losses.append(self.loss(logits[:,0],targets[:,-lidx,0])* ((lidx-2)/25))
-            theta_losses.append( self.loss(logits[:,1],targets[:,-lidx,1]) * ((lidx-2)/25))
-            energy_losses.append( self.loss(logits[:,2],targets[:,-lidx,2])*((3*(lidx-2)/25) + 1 ))
+            phi_losses.append(    tf.cast(self.loss(logits[:,0],targets[:,-lidx,0]),dtype=tf.float32)*       tf.cast((tf.math.exp(  (lidx-2)/25)),dtype=tf.float32) )
+            theta_losses.append(  tf.cast(self.loss(logits[:,1],targets[:,-lidx,1]),dtype=tf.float32) *   tf.cast((tf.math.exp(  (lidx-2)/25)),dtype=tf.float32) )
+            energy_losses.append( tf.cast(self.loss(logits[:,2],targets[:,-lidx,2]),dtype=tf.float32)* 2*tf.cast((tf.math.exp(  (lidx-2)/25)),dtype=tf.float32) )
 
             preds.append(logits)
         
