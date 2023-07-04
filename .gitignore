@@ -27,3 +27,6 @@ input.txt
 data
 eda.ipynb
 logDIR
+losses
+preds
+.idea
